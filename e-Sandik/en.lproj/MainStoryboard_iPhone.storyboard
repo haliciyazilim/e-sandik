@@ -1,91 +1,66 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2837" systemVersion="12A269" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="FdP-bt-3rd">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1921"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier First View Controller - First-->
-        <scene sceneID="11">
+        <!--Navigation Controller-->
+        <scene sceneID="0C6-Pt-lDG">
             <objects>
-                <viewController title="First" id="2" customClass="SandikFirstViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="16">
-                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="First View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="20">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" bouncesZoom="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="21">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="88" id="Ikv-jk-tyi"/>
-                                </constraints>
-                                <string key="text">Loaded by the first view controller — an instance of SandikFirstViewController — specified in the app delegate.</string>
-                                <fontDescription key="fontDescription" type="system" size="system"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="21" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="QBg-X6-fBV"/>
-                            <constraint firstAttribute="trailing" secondItem="20" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Qxj-1L-2Yh"/>
-                            <constraint firstItem="20" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Ty9-wx-CyI"/>
-                            <constraint firstItem="21" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Zmm-k2-2L7"/>
-                            <constraint firstItem="21" firstAttribute="top" secondItem="20" secondAttribute="bottom" constant="40" type="user" id="jX0-Wi-kmb"/>
-                            <constraint firstAttribute="centerY" secondItem="21" secondAttribute="centerY" type="user" id="yWk-L2-m9F"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="7"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
+                <navigationController definesPresentationContext="YES" id="FdP-bt-3rd" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="c1V-4k-0oZ">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="lMh-er-aEY" kind="relationship" relationship="rootViewController" id="gin-9L-M4F"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bnE-4O-7zm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="653" y="-138"/>
+            <point key="canvasLocation" x="-741" y="180"/>
         </scene>
-        <!--class Prefix:identifier Second View Controller - Second-->
-        <scene sceneID="13">
+        <!--View Controller - Sandık Sorgulama-->
+        <scene sceneID="1B2-2c-DbA">
             <objects>
-                <viewController title="Second" id="3" customClass="SandikSecondViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="17">
-                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <viewController id="lMh-er-aEY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bfh-Zj-2mf">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="22">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" bouncesZoom="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="23">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l2Q-iS-HgU">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="88" id="cQR-IW-sY8"/>
+                                    <constraint firstAttribute="width" constant="73" id="4c7-X9-f3n"/>
                                 </constraints>
-                                <string key="text">Loaded by the second view controller — an instance of SandikSecondViewController — specified in the app delegate.</string>
-                                <fontDescription key="fontDescription" type="system" size="system"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textView>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                <state key="normal" title="Sorgula">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="4" kind="push" id="p1r-B9-teQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="22" firstAttribute="leading" secondItem="17" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="0q6-IA-e8m"/>
-                            <constraint firstAttribute="trailing" secondItem="23" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="fR4-wH-Ih7"/>
-                            <constraint firstItem="23" firstAttribute="leading" secondItem="17" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="fzb-YA-SeR"/>
-                            <constraint firstAttribute="centerY" secondItem="23" secondAttribute="centerY" type="user" id="llH-eD-iPS"/>
-                            <constraint firstAttribute="trailing" secondItem="22" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="pc3-9Y-W42"/>
-                            <constraint firstItem="23" firstAttribute="top" secondItem="22" secondAttribute="bottom" constant="40" type="user" id="yUx-Ee-KEk"/>
+                            <constraint firstItem="l2Q-iS-HgU" firstAttribute="centerX" secondItem="Bfh-Zj-2mf" secondAttribute="centerX" type="default" id="DIw-Mf-fvO"/>
+                            <constraint firstItem="l2Q-iS-HgU" firstAttribute="top" secondItem="Bfh-Zj-2mf" secondAttribute="top" constant="203" id="kYZ-6J-upN"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="6"/>
+                    <navigationItem key="navigationItem" title="Sandık Sorgulama" id="oLa-q5-da0"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="12" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7nH-g5-PGE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="653" y="498"/>
+            <point key="canvasLocation" x="-300" y="180"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="15">
             <objects>
                 <tabBarController id="4" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="JG8-7V-Km7"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="5">
                         <rect key="frame" x="0.0" y="431" width="320" height="49"/>
@@ -93,19 +68,346 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="2" kind="relationship" relationship="viewControllers" id="26"/>
-                        <segue destination="3" kind="relationship" relationship="viewControllers" id="27"/>
+                        <segue destination="FRb-uF-G9H" kind="relationship" relationship="viewControllers" id="7vb-b7-VuN"/>
+                        <segue destination="jRa-Ks-1Vm" kind="relationship" relationship="viewControllers" id="M2l-S8-vkh"/>
+                        <segue destination="sFL-gl-PcJ" kind="relationship" relationship="viewControllers" id="pW6-ha-DdH"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="14" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="132" y="180"/>
         </scene>
+        <!--Sandik Bina Bilgisi View Controller - Bina Bilgisi-->
+        <scene sceneID="ary-47-eZp">
+            <objects>
+                <tableViewController id="jRa-Ks-1Vm" customClass="SandikBinaBilgisiViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="2Nr-fk-Bcc">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PersonInfo" id="v10-ni-uFh">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Name/Surname" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YC8-IU-xtO">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="E5D-Wg-fNw"/>
+                                                <constraint firstAttribute="width" constant="192" id="tEE-7L-hWo"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Door no" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RDb-EW-no6">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="42" id="nto-oC-cv2"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="RDb-EW-no6" firstAttribute="top" secondItem="YC8-IU-xtO" secondAttribute="top" type="default" id="1wm-Od-eRN"/>
+                                    <constraint firstItem="YC8-IU-xtO" firstAttribute="leading" secondItem="v10-ni-uFh" secondAttribute="leading" constant="20" type="default" id="RFf-62-dTG"/>
+                                    <constraint firstItem="YC8-IU-xtO" firstAttribute="top" secondItem="v10-ni-uFh" secondAttribute="top" constant="11" id="fIh-1a-c5j"/>
+                                    <constraint firstAttribute="trailing" secondItem="RDb-EW-no6" secondAttribute="trailing" constant="20" type="default" id="uGu-sT-8Sa"/>
+                                    <constraint firstItem="RDb-EW-no6" firstAttribute="bottom" secondItem="YC8-IU-xtO" secondAttribute="bottom" type="default" id="uzE-7h-lpC"/>
+                                </constraints>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="jRa-Ks-1Vm" id="ocJ-9H-2wo"/>
+                            <outlet property="delegate" destination="jRa-Ks-1Vm" id="SLm-Hn-cgr"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Bina Bilgisi" image="test_icon.png" id="iaf-cy-Nuv"/>
+                    <navigationItem key="navigationItem" id="rxw-Pl-ohM"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="llA-Re-dou" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="558" y="559"/>
+        </scene>
+        <!--Table View Controller - Künye-->
+        <scene sceneID="tOi-sg-sqt">
+            <objects>
+                <tableViewController id="FRb-uF-G9H" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="ziN-Q0-z2X">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="0Jp-gI-00r">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="36" id="LiV-0P-WuH">
+                                        <rect key="frame" x="0.0" y="10" width="320" height="37"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="300" height="35"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Seçmen Adı Soyadı" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6gN-o3-zYV">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="cTy-Mr-66z"/>
+                                                        <constraint firstAttribute="width" constant="260" id="ezp-Ks-CQr"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="6gN-o3-zYV" firstAttribute="top" secondItem="LiV-0P-WuH" secondAttribute="top" constant="8" id="C1J-VE-Zxw"/>
+                                            <constraint firstItem="6gN-o3-zYV" firstAttribute="centerX" secondItem="LiV-0P-WuH" secondAttribute="centerX" type="default" id="MHl-we-qdY"/>
+                                        </constraints>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="45" id="Zvs-fW-lGT">
+                                        <rect key="frame" x="0.0" y="47" width="320" height="46"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="0.0" width="300" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Ebuzer Egemen Dursun" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EHa-lI-nt2">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="260" id="QbP-n4-oSi"/>
+                                                        <constraint firstAttribute="height" constant="21" id="qVL-zB-Ts4"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Futura-CondensedExtraBold" family="Futura" pointSize="16"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="EHa-lI-nt2" firstAttribute="top" secondItem="Zvs-fW-lGT" secondAttribute="top" constant="11" id="dMO-SD-s6n"/>
+                                            <constraint firstItem="EHa-lI-nt2" firstAttribute="centerX" secondItem="Zvs-fW-lGT" secondAttribute="centerX" type="default" id="yNO-T2-EAi"/>
+                                        </constraints>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="J5e-FN-Tso">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="36" id="hdi-GQ-DnO">
+                                        <rect key="frame" x="0.0" y="113" width="320" height="37"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="300" height="35"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Muhtarlık" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dGX-ke-raK">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="260" id="IBm-aK-Hhk"/>
+                                                        <constraint firstAttribute="height" constant="21" id="NgQ-NQ-1Ev"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="dGX-ke-raK" firstAttribute="centerY" secondItem="hdi-GQ-DnO" secondAttribute="centerY" type="default" id="JUx-pv-5XV"/>
+                                            <constraint firstItem="dGX-ke-raK" firstAttribute="centerX" secondItem="hdi-GQ-DnO" secondAttribute="centerX" type="default" id="jwW-4j-m44"/>
+                                        </constraints>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="78" id="shh-NU-KTL">
+                                        <rect key="frame" x="0.0" y="150" width="320" height="79"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="0.0" width="300" height="77"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Ankara Çankaya Şehit Cevdet Özdemir" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="260" translatesAutoresizingMaskIntoConstraints="NO" id="EW7-rn-Uc7">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="260" id="iFZ-jy-moo"/>
+                                                        <constraint firstAttribute="height" constant="55" id="xyI-DS-aAz"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Futura-CondensedExtraBold" family="Futura" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="EW7-rn-Uc7" firstAttribute="centerX" secondItem="shh-NU-KTL" secondAttribute="centerX" type="default" id="bET-m5-xjD"/>
+                                            <constraint firstItem="EW7-rn-Uc7" firstAttribute="top" secondItem="shh-NU-KTL" secondAttribute="top" constant="11" id="t0a-cx-VrY"/>
+                                        </constraints>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="de5-lW-Ncs">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="36" id="erG-WY-95k">
+                                        <rect key="frame" x="0.0" y="249" width="320" height="37"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="300" height="35"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Okul" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aI2-rT-NIK">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="260" id="YXf-SY-LnY"/>
+                                                        <constraint firstAttribute="height" constant="21" id="ny9-QS-OMl"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="aI2-rT-NIK" firstAttribute="centerX" secondItem="erG-WY-95k" secondAttribute="centerX" type="default" id="D4G-gK-KIL"/>
+                                            <constraint firstItem="aI2-rT-NIK" firstAttribute="centerY" secondItem="erG-WY-95k" secondAttribute="centerY" type="default" id="yAf-mz-4HA"/>
+                                        </constraints>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="78" id="Ujv-Pj-D25">
+                                        <rect key="frame" x="0.0" y="286" width="320" height="79"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="0.0" width="300" height="77"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Bilgi İlköğretim Okulu -A Blok" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="260" translatesAutoresizingMaskIntoConstraints="NO" id="0Sz-lC-TiB">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="55" id="ehm-WF-Le8"/>
+                                                        <constraint firstAttribute="width" constant="260" id="wXC-wg-NeB"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Futura-CondensedExtraBold" family="Futura" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="0Sz-lC-TiB" firstAttribute="centerX" secondItem="Ujv-Pj-D25" secondAttribute="centerX" type="default" id="9V4-bg-CLY"/>
+                                            <constraint firstItem="0Sz-lC-TiB" firstAttribute="top" secondItem="Ujv-Pj-D25" secondAttribute="top" constant="11" id="XWO-YO-DG1"/>
+                                        </constraints>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="88b-vP-9dy">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="36" id="kU6-16-dzv">
+                                        <rect key="frame" x="0.0" y="385" width="320" height="37"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="300" height="35"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Sandık / Sandık Sıranız" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ysd-wk-cbN">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="260" id="91l-yV-IV0"/>
+                                                        <constraint firstAttribute="height" constant="21" id="Gln-4m-dva"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="ysd-wk-cbN" firstAttribute="centerY" secondItem="kU6-16-dzv" secondAttribute="centerY" type="default" id="TSA-lV-D29"/>
+                                            <constraint firstItem="ysd-wk-cbN" firstAttribute="centerX" secondItem="kU6-16-dzv" secondAttribute="centerX" type="default" id="qCq-VC-nHg"/>
+                                        </constraints>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Axz-DD-V4Z">
+                                        <rect key="frame" x="0.0" y="422" width="320" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="0.0" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="2573 / 165" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gFh-Fu-WBX">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="260" id="1Xs-6g-cbd"/>
+                                                        <constraint firstAttribute="height" constant="21" id="y3d-kE-PEL"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Futura-CondensedExtraBold" family="Futura" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="gFh-Fu-WBX" firstAttribute="top" secondItem="Axz-DD-V4Z" secondAttribute="top" constant="11" id="J8V-KC-dX2"/>
+                                            <constraint firstItem="gFh-Fu-WBX" firstAttribute="centerX" secondItem="Axz-DD-V4Z" secondAttribute="centerX" type="default" id="ZvO-q0-ZLJ"/>
+                                        </constraints>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="FRb-uF-G9H" id="Gtg-Fm-OQ1"/>
+                            <outlet property="delegate" destination="FRb-uF-G9H" id="8OY-N3-caN"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Künye" image="icon_siyah.png" id="OmD-DF-SBn"/>
+                    <navigationItem key="navigationItem" title="Künye" id="xfE-LG-g6b"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kvY-f2-JDz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="558" y="-214"/>
+        </scene>
+        <!--Sandik Secmenler View Controller - Sandık Bilgisi-->
+        <scene sceneID="gdq-Iu-T87">
+            <objects>
+                <tableViewController id="sFL-gl-PcJ" customClass="SandikSecmenlerViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="NHk-lQ-uwh">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PersonInfo" id="dJj-xK-Lr8">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="sFL-gl-PcJ" id="DLE-HB-gpN"/>
+                            <outlet property="delegate" destination="sFL-gl-PcJ" id="SOe-zV-Fki"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Sandık Bilgisi" id="CW7-g3-Pid"/>
+                    <navigationItem key="navigationItem" id="83e-7N-5el"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SIR-Mf-LYO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="990" y="180"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="first" width="16" height="16"/>
-        <image name="second" width="16" height="16"/>
+        <image name="icon_siyah.png" width="28" height="29"/>
+        <image name="test_icon.png" width="47" height="31"/>
     </resources>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="SandikBinaBilgisiViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SandikBinaBilgisiViewController.h"/>
+        </class>
+        <class className="SandikSecmenlerViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SandikSecmenlerViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
