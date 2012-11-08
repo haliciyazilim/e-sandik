@@ -18,10 +18,6 @@
 		0543E843164BB72D00255154 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0543E842164BB72D00255154 /* Default-568h@2x.png */; };
 		0543E846164BB72D00255154 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0543E844164BB72D00255154 /* MainStoryboard_iPhone.storyboard */; };
 		0543E849164BB72D00255154 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0543E847164BB72D00255154 /* MainStoryboard_iPad.storyboard */; };
-		0543E84E164BB72E00255154 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 0543E84D164BB72E00255154 /* first.png */; };
-		0543E850164BB72E00255154 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0543E84F164BB72E00255154 /* first@2x.png */; };
-		0543E855164BB72E00255154 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 0543E854164BB72E00255154 /* second.png */; };
-		0543E857164BB72E00255154 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0543E856164BB72E00255154 /* second@2x.png */; };
 		0543E86B164BD6E100255154 /* SandikKunyeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0543E86A164BD6E100255154 /* SandikKunyeViewController.m */; };
 		0543E86E164BD70100255154 /* SandikBinaBilgisiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0543E86D164BD70100255154 /* SandikBinaBilgisiViewController.m */; };
 		0543E871164BD71E00255154 /* SandikSecmenlerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0543E870164BD71E00255154 /* SandikSecmenlerViewController.m */; };
@@ -46,6 +42,7 @@
 		0543E8B8164BFAC600255154 /* header_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0543E8B6164BFAC600255154 /* header_bg@2x.png */; };
 		0543E8BB164BFD8300255154 /* SandikSorguViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0543E8BA164BFD8300255154 /* SandikSorguViewController.m */; };
 		0543E8BE164BFEBE00255154 /* SandikTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0543E8BD164BFEBD00255154 /* SandikTabBarViewController.m */; };
+		4104C1F6164BF8EE00520218 /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4104C1F5164BF8EE00520218 /* APIManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,10 +61,10 @@
 		0543E842164BB72D00255154 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		0543E845164BB72D00255154 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		0543E848164BB72D00255154 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		0543E84D164BB72E00255154 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
-		0543E84F164BB72E00255154 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		0543E854164BB72E00255154 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
-		0543E856164BB72E00255154 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		0543E84D164BB72E00255154 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = first.png; path = "/Users/erenhalici/Halici/CHP/e-sandik/e-Sandik/first.png"; sourceTree = "<absolute>"; };
+		0543E84F164BB72E00255154 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "first@2x.png"; path = "/Users/erenhalici/Halici/CHP/e-sandik/e-Sandik/first@2x.png"; sourceTree = "<absolute>"; };
+		0543E854164BB72E00255154 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = second.png; path = "/Users/erenhalici/Halici/CHP/e-sandik/e-Sandik/second.png"; sourceTree = "<absolute>"; };
+		0543E856164BB72E00255154 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "second@2x.png"; path = "/Users/erenhalici/Halici/CHP/e-sandik/e-Sandik/second@2x.png"; sourceTree = "<absolute>"; };
 		0543E869164BD6E100255154 /* SandikKunyeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SandikKunyeViewController.h; sourceTree = "<group>"; };
 		0543E86A164BD6E100255154 /* SandikKunyeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SandikKunyeViewController.m; sourceTree = "<group>"; };
 		0543E86C164BD70100255154 /* SandikBinaBilgisiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SandikBinaBilgisiViewController.h; sourceTree = "<group>"; };
@@ -98,6 +95,8 @@
 		0543E8BA164BFD8300255154 /* SandikSorguViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SandikSorguViewController.m; sourceTree = "<group>"; };
 		0543E8BC164BFEBD00255154 /* SandikTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SandikTabBarViewController.h; sourceTree = "<group>"; };
 		0543E8BD164BFEBD00255154 /* SandikTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SandikTabBarViewController.m; sourceTree = "<group>"; };
+		4104C1F4164BF8EE00520218 /* APIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIManager.h; sourceTree = "<group>"; };
+		4104C1F5164BF8EE00520218 /* APIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +161,8 @@
 				0543E86F164BD71E00255154 /* SandikSecmenlerViewController.h */,
 				0543E870164BD71E00255154 /* SandikSecmenlerViewController.m */,
 				0543E833164BB72D00255154 /* Supporting Files */,
+				4104C1F4164BF8EE00520218 /* APIManager.h */,
+				4104C1F5164BF8EE00520218 /* APIManager.m */,
 			);
 			path = "e-Sandik";
 			sourceTree = "<group>";
@@ -267,10 +268,6 @@
 				0543E843164BB72D00255154 /* Default-568h@2x.png in Resources */,
 				0543E846164BB72D00255154 /* MainStoryboard_iPhone.storyboard in Resources */,
 				0543E849164BB72D00255154 /* MainStoryboard_iPad.storyboard in Resources */,
-				0543E84E164BB72E00255154 /* first.png in Resources */,
-				0543E850164BB72E00255154 /* first@2x.png in Resources */,
-				0543E855164BB72E00255154 /* second.png in Resources */,
-				0543E857164BB72E00255154 /* second@2x.png in Resources */,
 				0543E891164BEA2B00255154 /* icon_boxlist@2x.png in Resources */,
 				0543E892164BEA2B00255154 /* icon_voter@2x.png in Resources */,
 				0543E893164BEA2B00255154 /* icon_voterlist@2x.png in Resources */,
@@ -307,6 +304,7 @@
 				0543E88C164BE58B00255154 /* Voter.m in Sources */,
 				0543E8BB164BFD8300255154 /* SandikSorguViewController.m in Sources */,
 				0543E8BE164BFEBE00255154 /* SandikTabBarViewController.m in Sources */,
+				4104C1F6164BF8EE00520218 /* APIManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

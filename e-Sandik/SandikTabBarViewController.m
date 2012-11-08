@@ -8,6 +8,8 @@
 
 #import "SandikTabBarViewController.h"
 
+#import "SandikKunyeViewController.h"
+
 @interface SandikTabBarViewController ()
 
 @end
@@ -33,6 +35,11 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)setVoter:(Voter *)voter {
+    SandikKunyeViewController *sandikKunyeViewController = [self.viewControllers objectAtIndex:0];
+    sandikKunyeViewController.voter = voter;
 }
 
 @end

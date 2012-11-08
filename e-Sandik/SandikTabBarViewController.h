@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class Voter;
+
 @interface SandikTabBarViewController : UITabBarController
+
+@property (nonatomic, strong) Voter* voter;
 
 @end

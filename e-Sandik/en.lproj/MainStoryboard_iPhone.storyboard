@@ -157,10 +157,10 @@
             </objects>
             <point key="canvasLocation" x="558" y="559"/>
         </scene>
-        <!--Table View Controller - Künye-->
+        <!--Sandik Kunye View Controller - Künye-->
         <scene sceneID="tOi-sg-sqt">
             <objects>
-                <tableViewController id="FRb-uF-G9H" sceneMemberID="viewController">
+                <tableViewController id="FRb-uF-G9H" customClass="SandikKunyeViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="ziN-Q0-z2X">
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -379,6 +379,12 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Künye" image="icon_voter.png" id="OmD-DF-SBn"/>
                     <navigationItem key="navigationItem" title="Künye" id="xfE-LG-g6b"/>
+                    <connections>
+                        <outlet property="chestLabel" destination="gFh-Fu-WBX" id="rqf-N7-WdA"/>
+                        <outlet property="nameLabel" destination="EHa-lI-nt2" id="nYy-5y-wLj"/>
+                        <outlet property="provinceLabel" destination="EW7-rn-Uc7" id="3j1-uM-8dX"/>
+                        <outlet property="schoolLabel" destination="0Sz-lC-TiB" id="dlc-Vt-thf"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kvY-f2-JDz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
