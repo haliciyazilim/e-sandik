@@ -1,0 +1,336 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0543E82D164BB72D00255154 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0543E82C164BB72D00255154 /* UIKit.framework */; };
+		0543E82F164BB72D00255154 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0543E82E164BB72D00255154 /* Foundation.framework */; };
+		0543E831164BB72D00255154 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0543E830164BB72D00255154 /* CoreGraphics.framework */; };
+		0543E837164BB72D00255154 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0543E835164BB72D00255154 /* InfoPlist.strings */; };
+		0543E839164BB72D00255154 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0543E838164BB72D00255154 /* main.m */; };
+		0543E83D164BB72D00255154 /* SandikAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0543E83C164BB72D00255154 /* SandikAppDelegate.m */; };
+		0543E83F164BB72D00255154 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 0543E83E164BB72D00255154 /* Default.png */; };
+		0543E841164BB72D00255154 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0543E840164BB72D00255154 /* Default@2x.png */; };
+		0543E843164BB72D00255154 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0543E842164BB72D00255154 /* Default-568h@2x.png */; };
+		0543E846164BB72D00255154 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0543E844164BB72D00255154 /* MainStoryboard_iPhone.storyboard */; };
+		0543E849164BB72D00255154 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0543E847164BB72D00255154 /* MainStoryboard_iPad.storyboard */; };
+		0543E84C164BB72E00255154 /* SandikFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0543E84B164BB72E00255154 /* SandikFirstViewController.m */; };
+		0543E84E164BB72E00255154 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 0543E84D164BB72E00255154 /* first.png */; };
+		0543E850164BB72E00255154 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0543E84F164BB72E00255154 /* first@2x.png */; };
+		0543E853164BB72E00255154 /* SandikSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0543E852164BB72E00255154 /* SandikSecondViewController.m */; };
+		0543E855164BB72E00255154 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 0543E854164BB72E00255154 /* second.png */; };
+		0543E857164BB72E00255154 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0543E856164BB72E00255154 /* second@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0543E828164BB72D00255154 /* e-Sandik.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "e-Sandik.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0543E82C164BB72D00255154 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		0543E82E164BB72D00255154 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0543E830164BB72D00255154 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		0543E834164BB72D00255154 /* e-Sandik-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "e-Sandik-Info.plist"; sourceTree = "<group>"; };
+		0543E836164BB72D00255154 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0543E838164BB72D00255154 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0543E83A164BB72D00255154 /* e-Sandik-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "e-Sandik-Prefix.pch"; sourceTree = "<group>"; };
+		0543E83B164BB72D00255154 /* SandikAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SandikAppDelegate.h; sourceTree = "<group>"; };
+		0543E83C164BB72D00255154 /* SandikAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SandikAppDelegate.m; sourceTree = "<group>"; };
+		0543E83E164BB72D00255154 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		0543E840164BB72D00255154 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		0543E842164BB72D00255154 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		0543E845164BB72D00255154 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		0543E848164BB72D00255154 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		0543E84A164BB72D00255154 /* SandikFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SandikFirstViewController.h; sourceTree = "<group>"; };
+		0543E84B164BB72E00255154 /* SandikFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SandikFirstViewController.m; sourceTree = "<group>"; };
+		0543E84D164BB72E00255154 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
+		0543E84F164BB72E00255154 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
+		0543E851164BB72E00255154 /* SandikSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SandikSecondViewController.h; sourceTree = "<group>"; };
+		0543E852164BB72E00255154 /* SandikSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SandikSecondViewController.m; sourceTree = "<group>"; };
+		0543E854164BB72E00255154 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
+		0543E856164BB72E00255154 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0543E825164BB72D00255154 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0543E82D164BB72D00255154 /* UIKit.framework in Frameworks */,
+				0543E82F164BB72D00255154 /* Foundation.framework in Frameworks */,
+				0543E831164BB72D00255154 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0543E81D164BB72D00255154 = {
+			isa = PBXGroup;
+			children = (
+				0543E832164BB72D00255154 /* e-Sandik */,
+				0543E82B164BB72D00255154 /* Frameworks */,
+				0543E829164BB72D00255154 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0543E829164BB72D00255154 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0543E828164BB72D00255154 /* e-Sandik.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0543E82B164BB72D00255154 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0543E82C164BB72D00255154 /* UIKit.framework */,
+				0543E82E164BB72D00255154 /* Foundation.framework */,
+				0543E830164BB72D00255154 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0543E832164BB72D00255154 /* e-Sandik */ = {
+			isa = PBXGroup;
+			children = (
+				0543E83B164BB72D00255154 /* SandikAppDelegate.h */,
+				0543E83C164BB72D00255154 /* SandikAppDelegate.m */,
+				0543E844164BB72D00255154 /* MainStoryboard_iPhone.storyboard */,
+				0543E847164BB72D00255154 /* MainStoryboard_iPad.storyboard */,
+				0543E84A164BB72D00255154 /* SandikFirstViewController.h */,
+				0543E84B164BB72E00255154 /* SandikFirstViewController.m */,
+				0543E84D164BB72E00255154 /* first.png */,
+				0543E84F164BB72E00255154 /* first@2x.png */,
+				0543E851164BB72E00255154 /* SandikSecondViewController.h */,
+				0543E852164BB72E00255154 /* SandikSecondViewController.m */,
+				0543E854164BB72E00255154 /* second.png */,
+				0543E856164BB72E00255154 /* second@2x.png */,
+				0543E833164BB72D00255154 /* Supporting Files */,
+			);
+			path = "e-Sandik";
+			sourceTree = "<group>";
+		};
+		0543E833164BB72D00255154 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0543E834164BB72D00255154 /* e-Sandik-Info.plist */,
+				0543E835164BB72D00255154 /* InfoPlist.strings */,
+				0543E838164BB72D00255154 /* main.m */,
+				0543E83A164BB72D00255154 /* e-Sandik-Prefix.pch */,
+				0543E83E164BB72D00255154 /* Default.png */,
+				0543E840164BB72D00255154 /* Default@2x.png */,
+				0543E842164BB72D00255154 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0543E827164BB72D00255154 /* e-Sandik */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0543E85A164BB72E00255154 /* Build configuration list for PBXNativeTarget "e-Sandik" */;
+			buildPhases = (
+				0543E824164BB72D00255154 /* Sources */,
+				0543E825164BB72D00255154 /* Frameworks */,
+				0543E826164BB72D00255154 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "e-Sandik";
+			productName = "e-Sandik";
+			productReference = 0543E828164BB72D00255154 /* e-Sandik.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0543E81F164BB72D00255154 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = Sandik;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Halıcı";
+			};
+			buildConfigurationList = 0543E822164BB72D00255154 /* Build configuration list for PBXProject "e-Sandik" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0543E81D164BB72D00255154;
+			productRefGroup = 0543E829164BB72D00255154 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0543E827164BB72D00255154 /* e-Sandik */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0543E826164BB72D00255154 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0543E837164BB72D00255154 /* InfoPlist.strings in Resources */,
+				0543E83F164BB72D00255154 /* Default.png in Resources */,
+				0543E841164BB72D00255154 /* Default@2x.png in Resources */,
+				0543E843164BB72D00255154 /* Default-568h@2x.png in Resources */,
+				0543E846164BB72D00255154 /* MainStoryboard_iPhone.storyboard in Resources */,
+				0543E849164BB72D00255154 /* MainStoryboard_iPad.storyboard in Resources */,
+				0543E84E164BB72E00255154 /* first.png in Resources */,
+				0543E850164BB72E00255154 /* first@2x.png in Resources */,
+				0543E855164BB72E00255154 /* second.png in Resources */,
+				0543E857164BB72E00255154 /* second@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0543E824164BB72D00255154 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0543E839164BB72D00255154 /* main.m in Sources */,
+				0543E83D164BB72D00255154 /* SandikAppDelegate.m in Sources */,
+				0543E84C164BB72E00255154 /* SandikFirstViewController.m in Sources */,
+				0543E853164BB72E00255154 /* SandikSecondViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0543E835164BB72D00255154 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0543E836164BB72D00255154 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		0543E844164BB72D00255154 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0543E845164BB72D00255154 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		0543E847164BB72D00255154 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0543E848164BB72D00255154 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0543E858164BB72E00255154 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0543E859164BB72E00255154 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0543E85B164BB72E00255154 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "e-Sandik/e-Sandik-Prefix.pch";
+				INFOPLIST_FILE = "e-Sandik/e-Sandik-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		0543E85C164BB72E00255154 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "e-Sandik/e-Sandik-Prefix.pch";
+				INFOPLIST_FILE = "e-Sandik/e-Sandik-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0543E822164BB72D00255154 /* Build configuration list for PBXProject "e-Sandik" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0543E858164BB72E00255154 /* Debug */,
+				0543E859164BB72E00255154 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0543E85A164BB72E00255154 /* Build configuration list for PBXNativeTarget "e-Sandik" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0543E85B164BB72E00255154 /* Debug */,
+				0543E85C164BB72E00255154 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0543E81F164BB72D00255154 /* Project object */;
+}
