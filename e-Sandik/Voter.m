@@ -10,4 +10,17 @@
 
 @implementation Voter
 
+- (id) initWithName:(NSString *)name school:(NSString *)school province:(NSString *)province chest:(NSString *)chest chestIndex:(NSString *)chestIndex  {
+    
+    if(self = [super init]) {
+        _name = name;
+        _school = school;
+        _province = province;
+        _chest = chest;
+        _chestIndex = chestIndex;
+        return self;
+    }
+    return nil;
+}
+
 @end

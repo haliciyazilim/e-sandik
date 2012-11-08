@@ -16,4 +16,10 @@
 @property (nonatomic, strong) NSString *chest;
 @property (nonatomic, strong) NSString *chestIndex;
 
+- (id) initWithName:(NSString *)name
+             school:(NSString *)school
+           province:(NSString *)province
+              chest:(NSString *)chest
+         chestIndex:(NSString *)chestIndex;
+
 @end
