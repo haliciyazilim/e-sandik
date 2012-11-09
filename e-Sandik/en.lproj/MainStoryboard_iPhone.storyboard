@@ -378,12 +378,12 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Künye" image="icon_voter.png" id="OmD-DF-SBn"/>
-                    <navigationItem key="navigationItem" id="xfE-LG-g6b"/>
+                    <navigationItem key="navigationItem" title="Künye" id="xfE-LG-g6b"/>
                     <connections>
-                        <outlet property="chestLabel" destination="gFh-Fu-WBX" id="OP8-Mm-R7T"/>
-                        <outlet property="nameLabel" destination="EHa-lI-nt2" id="gjR-9P-5ue"/>
-                        <outlet property="provinceLabel" destination="EW7-rn-Uc7" id="b5b-dx-Jxe"/>
-                        <outlet property="schoolLabel" destination="0Sz-lC-TiB" id="Vda-tu-sjV"/>
+                        <outlet property="chestLabel" destination="gFh-Fu-WBX" id="rqf-N7-WdA"/>
+                        <outlet property="nameLabel" destination="EHa-lI-nt2" id="nYy-5y-wLj"/>
+                        <outlet property="provinceLabel" destination="EW7-rn-Uc7" id="3j1-uM-8dX"/>
+                        <outlet property="schoolLabel" destination="0Sz-lC-TiB" id="dlc-Vt-thf"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kvY-f2-JDz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -438,38 +438,6 @@
         <image name="mainbg.png" width="320" height="480"/>
         <image name="tcinput_bg.png" width="262" height="45"/>
     </resources>
-    <classes>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="SandikBinaBilgisiViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SandikBinaBilgisiViewController.h"/>
-        </class>
-        <class className="SandikKunyeViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SandikKunyeViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="chestLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="provinceLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="schoolLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="SandikNavigationViewController" superclassName="UINavigationController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SandikNavigationViewController.h"/>
-        </class>
-        <class className="SandikSecmenlerViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SandikSecmenlerViewController.h"/>
-        </class>
-        <class className="SandikSorguViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SandikSorguViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="tckNoTextField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="SandikTabBarViewController" superclassName="UITabBarController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SandikTabBarViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

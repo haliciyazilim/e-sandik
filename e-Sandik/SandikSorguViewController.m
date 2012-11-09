@@ -9,6 +9,7 @@
 #import "SandikSorguViewController.h"
 
 #import "SandikTabBarViewController.h"
+#import "APIManager.h"
 
 @interface SandikSorguViewController ()
 
@@ -56,10 +57,14 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([[segue identifier] isEqualToString:@"ShowQueryResult"]) {
-//        SandikTabBarViewController *sandikTabBarViewController = [segue destinationViewController];
+        SandikTabBarViewController *sandikTabBarViewController = [segue destinationViewController];
         
-    
-        
+        [[APIManager sharedInstance] getVoterWithTckNo:[self.tckNoTextField.text intValue]
+                                          onCompletion:^(Voter *voter) {
+                                              sandikTabBarViewController.voter = voter;
+                                          } onError:^(NSError *error) {
+                                              
+                                          }];
         
     //    detailViewController.sighting = [self.dataController objectInListAtIndex:[self.tableView indexPathForSelectedRow].row];
     }
