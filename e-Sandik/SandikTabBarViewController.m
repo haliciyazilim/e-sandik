@@ -20,7 +20,6 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
     }
     return self;
 }
@@ -29,6 +28,12 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    UINavigationItem *navItem = self.navigationItem;
+    navItem.backBarButtonItem.tintColor = [UIColor clearColor];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    
 }
 
 - (void)didReceiveMemoryWarning

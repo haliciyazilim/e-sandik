@@ -18,7 +18,6 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
     }
     return self;
 }
@@ -33,8 +32,10 @@
     UINavigationBar *navBar = self.navigationBar;
     UIImage *image = [UIImage imageNamed:@"header_bg.png"];
     UIImage *shadowImage = [UIImage imageNamed:@"header_shadow.png"];
+
     [navBar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
     [navBar setShadowImage:shadowImage];
+    
 }
 
 - (void)didReceiveMemoryWarning

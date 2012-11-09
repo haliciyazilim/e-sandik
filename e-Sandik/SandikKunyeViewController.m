@@ -22,7 +22,8 @@
 {
     self = [super initWithStyle:style];
     if (self) {
-        // Custom initialization
+        UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Yeni sorgu" style:UIBarButtonItemStylePlain target:nil action:nil];
+        self.navigationItem.backBarButtonItem = backButton;
     }
     return self;
 }
@@ -75,7 +76,11 @@
     self.nameLabel.text = self.voter.name;
     self.provinceLabel.text = self.voter.province;
     self.schoolLabel.text = self.voter.school;
-    self.chestLabel.text = [NSString stringWithFormat:@"%@ / %@", self.voter.chest, self.voter.chestIndex];
+    if (self.voter.chest && self.voter.chestIndex) {
+        self.chestLabel.text = [NSString stringWithFormat:@"%@ / %@", self.voter.chest, self.voter.chestIndex];
+    } else {
+        self.chestLabel.text = nil;
+    }
 }
 
 

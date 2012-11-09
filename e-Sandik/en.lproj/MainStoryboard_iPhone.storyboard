@@ -19,7 +19,7 @@
             </objects>
             <point key="canvasLocation" x="-741" y="180"/>
         </scene>
-        <!--Sandik Sorgu View Controller - e-Sandık-->
+        <!--Sandik Sorgu View Controller-->
         <scene sceneID="1B2-2c-DbA">
             <objects>
                 <viewController id="lMh-er-aEY" customClass="SandikSorguViewController" sceneMemberID="viewController">
@@ -28,7 +28,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="mainbg.png" translatesAutoresizingMaskIntoConstraints="NO" id="rBc-Ty-Wlp"/>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="T.C. Kimlik No Giriniz" textAlignment="center" minimumFontSize="17" background="tcinput_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="PmJ-DB-zdg">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="T.C. Kimlik No Giriniz" textAlignment="center" minimumFontSize="17" background="tcinput_bg.png" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="PmJ-DB-zdg">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="262" id="8cU-Iq-jq0"/>
                                     <constraint firstAttribute="height" constant="45" id="qox-HK-Dvo"/>
@@ -70,7 +70,7 @@
                             <constraint firstItem="rBc-Ty-Wlp" firstAttribute="bottom" secondItem="Bfh-Zj-2mf" secondAttribute="bottom" type="default" id="u9h-yt-0Ub"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="e-Sandık" id="oLa-q5-da0"/>
+                    <navigationItem key="navigationItem" id="oLa-q5-da0"/>
                     <connections>
                         <outlet property="tckNoTextField" destination="PmJ-DB-zdg" id="xVo-Gq-XxM"/>
                     </connections>
@@ -168,7 +168,7 @@
                         <sections>
                             <tableViewSection id="0Jp-gI-00r">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="headerCells" rowHeight="36" id="LiV-0P-WuH">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="36" id="LiV-0P-WuH">
                                         <rect key="frame" x="0.0" y="10" width="320" height="37"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -218,7 +218,7 @@
                             </tableViewSection>
                             <tableViewSection id="J5e-FN-Tso">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="headerCells" rowHeight="36" id="hdi-GQ-DnO">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="36" id="hdi-GQ-DnO">
                                         <rect key="frame" x="0.0" y="113" width="320" height="37"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -269,7 +269,7 @@
                             </tableViewSection>
                             <tableViewSection id="de5-lW-Ncs">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="headerCells" rowHeight="36" id="erG-WY-95k">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="36" id="erG-WY-95k">
                                         <rect key="frame" x="0.0" y="249" width="320" height="37"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -321,7 +321,7 @@
                             </tableViewSection>
                             <tableViewSection id="88b-vP-9dy">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="headerCells" rowHeight="36" id="kU6-16-dzv">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="36" id="kU6-16-dzv">
                                         <rect key="frame" x="0.0" y="385" width="320" height="37"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -378,11 +378,15 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Künye" image="icon_voter.png" id="OmD-DF-SBn"/>
-                    <navigationItem key="navigationItem" title="Künye" id="xfE-LG-g6b"/>
+                    <navigationItem key="navigationItem" id="xfE-LG-g6b"/>
                     <connections>
+                        <outlet property="chestCell" destination="kU6-16-dzv" id="g0d-dd-rM7"/>
                         <outlet property="chestLabel" destination="gFh-Fu-WBX" id="rqf-N7-WdA"/>
+                        <outlet property="nameCell" destination="LiV-0P-WuH" id="DdQ-dz-LsA"/>
                         <outlet property="nameLabel" destination="EHa-lI-nt2" id="nYy-5y-wLj"/>
+                        <outlet property="provinceCell" destination="hdi-GQ-DnO" id="Nja-Nz-Vkn"/>
                         <outlet property="provinceLabel" destination="EW7-rn-Uc7" id="3j1-uM-8dX"/>
+                        <outlet property="schoolCell" destination="erG-WY-95k" id="PPE-ju-vyQ"/>
                         <outlet property="schoolLabel" destination="0Sz-lC-TiB" id="dlc-Vt-thf"/>
                     </connections>
                 </tableViewController>

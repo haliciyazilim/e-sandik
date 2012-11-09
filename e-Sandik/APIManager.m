@@ -58,7 +58,13 @@ static APIManager *sharedInstance = nil;
 - (void)getVoterWithTckNo:(int)tckNo
              onCompletion:(VoterBlock)completionBlock
                   onError:(ErrorBlock)errorBlock {
-    completionBlock([[Voter alloc] initWithName:@"Eren" school:@"ODTU" province:@"Ankara" chest:@"112" chestIndex:@"115"]);
+    
+    double delayInSeconds = 2.0;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+            completionBlock([[Voter alloc] initWithName:@"Eren" school:@"ODTU" province:@"Ankara" chest:@"112" chestIndex:@"115"]);
+    });
+
 }
 
 @end
