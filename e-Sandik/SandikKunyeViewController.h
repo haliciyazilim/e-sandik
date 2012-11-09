@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@class Voter;
+
 @interface SandikKunyeViewController : UITableViewController
+
+@property (strong, nonatomic) Voter *voter;
+
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *provinceLabel;
+@property (weak, nonatomic) IBOutlet UILabel *schoolLabel;
+@property (weak, nonatomic) IBOutlet UILabel *chestLabel;
 
 @end

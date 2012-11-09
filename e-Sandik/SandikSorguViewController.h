@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SandikSorguViewController : UIViewController
+@interface SandikSorguViewController : UIViewController <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *tckNoTextField;
 
 @end

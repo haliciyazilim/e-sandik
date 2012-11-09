@@ -46,6 +46,15 @@
 		0543E8B8164BFAC600255154 /* header_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0543E8B6164BFAC600255154 /* header_bg@2x.png */; };
 		0543E8BB164BFD8300255154 /* SandikSorguViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0543E8BA164BFD8300255154 /* SandikSorguViewController.m */; };
 		0543E8BE164BFEBE00255154 /* SandikTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0543E8BD164BFEBD00255154 /* SandikTabBarViewController.m */; };
+		05D0B718164D23D10041D665 /* header_shadow.png in Resources */ = {isa = PBXBuildFile; fileRef = 05D0B716164D23D10041D665 /* header_shadow.png */; };
+		05D0B719164D23D10041D665 /* header_shadow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 05D0B717164D23D10041D665 /* header_shadow@2x.png */; };
+		05D0B71C164D29BE0041D665 /* SandikNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D0B71B164D29BE0041D665 /* SandikNavigationViewController.m */; };
+		05D0B723164D32180041D665 /* icon_muhtar.png in Resources */ = {isa = PBXBuildFile; fileRef = 05D0B71D164D32180041D665 /* icon_muhtar.png */; };
+		05D0B724164D32180041D665 /* icon_muhtar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 05D0B71E164D32180041D665 /* icon_muhtar@2x.png */; };
+		05D0B725164D32180041D665 /* icon_okul.png in Resources */ = {isa = PBXBuildFile; fileRef = 05D0B71F164D32180041D665 /* icon_okul.png */; };
+		05D0B726164D32180041D665 /* icon_okul@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 05D0B720164D32180041D665 /* icon_okul@2x.png */; };
+		05D0B727164D32180041D665 /* icon_secmen.png in Resources */ = {isa = PBXBuildFile; fileRef = 05D0B721164D32180041D665 /* icon_secmen.png */; };
+		05D0B728164D32180041D665 /* icon_secmen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 05D0B722164D32180041D665 /* icon_secmen@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +107,16 @@
 		0543E8BA164BFD8300255154 /* SandikSorguViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SandikSorguViewController.m; sourceTree = "<group>"; };
 		0543E8BC164BFEBD00255154 /* SandikTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SandikTabBarViewController.h; sourceTree = "<group>"; };
 		0543E8BD164BFEBD00255154 /* SandikTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SandikTabBarViewController.m; sourceTree = "<group>"; };
+		05D0B716164D23D10041D665 /* header_shadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header_shadow.png; sourceTree = "<group>"; };
+		05D0B717164D23D10041D665 /* header_shadow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "header_shadow@2x.png"; sourceTree = "<group>"; };
+		05D0B71A164D29BE0041D665 /* SandikNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SandikNavigationViewController.h; sourceTree = "<group>"; };
+		05D0B71B164D29BE0041D665 /* SandikNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SandikNavigationViewController.m; sourceTree = "<group>"; };
+		05D0B71D164D32180041D665 /* icon_muhtar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_muhtar.png; sourceTree = "<group>"; };
+		05D0B71E164D32180041D665 /* icon_muhtar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_muhtar@2x.png"; sourceTree = "<group>"; };
+		05D0B71F164D32180041D665 /* icon_okul.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_okul.png; sourceTree = "<group>"; };
+		05D0B720164D32180041D665 /* icon_okul@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_okul@2x.png"; sourceTree = "<group>"; };
+		05D0B721164D32180041D665 /* icon_secmen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_secmen.png; sourceTree = "<group>"; };
+		05D0B722164D32180041D665 /* icon_secmen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_secmen@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +165,8 @@
 			children = (
 				0543E8BF164BFECF00255154 /* Images */,
 				0543E844164BB72D00255154 /* MainStoryboard_iPhone.storyboard */,
+				05D0B71A164D29BE0041D665 /* SandikNavigationViewController.h */,
+				05D0B71B164D29BE0041D665 /* SandikNavigationViewController.m */,
 				0543E8BC164BFEBD00255154 /* SandikTabBarViewController.h */,
 				0543E8BD164BFEBD00255154 /* SandikTabBarViewController.m */,
 				0543E8B9164BFD8200255154 /* SandikSorguViewController.h */,
@@ -199,8 +220,16 @@
 				0543E8AE164BF43400255154 /* main_btn_hover@2x.png */,
 				0543E8AF164BF43400255154 /* main_btn_normal.png */,
 				0543E8B0164BF43400255154 /* main_btn_normal@2x.png */,
+				05D0B716164D23D10041D665 /* header_shadow.png */,
+				05D0B717164D23D10041D665 /* header_shadow@2x.png */,
 				0543E8B5164BFAC500255154 /* header_bg.png */,
 				0543E8B6164BFAC600255154 /* header_bg@2x.png */,
+				05D0B71D164D32180041D665 /* icon_muhtar.png */,
+				05D0B71E164D32180041D665 /* icon_muhtar@2x.png */,
+				05D0B71F164D32180041D665 /* icon_okul.png */,
+				05D0B720164D32180041D665 /* icon_okul@2x.png */,
+				05D0B721164D32180041D665 /* icon_secmen.png */,
+				05D0B722164D32180041D665 /* icon_secmen@2x.png */,
 				0543E84D164BB72E00255154 /* first.png */,
 				0543E84F164BB72E00255154 /* first@2x.png */,
 				0543E854164BB72E00255154 /* second.png */,
@@ -289,6 +318,14 @@
 				0543E8B4164BF43400255154 /* main_btn_normal@2x.png in Resources */,
 				0543E8B7164BFAC600255154 /* header_bg.png in Resources */,
 				0543E8B8164BFAC600255154 /* header_bg@2x.png in Resources */,
+				05D0B718164D23D10041D665 /* header_shadow.png in Resources */,
+				05D0B719164D23D10041D665 /* header_shadow@2x.png in Resources */,
+				05D0B723164D32180041D665 /* icon_muhtar.png in Resources */,
+				05D0B724164D32180041D665 /* icon_muhtar@2x.png in Resources */,
+				05D0B725164D32180041D665 /* icon_okul.png in Resources */,
+				05D0B726164D32180041D665 /* icon_okul@2x.png in Resources */,
+				05D0B727164D32180041D665 /* icon_secmen.png in Resources */,
+				05D0B728164D32180041D665 /* icon_secmen@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +344,7 @@
 				0543E88C164BE58B00255154 /* Voter.m in Sources */,
 				0543E8BB164BFD8300255154 /* SandikSorguViewController.m in Sources */,
 				0543E8BE164BFEBE00255154 /* SandikTabBarViewController.m in Sources */,
+				05D0B71C164D29BE0041D665 /* SandikNavigationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

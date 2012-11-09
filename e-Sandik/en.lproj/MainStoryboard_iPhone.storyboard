@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
+        <!--Sandik Navigation View Controller-->
         <scene sceneID="0C6-Pt-lDG">
             <objects>
-                <navigationController definesPresentationContext="YES" id="FdP-bt-3rd" sceneMemberID="viewController">
+                <navigationController definesPresentationContext="YES" id="FdP-bt-3rd" customClass="SandikNavigationViewController" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="c1V-4k-0oZ">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -35,7 +35,10 @@
                                 </constraints>
                                 <color key="textColor" red="0.37647058823529411" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="lMh-er-aEY" id="Xdr-T6-8S4"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UAz-Y1-1MB">
                                 <constraints>
@@ -55,18 +58,15 @@
                                     <segue destination="4" kind="push" identifier="ShowQueryResult" id="8BP-RP-wIP"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="center" image="main_chp_yatay.png" translatesAutoresizingMaskIntoConstraints="NO" id="BOd-K8-UWp"/>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="rBc-Ty-Wlp" firstAttribute="top" secondItem="Bfh-Zj-2mf" secondAttribute="top" type="default" id="Evo-LV-X1u"/>
-                            <constraint firstItem="BOd-K8-UWp" firstAttribute="centerX" secondItem="rBc-Ty-Wlp" secondAttribute="centerX" type="default" id="JQ4-9R-dlj"/>
-                            <constraint firstItem="UAz-Y1-1MB" firstAttribute="top" secondItem="Bfh-Zj-2mf" secondAttribute="top" constant="223" id="Wfe-Wq-NsQ"/>
-                            <constraint firstAttribute="bottom" secondItem="BOd-K8-UWp" secondAttribute="bottom" constant="56" id="Z98-3R-YDl"/>
-                            <constraint firstItem="PmJ-DB-zdg" firstAttribute="top" secondItem="Bfh-Zj-2mf" secondAttribute="top" constant="144" id="dXA-CV-R9z"/>
+                            <constraint firstItem="PmJ-DB-zdg" firstAttribute="top" secondItem="Bfh-Zj-2mf" secondAttribute="top" constant="126" id="JjY-Q0-IEc"/>
+                            <constraint firstItem="UAz-Y1-1MB" firstAttribute="top" secondItem="Bfh-Zj-2mf" secondAttribute="top" constant="190" id="h1T-cd-vVw"/>
                             <constraint firstItem="rBc-Ty-Wlp" firstAttribute="leading" secondItem="Bfh-Zj-2mf" secondAttribute="leading" type="default" id="h1W-SL-bUR"/>
+                            <constraint firstItem="PmJ-DB-zdg" firstAttribute="centerX" secondItem="rBc-Ty-Wlp" secondAttribute="centerX" type="default" id="igz-T9-TVB"/>
                             <constraint firstItem="UAz-Y1-1MB" firstAttribute="centerX" secondItem="PmJ-DB-zdg" secondAttribute="centerX" type="default" id="nfa-UK-nbu"/>
-                            <constraint firstItem="BOd-K8-UWp" firstAttribute="centerX" secondItem="UAz-Y1-1MB" secondAttribute="centerX" type="default" id="tjC-zf-ubv"/>
                             <constraint firstItem="rBc-Ty-Wlp" firstAttribute="bottom" secondItem="Bfh-Zj-2mf" secondAttribute="bottom" type="default" id="u9h-yt-0Ub"/>
                         </constraints>
                     </view>
@@ -157,10 +157,10 @@
             </objects>
             <point key="canvasLocation" x="558" y="559"/>
         </scene>
-        <!--Table View Controller - Künye-->
+        <!--Sandik Kunye View Controller - Künye-->
         <scene sceneID="tOi-sg-sqt">
             <objects>
-                <tableViewController id="FRb-uF-G9H" sceneMemberID="viewController">
+                <tableViewController id="FRb-uF-G9H" customClass="SandikKunyeViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="ziN-Q0-z2X">
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -168,7 +168,7 @@
                         <sections>
                             <tableViewSection id="0Jp-gI-00r">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="36" id="LiV-0P-WuH">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="headerCells" rowHeight="36" id="LiV-0P-WuH">
                                         <rect key="frame" x="0.0" y="10" width="320" height="37"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -181,14 +181,14 @@
                                                         <constraint firstAttribute="width" constant="260" id="ezp-Ks-CQr"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
-                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="6gN-o3-zYV" firstAttribute="top" secondItem="LiV-0P-WuH" secondAttribute="top" constant="8" id="C1J-VE-Zxw"/>
-                                            <constraint firstItem="6gN-o3-zYV" firstAttribute="centerX" secondItem="LiV-0P-WuH" secondAttribute="centerX" type="default" id="MHl-we-qdY"/>
+                                            <constraint firstItem="6gN-o3-zYV" firstAttribute="centerY" secondItem="LiV-0P-WuH" secondAttribute="centerY" type="default" id="sGE-bQ-c2d"/>
+                                            <constraint firstItem="6gN-o3-zYV" firstAttribute="centerX" secondItem="LiV-0P-WuH" secondAttribute="centerX" type="default" id="yKh-IR-q2f"/>
                                         </constraints>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="45" id="Zvs-fW-lGT">
@@ -218,7 +218,7 @@
                             </tableViewSection>
                             <tableViewSection id="J5e-FN-Tso">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="36" id="hdi-GQ-DnO">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="headerCells" rowHeight="36" id="hdi-GQ-DnO">
                                         <rect key="frame" x="0.0" y="113" width="320" height="37"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -269,7 +269,7 @@
                             </tableViewSection>
                             <tableViewSection id="de5-lW-Ncs">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="36" id="erG-WY-95k">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="headerCells" rowHeight="36" id="erG-WY-95k">
                                         <rect key="frame" x="0.0" y="249" width="320" height="37"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -321,7 +321,7 @@
                             </tableViewSection>
                             <tableViewSection id="88b-vP-9dy">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="36" id="kU6-16-dzv">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="headerCells" rowHeight="36" id="kU6-16-dzv">
                                         <rect key="frame" x="0.0" y="385" width="320" height="37"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -378,7 +378,13 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Künye" image="icon_voter.png" id="OmD-DF-SBn"/>
-                    <navigationItem key="navigationItem" title="Künye" id="xfE-LG-g6b"/>
+                    <navigationItem key="navigationItem" id="xfE-LG-g6b"/>
+                    <connections>
+                        <outlet property="chestLabel" destination="gFh-Fu-WBX" id="OP8-Mm-R7T"/>
+                        <outlet property="nameLabel" destination="EHa-lI-nt2" id="gjR-9P-5ue"/>
+                        <outlet property="provinceLabel" destination="EW7-rn-Uc7" id="b5b-dx-Jxe"/>
+                        <outlet property="schoolLabel" destination="0Sz-lC-TiB" id="Vda-tu-sjV"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kvY-f2-JDz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -393,12 +399,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PersonInfo" id="dJj-xK-Lr8">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PersonInfo" textLabel="vva-Zo-1Fo" style="IBUITableViewCellStyleDefault" id="dJj-xK-Lr8">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Name/Surname" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vva-Zo-1Fo">
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                             </tableViewCell>
@@ -422,10 +435,41 @@
         <image name="icon_voterlist.png" width="31" height="24"/>
         <image name="main_btn_hover.png" width="176" height="34"/>
         <image name="main_btn_normal.png" width="176" height="34"/>
-        <image name="main_chp_yatay.png" width="184" height="60"/>
         <image name="mainbg.png" width="320" height="480"/>
         <image name="tcinput_bg.png" width="262" height="45"/>
     </resources>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="SandikBinaBilgisiViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SandikBinaBilgisiViewController.h"/>
+        </class>
+        <class className="SandikKunyeViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SandikKunyeViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="chestLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="provinceLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="schoolLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="SandikNavigationViewController" superclassName="UINavigationController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SandikNavigationViewController.h"/>
+        </class>
+        <class className="SandikSecmenlerViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SandikSecmenlerViewController.h"/>
+        </class>
+        <class className="SandikSorguViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SandikSorguViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="tckNoTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="SandikTabBarViewController" superclassName="UITabBarController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SandikTabBarViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
