@@ -10,7 +10,7 @@
 
 @implementation Voter
 
-- (id) initWithName:(NSString *)name school:(NSString *)school province:(NSString *)province chest:(NSString *)chest chestIndex:(NSString *)chestIndex  {
+- (id) initWithName:(NSString *)name school:(NSString *)school province:(NSString *)province chest:(NSString *)chest chestIndex:(NSString *)chestIndex {
     
     if(self = [super init]) {
         _name = name;
@@ -18,8 +18,26 @@
         _province = province;
         _chest = chest;
         _chestIndex = chestIndex;
+        
         return self;
     }
+    
+    return nil;
+}
+- (id) initWithName:(NSString *)name school:(NSString *)school province:(NSString *)province chest:(NSString *)chest chestIndex:(NSString *)chestIndex fellowsInBuilding:(NSArray *)fellowsInBuilding fellowsInChest:(NSArray *)fellowsInChest {
+    
+    if(self = [super init]) {
+        _name = name;
+        _school = school;
+        _province = province;
+        _chest = chest;
+        _chestIndex = chestIndex;
+        _fellowsInBuilding = [[NSArray alloc] initWithArray:fellowsInBuilding copyItems:YES];
+        _fellowsInChest = [[NSArray alloc] initWithArray:fellowsInChest copyItems:YES];
+        
+        return self;
+    }
+    
     return nil;
 }
 

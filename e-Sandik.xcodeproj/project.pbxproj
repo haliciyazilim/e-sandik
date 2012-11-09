@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		053E4975164D944700053418 /* Neighbour.m in Sources */ = {isa = PBXBuildFile; fileRef = 053E4974164D944700053418 /* Neighbour.m */; };
 		0543E82D164BB72D00255154 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0543E82C164BB72D00255154 /* UIKit.framework */; };
 		0543E82F164BB72D00255154 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0543E82E164BB72D00255154 /* Foundation.framework */; };
 		0543E831164BB72D00255154 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0543E830164BB72D00255154 /* CoreGraphics.framework */; };
@@ -57,6 +58,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		053E4973164D944700053418 /* Neighbour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Neighbour.h; sourceTree = "<group>"; };
+		053E4974164D944700053418 /* Neighbour.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Neighbour.m; sourceTree = "<group>"; };
 		0543E828164BB72D00255154 /* e-Sandik.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "e-Sandik.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0543E82C164BB72D00255154 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0543E82E164BB72D00255154 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -175,6 +178,8 @@
 				0543E83C164BB72D00255154 /* SandikAppDelegate.m */,
 				0543E88A164BE58B00255154 /* Voter.h */,
 				0543E88B164BE58B00255154 /* Voter.m */,
+				053E4973164D944700053418 /* Neighbour.h */,
+				053E4974164D944700053418 /* Neighbour.m */,
 				0543E869164BD6E100255154 /* SandikKunyeViewController.h */,
 				0543E86A164BD6E100255154 /* SandikKunyeViewController.m */,
 				0543E86C164BD70100255154 /* SandikBinaBilgisiViewController.h */,
@@ -343,6 +348,7 @@
 				0543E8BE164BFEBE00255154 /* SandikTabBarViewController.m in Sources */,
 				05D0B71C164D29BE0041D665 /* SandikNavigationViewController.m in Sources */,
 				4104C1F6164BF8EE00520218 /* APIManager.m in Sources */,
+				053E4975164D944700053418 /* Neighbour.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

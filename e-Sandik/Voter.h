@@ -15,11 +15,21 @@
 @property (nonatomic, strong) NSString *province;
 @property (nonatomic, strong) NSString *chest;
 @property (nonatomic, strong) NSString *chestIndex;
+@property (nonatomic, strong) NSArray *fellowsInBuilding;
+@property (nonatomic, strong) NSArray *fellowsInChest;
 
 - (id) initWithName:(NSString *)name
              school:(NSString *)school
            province:(NSString *)province
               chest:(NSString *)chest
          chestIndex:(NSString *)chestIndex;
+
+- (id) initWithName:(NSString *)name
+             school:(NSString *)school
+           province:(NSString *)province
+              chest:(NSString *)chest
+         chestIndex:(NSString *)chestIndex
+  fellowsInBuilding:(NSArray *)fellowsInBuilding
+     fellowsInChest:(NSArray *)fellowsInChest;
 
 @end
