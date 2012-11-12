@@ -10,6 +10,12 @@
 
 @implementation Neighbour
 
++ (id) neighbourWithName:(NSString *)name
+              doorNumber:(NSString *)doorNumber {
+    return [[Neighbour alloc] initWithName:name
+                                doorNumber:doorNumber];
+}
+
 - (id) initWithName:(NSString *)name doorNumber:(NSString *)doorNumber {
     
     if(self = [super init]) {
@@ -19,6 +25,11 @@
         return self;
     }
     return nil;
+}
+
+- (id)copyWithZone:(NSZone *)zone {
+    return [[Neighbour allocWithZone:zone] initWithName:self.name
+                                             doorNumber:self.doorNumber];
 }
 
 @end
