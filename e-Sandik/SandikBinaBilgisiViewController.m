@@ -7,6 +7,8 @@
 //
 
 #import "SandikBinaBilgisiViewController.h"
+#import "Voter.h"
+#import "Neighbour.h"
 
 @interface SandikBinaBilgisiViewController ()
 
@@ -26,6 +28,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    UIImage *image = [UIImage imageNamed:@"mainbg.png"];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+    
+    // Add image view on top of table view
+    [self.tableView addSubview:imageView];
+    
+    // Set the background view of the table view
+    self.tableView.backgroundView = imageView;
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -46,24 +57,35 @@
 {
 
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 
     // Return the number of rows in the section.
-    return 0;
+    return [self.voter.fellowsInBuilding count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    static NSString *CellIdentifier = @"NeighbourCell";
     
-    // Configure the cell...
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    Neighbour *neighBourAtIndex = [self.voter.fellowsInBuilding objectAtIndex:indexPath.row];
+    
+    [[cell textLabel] setText:neighBourAtIndex.name];
+    
+    [[cell detailTextLabel] setText:neighBourAtIndex.doorNumber];
     
     return cell;
+}
+
+- (void)setVoter:(Voter *)voter {
+    if (_voter != voter) {
+        _voter = voter;
+    }
 }
 
 /*
@@ -104,18 +126,5 @@
     return YES;
 }
 */
-
-#pragma mark - Table view delegate
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
-}
 
 @end

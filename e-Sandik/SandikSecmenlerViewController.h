@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class Voter;
+
 @interface SandikSecmenlerViewController : UITableViewController
+
+@property (strong, nonatomic) Voter *voter;
 
 @end

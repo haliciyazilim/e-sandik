@@ -7,6 +7,7 @@
 //
 
 #import "SandikSecmenlerViewController.h"
+#import "Voter.h"
 
 @interface SandikSecmenlerViewController ()
 
@@ -64,6 +65,12 @@
     // Configure the cell...
     
     return cell;
+}
+
+- (void)setVoter:(Voter *)voter {
+    if (_voter != voter) {
+        _voter = voter;
+    }
 }
 
 /*

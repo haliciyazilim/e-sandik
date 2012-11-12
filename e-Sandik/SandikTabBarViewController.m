@@ -9,6 +9,8 @@
 #import "SandikTabBarViewController.h"
 
 #import "SandikKunyeViewController.h"
+#import "SandikBinaBilgisiViewController.h"
+#import "SandikSecmenlerViewController.h"
 
 @interface SandikTabBarViewController ()
 
@@ -28,8 +30,6 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    UINavigationItem *navItem = self.navigationItem;
-    navItem.backBarButtonItem.tintColor = [UIColor clearColor];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -45,6 +45,12 @@
 - (void)setVoter:(Voter *)voter {
     SandikKunyeViewController *sandikKunyeViewController = [self.viewControllers objectAtIndex:0];
     sandikKunyeViewController.voter = voter;
+    
+    SandikBinaBilgisiViewController *sandikBinaBilgisiViewController = [self.viewControllers objectAtIndex:1];
+    sandikBinaBilgisiViewController.voter = voter;
+    
+    SandikSecmenlerViewController *sandikSecmenlerViewController = [self.viewControllers objectAtIndex:2];
+    sandikSecmenlerViewController.voter = voter;
 }
 
 @end
