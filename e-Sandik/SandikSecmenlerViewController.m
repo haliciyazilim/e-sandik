@@ -8,6 +8,7 @@
 
 #import "SandikSecmenlerViewController.h"
 #import "Voter.h"
+#import "Neighbour.h"
 
 @interface SandikSecmenlerViewController ()
 
@@ -19,7 +20,7 @@
 {
     self = [super initWithStyle:style];
     if (self) {
-        // Custom initialization
+        
     }
     return self;
 }
@@ -28,11 +29,31 @@
 {
     [super viewDidLoad];
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    UIImage *image = [UIImage imageNamed:@"mainbg.png"];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+    
+    // Add image view on top of table view
+    [self.tableView addSubview:imageView];
+    
+    // Set the background view of the table view
+    self.tableView.backgroundView = imageView;
+    
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    
+//    UILabel *label = [[UILabel alloc] initWithFrame:CGRectZero];
+//    label.backgroundColor = [UIColor clearColor];
+//    label.font = [UIFont boldSystemFontOfSize:20.0];
+//    label.shadowColor = [UIColor colorWithWhite:0.0 alpha:0.5];
+//    label.textColor = [UIColor yellowColor]; // change this color
+//    self.navigationController.navigationBar.topItem.titleView = label;
+//    label.text = @"Sandık Bilgisi";
+//    [label sizeToFit];
+    
+    self.navigationController.navigationBar.topItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"title_sandikbilgisi.png"]];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -47,22 +68,25 @@
 {
 
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 
     // Return the number of rows in the section.
-    return 0;
+    return [self.voter.fellowsInChest count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    static NSString *CellIdentifier = @"ChestCell";
     
-    // Configure the cell...
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    Neighbour *neighBourAtIndex = [self.voter.fellowsInChest objectAtIndex:indexPath.row];
+    
+    [(UILabel *)[cell viewWithTag:3] setText:neighBourAtIndex.name];
     
     return cell;
 }
@@ -71,7 +95,31 @@
     if (_voter != voter) {
         _voter = voter;
     }
+    
+    [self.tableView reloadData];
 }
+
+- (UIView *) tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.bounds.size.width, 30)];
+    
+    [headerView setBackgroundColor:[UIColor colorWithRed:0.420 green:0.227 blue:0.227 alpha:0.85]];
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, tableView.bounds.size.width - 10, 18)];
+    label.text = [NSString stringWithFormat:@"%@ nolu sandıkta oy kullanan seçmenler",self.voter.chest];
+    label.font = [UIFont fontWithName:@"Futura" size:14];
+    label.textColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:0.75];
+    label.backgroundColor = [UIColor clearColor];
+    [headerView addSubview:label];
+    
+    return headerView;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 32;
+}
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -111,18 +159,5 @@
     return YES;
 }
 */
-
-#pragma mark - Table view delegate
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
-}
 
 @end

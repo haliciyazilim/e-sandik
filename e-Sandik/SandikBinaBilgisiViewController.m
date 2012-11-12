@@ -49,6 +49,18 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    
+    //    UINavigationBar *navBar = self.navigationController.navigationBar;
+    //    UIImage *image = [UIImage imageNamed:@"header_bg.png"];
+    //    UIImage *shadowImage = [UIImage imageNamed:@"header_shadow.png"];
+    //    [navBar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
+    //    [navBar setShadowImage:shadowImage];
+    
+//    self.navigationController.navigationBar.topItem.title = @"Bina Bilgisi";
+        self.navigationController.navigationBar.topItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"title_binabilgisi.png"]];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

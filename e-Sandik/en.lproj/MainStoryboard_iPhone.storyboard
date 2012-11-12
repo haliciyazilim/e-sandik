@@ -418,31 +418,42 @@
         <scene sceneID="gdq-Iu-T87">
             <objects>
                 <tableViewController id="sFL-gl-PcJ" customClass="SandikSecmenlerViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="NHk-lQ-uwh">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="30" sectionHeaderHeight="22" sectionFooterHeight="22" id="mwe-vG-XLx">
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PersonInfo" textLabel="vva-Zo-1Fo" style="IBUITableViewCellStyleDefault" id="dJj-xK-Lr8">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                            <tableViewCell contentMode="scaleAspectFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="ChestCell" rowHeight="30" id="Ej7-Uj-FS7">
+                                <rect key="frame" x="0.0" y="22" width="320" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="29"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Name/Surname" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vva-Zo-1Fo">
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="seperator.png" translatesAutoresizingMaskIntoConstraints="NO" id="iCp-aP-Uy5"/>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="3" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QMb-Qz-1P0">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="19" id="VPQ-Qf-JsQ"/>
+                                                <constraint firstAttribute="width" constant="210" id="rDF-Yr-RmR"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="iCp-aP-Uy5" secondAttribute="bottom" constant="1" id="NMk-li-9El"/>
+                                    <constraint firstItem="QMb-Qz-1P0" firstAttribute="leading" secondItem="Ej7-Uj-FS7" secondAttribute="leading" constant="20" type="default" id="kNl-bw-lNr"/>
+                                    <constraint firstItem="QMb-Qz-1P0" firstAttribute="centerY" secondItem="Ej7-Uj-FS7" secondAttribute="centerY" type="default" id="mL6-hT-h0G"/>
+                                    <constraint firstItem="iCp-aP-Uy5" firstAttribute="leading" secondItem="Ej7-Uj-FS7" secondAttribute="leading" type="default" id="ohw-MW-nme"/>
+                                </constraints>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="sFL-gl-PcJ" id="DLE-HB-gpN"/>
-                            <outlet property="delegate" destination="sFL-gl-PcJ" id="SOe-zV-Fki"/>
+                            <outlet property="dataSource" destination="sFL-gl-PcJ" id="CmI-a7-VPj"/>
+                            <outlet property="delegate" destination="sFL-gl-PcJ" id="FFV-wW-1eR"/>
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Sandık Bilgisi" image="icon_boxlist.png" id="CW7-g3-Pid"/>

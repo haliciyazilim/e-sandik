@@ -52,8 +52,9 @@
 - (void)viewWillAppear:(BOOL)animated {
 //    UINavigationBar *navBar = self.navigationController.navigationBar;
     
-    UINavigationItem *navItem = self.navigationItem;
-    navItem.title = @"e-Sandık";
+    self.navigationController.navigationBar.topItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"title_esandik.png"]];
+    
+    
     
     
     

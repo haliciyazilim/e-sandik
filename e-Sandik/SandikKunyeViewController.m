@@ -24,6 +24,7 @@
     if (self) {
         UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Yeni sorgu" style:UIBarButtonItemStylePlain target:nil action:nil];
         self.navigationItem.backBarButtonItem = backButton;
+        
     }
     return self;
 }
@@ -47,6 +48,8 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    self.navigationController.navigationBar.topItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"title_secmenkunyesi.png"]];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -56,6 +59,11 @@
 //    UIImage *shadowImage = [UIImage imageNamed:@"header_shadow.png"];
 //    [navBar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
 //    [navBar setShadowImage:shadowImage];
+    
+//    self.navigationController.navigationBar.topItem.title = @"Künye";
+    
+    
+        
 }
 
 - (void)didReceiveMemoryWarning
@@ -81,6 +89,7 @@
     } else {
         self.chestLabel.text = nil;
     }
+    
 }
 
 
