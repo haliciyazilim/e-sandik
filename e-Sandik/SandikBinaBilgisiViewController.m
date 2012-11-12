@@ -77,7 +77,7 @@
     
     [[cell textLabel] setText:neighBourAtIndex.name];
     
-    [[cell detailTextLabel] setText:neighBourAtIndex.doorNumber];
+    [(UILabel *)[cell viewWithTag:1] setText:neighBourAtIndex.doorNumber];
     
     return cell;
 }
