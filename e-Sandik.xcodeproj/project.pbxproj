@@ -234,28 +234,14 @@
 		0543E832164BB72D00255154 /* e-Sandik */ = {
 			isa = PBXGroup;
 			children = (
+				416A7DB31651470E0005E9E3 /* Models */,
+				416A7DB5165147180005E9E3 /* Controllers */,
 				416A7D89165141BC0005E9E3 /* MKNetworkKit */,
 				0543E8BF164BFECF00255154 /* Images */,
 				0543E844164BB72D00255154 /* MainStoryboard_iPhone.storyboard */,
-				05D0B71A164D29BE0041D665 /* SandikNavigationViewController.h */,
-				05D0B71B164D29BE0041D665 /* SandikNavigationViewController.m */,
-				0543E8BC164BFEBD00255154 /* SandikTabBarViewController.h */,
-				0543E8BD164BFEBD00255154 /* SandikTabBarViewController.m */,
-				0543E8B9164BFD8200255154 /* SandikSorguViewController.h */,
-				0543E8BA164BFD8300255154 /* SandikSorguViewController.m */,
 				0543E847164BB72D00255154 /* MainStoryboard_iPad.storyboard */,
 				0543E83B164BB72D00255154 /* SandikAppDelegate.h */,
 				0543E83C164BB72D00255154 /* SandikAppDelegate.m */,
-				0543E88A164BE58B00255154 /* Voter.h */,
-				0543E88B164BE58B00255154 /* Voter.m */,
-				053E4973164D944700053418 /* Neighbour.h */,
-				053E4974164D944700053418 /* Neighbour.m */,
-				0543E869164BD6E100255154 /* SandikKunyeViewController.h */,
-				0543E86A164BD6E100255154 /* SandikKunyeViewController.m */,
-				0543E86C164BD70100255154 /* SandikBinaBilgisiViewController.h */,
-				0543E86D164BD70100255154 /* SandikBinaBilgisiViewController.m */,
-				0543E86F164BD71E00255154 /* SandikSecmenlerViewController.h */,
-				0543E870164BD71E00255154 /* SandikSecmenlerViewController.m */,
 				0543E833164BB72D00255154 /* Supporting Files */,
 				4104C1F4164BF8EE00520218 /* APIManager.h */,
 				4104C1F5164BF8EE00520218 /* APIManager.m */,
@@ -366,6 +352,36 @@
 				416A7D9E165141BC0005E9E3 /* Reachability.m */,
 			);
 			path = Reachability;
+			sourceTree = "<group>";
+		};
+		416A7DB31651470E0005E9E3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0543E88A164BE58B00255154 /* Voter.h */,
+				0543E88B164BE58B00255154 /* Voter.m */,
+				053E4973164D944700053418 /* Neighbour.h */,
+				053E4974164D944700053418 /* Neighbour.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		416A7DB5165147180005E9E3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				05D0B71A164D29BE0041D665 /* SandikNavigationViewController.h */,
+				05D0B71B164D29BE0041D665 /* SandikNavigationViewController.m */,
+				0543E8BC164BFEBD00255154 /* SandikTabBarViewController.h */,
+				0543E8BD164BFEBD00255154 /* SandikTabBarViewController.m */,
+				0543E8B9164BFD8200255154 /* SandikSorguViewController.h */,
+				0543E8BA164BFD8300255154 /* SandikSorguViewController.m */,
+				0543E869164BD6E100255154 /* SandikKunyeViewController.h */,
+				0543E86A164BD6E100255154 /* SandikKunyeViewController.m */,
+				0543E86C164BD70100255154 /* SandikBinaBilgisiViewController.h */,
+				0543E86D164BD70100255154 /* SandikBinaBilgisiViewController.m */,
+				0543E86F164BD71E00255154 /* SandikSecmenlerViewController.h */,
+				0543E870164BD71E00255154 /* SandikSecmenlerViewController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
