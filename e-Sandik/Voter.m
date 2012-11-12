@@ -10,6 +10,34 @@
 
 @implementation Voter
 
++ (id) VoterWithName:(NSString *)name
+             school:(NSString *)school
+           province:(NSString *)province
+              chest:(NSString *)chest
+         chestIndex:(NSString *)chestIndex {
+    return [[Voter alloc] initWithName:name
+                                school:school
+                              province:province
+                                 chest:chest
+                            chestIndex:chestIndex];
+}
+
++ (id) VoterWithName:(NSString *)name
+              school:(NSString *)school
+            province:(NSString *)province
+               chest:(NSString *)chest
+          chestIndex:(NSString *)chestIndex
+   fellowsInBuilding:(NSArray *)fellowsInBuilding
+      fellowsInChest:(NSArray *)fellowsInChest {
+    return [[Voter alloc] initWithName:name
+                                school:school
+                              province:province
+                                 chest:chest
+                            chestIndex:chestIndex
+                     fellowsInBuilding:fellowsInBuilding
+                        fellowsInChest:fellowsInChest];
+}
+
 - (id) initWithName:(NSString *)name school:(NSString *)school province:(NSString *)province chest:(NSString *)chest chestIndex:(NSString *)chestIndex {
     
     if(self = [super init]) {
