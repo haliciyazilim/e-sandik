@@ -37,6 +37,10 @@
     
     // Set the background view of the table view
     self.tableView.backgroundView = imageView;
+    
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
+
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -75,9 +79,9 @@
     
     Neighbour *neighBourAtIndex = [self.voter.fellowsInBuilding objectAtIndex:indexPath.row];
     
-    [[cell textLabel] setText:neighBourAtIndex.name];
+    [(UILabel *)[cell viewWithTag:1] setText:neighBourAtIndex.name];
     
-    [(UILabel *)[cell viewWithTag:1] setText:neighBourAtIndex.doorNumber];
+    [(UILabel *)[cell viewWithTag:2] setText:neighBourAtIndex.doorNumber];
     
     return cell;
 }
@@ -86,6 +90,31 @@
     if (_voter != voter) {
         _voter = voter;
     }
+    
+    [self.tableView reloadData];
+}
+
+
+
+- (UIView *) tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.bounds.size.width, 30)];
+    
+    [headerView setBackgroundColor:[UIColor colorWithRed:0.420 green:0.227 blue:0.227 alpha:0.85]];
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, tableView.bounds.size.width - 10, 18)];
+    label.text = @"Binanızda oy kullanan seçmenler      Kapı No";
+    label.font = [UIFont fontWithName:@"Futura" size:14];
+    label.textColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:0.75];
+    label.backgroundColor = [UIColor clearColor];
+    [headerView addSubview:label];
+    
+    return headerView;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 32;
 }
 
 /*

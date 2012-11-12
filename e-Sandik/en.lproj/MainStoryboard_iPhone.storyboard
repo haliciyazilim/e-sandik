@@ -104,44 +104,50 @@
         <scene sceneID="ary-47-eZp">
             <objects>
                 <tableViewController id="jRa-Ks-1Vm" customClass="SandikBinaBilgisiViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="2Nr-fk-Bcc">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="53" sectionHeaderHeight="22" sectionFooterHeight="22" id="2Nr-fk-Bcc">
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="NeighbourCell" id="v10-ni-uFh">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                            <tableViewCell contentMode="scaleAspectFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="NeighbourCell" rowHeight="54" id="bNR-6T-od9">
+                                <rect key="frame" x="0.0" y="22" width="320" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="53"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Name/Surname" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YC8-IU-xtO">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="seperator.png" translatesAutoresizingMaskIntoConstraints="NO" id="VMW-f6-zsq"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="bina_numara.png" translatesAutoresizingMaskIntoConstraints="NO" id="5xH-bR-8iv"/>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vC0-8n-h3T">
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="21" id="E5D-Wg-fNw"/>
-                                                <constraint firstAttribute="width" constant="192" id="tEE-7L-hWo"/>
+                                                <constraint firstAttribute="width" constant="210" id="T6B-HL-2zU"/>
+                                                <constraint firstAttribute="height" constant="21" id="rgx-W7-cjd"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" text="Door no" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RDb-EW-no6">
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OX3-So-PfZ">
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="42" id="nto-oC-cv2"/>
+                                                <constraint firstAttribute="width" constant="42" id="iLU-sD-lfL"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
-                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" name="Futura-CondensedExtraBold" family="Futura" pointSize="14"/>
+                                            <color key="textColor" red="0.30196079609999998" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <constraints>
-                                    <constraint firstItem="RDb-EW-no6" firstAttribute="top" secondItem="YC8-IU-xtO" secondAttribute="top" type="default" id="1wm-Od-eRN"/>
-                                    <constraint firstItem="YC8-IU-xtO" firstAttribute="leading" secondItem="v10-ni-uFh" secondAttribute="leading" constant="20" type="default" id="RFf-62-dTG"/>
-                                    <constraint firstItem="YC8-IU-xtO" firstAttribute="top" secondItem="v10-ni-uFh" secondAttribute="top" constant="11" id="fIh-1a-c5j"/>
-                                    <constraint firstAttribute="trailing" secondItem="RDb-EW-no6" secondAttribute="trailing" constant="20" type="default" id="uGu-sT-8Sa"/>
-                                    <constraint firstItem="RDb-EW-no6" firstAttribute="bottom" secondItem="YC8-IU-xtO" secondAttribute="bottom" type="default" id="uzE-7h-lpC"/>
+                                    <constraint firstAttribute="bottom" secondItem="VMW-f6-zsq" secondAttribute="bottom" constant="1" id="NaM-Vw-UB1"/>
+                                    <constraint firstItem="OX3-So-PfZ" firstAttribute="centerY" secondItem="5xH-bR-8iv" secondAttribute="centerY" type="default" id="aZx-6A-0UL"/>
+                                    <constraint firstItem="vC0-8n-h3T" firstAttribute="leading" secondItem="bNR-6T-od9" secondAttribute="leading" constant="20" type="default" id="bMs-4r-qff"/>
+                                    <constraint firstItem="OX3-So-PfZ" firstAttribute="centerX" secondItem="5xH-bR-8iv" secondAttribute="centerX" type="default" id="gAH-H4-SB8"/>
+                                    <constraint firstAttribute="trailing" secondItem="5xH-bR-8iv" secondAttribute="trailing" constant="20" type="default" id="i4W-oA-JMI"/>
+                                    <constraint firstItem="OX3-So-PfZ" firstAttribute="bottom" secondItem="vC0-8n-h3T" secondAttribute="bottom" type="default" id="iMc-1n-8El"/>
+                                    <constraint firstItem="5xH-bR-8iv" firstAttribute="top" secondItem="bNR-6T-od9" secondAttribute="top" constant="10" id="r4V-qi-tP2"/>
+                                    <constraint firstItem="VMW-f6-zsq" firstAttribute="leading" secondItem="bNR-6T-od9" secondAttribute="leading" type="default" id="ybX-0K-EG8"/>
+                                    <constraint firstItem="OX3-So-PfZ" firstAttribute="top" secondItem="vC0-8n-h3T" secondAttribute="top" type="default" id="zfj-NJ-NnM"/>
                                 </constraints>
                             </tableViewCell>
                         </prototypes>
@@ -154,6 +160,13 @@
                     <navigationItem key="navigationItem" id="rxw-Pl-ohM"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="llA-Re-dou" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AYC-NT-dPk">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="15"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </objects>
             <point key="canvasLocation" x="558" y="559"/>
         </scene>
@@ -441,14 +454,52 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bina_numara.png" width="50" height="32"/>
         <image name="icon_boxlist.png" width="31" height="24"/>
         <image name="icon_voter.png" width="31" height="24"/>
         <image name="icon_voterlist.png" width="31" height="24"/>
         <image name="main_btn_hover.png" width="176" height="34"/>
         <image name="main_btn_normal.png" width="176" height="34"/>
         <image name="mainbg.png" width="320" height="480"/>
+        <image name="seperator.png" width="320" height="1"/>
         <image name="tcinput_bg.png" width="262" height="45"/>
     </resources>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="SandikBinaBilgisiViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SandikBinaBilgisiViewController.h"/>
+        </class>
+        <class className="SandikKunyeViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SandikKunyeViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="chestCell" candidateClass="UITableViewCell"/>
+                <relationship kind="outlet" name="chestLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="nameCell" candidateClass="UITableViewCell"/>
+                <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="provinceCell" candidateClass="UITableViewCell"/>
+                <relationship kind="outlet" name="provinceLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="schoolCell" candidateClass="UITableViewCell"/>
+                <relationship kind="outlet" name="schoolLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="SandikNavigationViewController" superclassName="UINavigationController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SandikNavigationViewController.h"/>
+        </class>
+        <class className="SandikSecmenlerViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SandikSecmenlerViewController.h"/>
+        </class>
+        <class className="SandikSorguViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SandikSorguViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="tckNoTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="SandikTabBarViewController" superclassName="UITabBarController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SandikTabBarViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
