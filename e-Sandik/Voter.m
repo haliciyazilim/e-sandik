@@ -32,8 +32,8 @@
         _province = province;
         _chest = chest;
         _chestIndex = chestIndex;
-        _fellowsInBuilding = [[NSArray alloc] initWithArray:fellowsInBuilding copyItems:YES];
-        _fellowsInChest = [[NSArray alloc] initWithArray:fellowsInChest copyItems:YES];
+        _fellowsInBuilding = fellowsInBuilding;
+        _fellowsInChest = fellowsInChest;
         
         return self;
     }

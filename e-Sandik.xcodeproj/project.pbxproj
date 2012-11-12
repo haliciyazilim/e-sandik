@@ -43,6 +43,10 @@
 		0543E8B8164BFAC600255154 /* header_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0543E8B6164BFAC600255154 /* header_bg@2x.png */; };
 		0543E8BB164BFD8300255154 /* SandikSorguViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0543E8BA164BFD8300255154 /* SandikSorguViewController.m */; };
 		0543E8BE164BFEBE00255154 /* SandikTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0543E8BD164BFEBD00255154 /* SandikTabBarViewController.m */; };
+		05C3087E1650E2FA000A6780 /* btn_back_hover.png in Resources */ = {isa = PBXBuildFile; fileRef = 05C3087A1650E2FA000A6780 /* btn_back_hover.png */; };
+		05C3087F1650E2FA000A6780 /* btn_back_hover@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 05C3087B1650E2FA000A6780 /* btn_back_hover@2x.png */; };
+		05C308801650E2FA000A6780 /* btn_back_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 05C3087C1650E2FA000A6780 /* btn_back_normal.png */; };
+		05C308811650E2FA000A6780 /* btn_back_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 05C3087D1650E2FA000A6780 /* btn_back_normal@2x.png */; };
 		05D0B718164D23D10041D665 /* header_shadow.png in Resources */ = {isa = PBXBuildFile; fileRef = 05D0B716164D23D10041D665 /* header_shadow.png */; };
 		05D0B719164D23D10041D665 /* header_shadow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 05D0B717164D23D10041D665 /* header_shadow@2x.png */; };
 		05D0B71C164D29BE0041D665 /* SandikNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D0B71B164D29BE0041D665 /* SandikNavigationViewController.m */; };
@@ -105,6 +109,10 @@
 		0543E8BA164BFD8300255154 /* SandikSorguViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SandikSorguViewController.m; sourceTree = "<group>"; };
 		0543E8BC164BFEBD00255154 /* SandikTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SandikTabBarViewController.h; sourceTree = "<group>"; };
 		0543E8BD164BFEBD00255154 /* SandikTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SandikTabBarViewController.m; sourceTree = "<group>"; };
+		05C3087A1650E2FA000A6780 /* btn_back_hover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_back_hover.png; sourceTree = "<group>"; };
+		05C3087B1650E2FA000A6780 /* btn_back_hover@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_back_hover@2x.png"; sourceTree = "<group>"; };
+		05C3087C1650E2FA000A6780 /* btn_back_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_back_normal.png; sourceTree = "<group>"; };
+		05C3087D1650E2FA000A6780 /* btn_back_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_back_normal@2x.png"; sourceTree = "<group>"; };
 		05D0B716164D23D10041D665 /* header_shadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header_shadow.png; sourceTree = "<group>"; };
 		05D0B717164D23D10041D665 /* header_shadow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "header_shadow@2x.png"; sourceTree = "<group>"; };
 		05D0B71A164D29BE0041D665 /* SandikNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SandikNavigationViewController.h; sourceTree = "<group>"; };
@@ -238,6 +246,10 @@
 				05D0B722164D32180041D665 /* icon_secmen@2x.png */,
 				05D0B739164D36FD0041D665 /* icon_sandik.png */,
 				05D0B73A164D36FD0041D665 /* icon_sandik@2x.png */,
+				05C3087A1650E2FA000A6780 /* btn_back_hover.png */,
+				05C3087B1650E2FA000A6780 /* btn_back_hover@2x.png */,
+				05C3087C1650E2FA000A6780 /* btn_back_normal.png */,
+				05C3087D1650E2FA000A6780 /* btn_back_normal@2x.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -328,6 +340,10 @@
 				05D0B728164D32180041D665 /* icon_secmen@2x.png in Resources */,
 				05D0B73B164D36FD0041D665 /* icon_sandik.png in Resources */,
 				05D0B73C164D36FD0041D665 /* icon_sandik@2x.png in Resources */,
+				05C3087E1650E2FA000A6780 /* btn_back_hover.png in Resources */,
+				05C3087F1650E2FA000A6780 /* btn_back_hover@2x.png in Resources */,
+				05C308801650E2FA000A6780 /* btn_back_normal.png in Resources */,
+				05C308811650E2FA000A6780 /* btn_back_normal@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

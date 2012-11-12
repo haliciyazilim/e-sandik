@@ -30,14 +30,20 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Yeni sorgu"
-                                                                   style:UIBarButtonItemStylePlain
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Geri"
+                                                                   style:UIBarButtonItemStyleBordered
                                                                   target:self
                                                                   action:nil];
+    UIImage *buttonImage = [UIImage imageNamed:@"btn_back_normal.png"];
     
-    UIImage *buttonImage = [UIImage imageNamed:@"icon_sandik.png"];
+    UIImage *hoverButtonImage = [UIImage imageNamed:@"btn_back_hover.png"];
+    
     [backButton setBackButtonBackgroundImage:buttonImage
                                     forState:UIControlStateNormal
+                                  barMetrics:UIBarMetricsDefault];
+    
+    [backButton setBackButtonBackgroundImage:hoverButtonImage
+                                    forState:UIControlStateHighlighted
                                   barMetrics:UIBarMetricsDefault];
     
     self.navigationItem.backBarButtonItem = backButton;
@@ -82,6 +88,11 @@
         [textField resignFirstResponder];
 //    }
     return YES;
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self.tckNoTextField resignFirstResponder];
 }
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
@@ -149,6 +160,8 @@
     //    detailViewController.sighting = [self.dataController objectInListAtIndex:[self.tableView indexPathForSelectedRow].row];
     }
     [self.tckNoTextField setText:@""];
+    
+    [self.tckNoTextField resignFirstResponder];
 }
 
 @end
