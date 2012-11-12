@@ -13,6 +13,12 @@
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *doorNumber;
 
-- (id) initWithName:(NSString *)name doorNumber:(NSString *)doorNumber;
++ (id)neighbourWithName:(NSString *)name
+             doorNumber:(NSString *)doorNumber;
+
+- (id)initWithName:(NSString *)name
+        doorNumber:(NSString *)doorNumber;
+
+- (id)copyWithZone:(NSZone *)zone;
 
 @end
