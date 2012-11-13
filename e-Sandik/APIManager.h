@@ -8,17 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
+#import "MKNetworkKit/MKNetworkEngine.h"
+
 @class Voter;
 
 typedef void (^VoterBlock) (Voter *voter);
 typedef void (^ErrorBlock) (NSError *error);
 
-@interface APIManager : NSObject
+@interface APIManager : MKNetworkEngine
 
 + (APIManager *)sharedInstance;
 
-- (void)getVoterWithTckNo:(int)tckNo
-             onCompletion:(VoterBlock)completionBlock
-                  onError:(ErrorBlock)errorBlock;
+- (MKNetworkOperation *)getVoterWithTckNo:(long long int)tckNo
+                             onCompletion:(VoterBlock)completionBlock
+                                  onError:(ErrorBlock)errorBlock;
 
 @end
