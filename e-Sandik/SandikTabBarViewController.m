@@ -29,11 +29,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+	
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     
+    UIImage *titleImage = [UIImage imageNamed:@"title_secmenkunyesi.png"];
+    UIImageView *titleImageView = [[UIImageView alloc] initWithImage:titleImage];
+    
+    self.navigationItem.titleView = titleImageView;
+    
+    SandikKunyeViewController *sandikKunyeViewController = [self.viewControllers objectAtIndex:0];
+    [sandikKunyeViewController setIsFirst];
 }
 
 - (void)didReceiveMemoryWarning

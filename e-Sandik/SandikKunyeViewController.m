@@ -10,6 +10,8 @@
 
 #import "Voter.h"
 
+#import <QuartzCore/QuartzCore.h>
+
 @interface SandikKunyeViewController ()
     
 - (void)configureViews;
@@ -41,6 +43,57 @@
     
     // Set the background view of the table view
     self.tableView.backgroundView = imageView;
+    
+    [self.tableView setSeparatorColor:[UIColor clearColor]];
+    
+    UIImageView *myImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"cell_bg.png"]];
+    myImageView.layer.cornerRadius = 6.0;
+    myImageView.clipsToBounds = YES;
+   
+    UIImageView *myImageView2 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"cell_bg.png"]];
+    myImageView2.layer.cornerRadius = 6.0;
+    myImageView2.clipsToBounds = YES;
+    
+    UIImageView *myImageView3 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"cell_bg.png"]];
+    myImageView3.layer.cornerRadius = 6.0;
+    myImageView3.clipsToBounds = YES;
+    
+    UIImageView *myImageView4 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"cell_bg.png"]];
+    myImageView4.layer.cornerRadius = 6.0;
+    myImageView4.clipsToBounds = YES;
+
+    UIImageView *myImageView5 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"cell_tile_bg.png"]];
+    myImageView5.layer.cornerRadius = 6.0;
+    myImageView5.clipsToBounds = YES;
+    myImageView5.alpha = 0.3;
+
+    UIImageView *myImageView6 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"cell_tile_bg.png"]];
+    myImageView6.layer.cornerRadius = 6.0;
+    myImageView6.clipsToBounds = YES;
+    myImageView6.alpha = 0.3;
+    
+    UIImageView *myImageView7 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"cell_tile_bg.png"]];
+    myImageView7.layer.cornerRadius = 6.0;
+    myImageView7.clipsToBounds = YES;
+    myImageView7.alpha = 0.3;
+
+    UIImageView *myImageView8 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"cell_tile_bg.png"]];
+    myImageView8.layer.cornerRadius = 6.0;
+    myImageView8.clipsToBounds = YES;
+    myImageView8.alpha = 0.3;
+    
+//    self.nameCell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"cell_bg.png"]];
+    self.nameCell.backgroundView = myImageView;
+    self.provinceCell.backgroundView = myImageView2;
+    self.schoolCell.backgroundView = myImageView3;
+    self.chestCell.backgroundView = myImageView4;
+    
+    self.detailNameCell.backgroundView = myImageView5;
+    self.detailProvinceCell.backgroundView = myImageView6;
+    self.detailSchoolCell.backgroundView = myImageView7;
+    self.detailChestCell.backgroundView = myImageView8;
+    
+    
 
     [self configureViews];
     // Uncomment the following line to preserve selection between presentations.
@@ -48,8 +101,6 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-    self.navigationController.navigationBar.topItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"title_secmenkunyesi.png"]];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -61,9 +112,14 @@
 //    [navBar setShadowImage:shadowImage];
     
 //    self.navigationController.navigationBar.topItem.title = @"Künye";
+
+    if(isFirst != 0){
     
-    
-        
+    self.navigationController.navigationBar.topItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"title_secmenkunyesi.png"]];
+    }
+    else{
+        isFirst = 1;
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -92,5 +148,7 @@
     
 }
 
-
+- (void)setIsFirst {
+    isFirst = 0;
+}
 @end

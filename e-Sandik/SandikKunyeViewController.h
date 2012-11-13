@@ -11,6 +11,9 @@
 @class Voter;
 
 @interface SandikKunyeViewController : UITableViewController
+{
+    int isFirst;
+}
 
 @property (strong, nonatomic) Voter *voter;
 
@@ -25,6 +28,15 @@
 @property (weak, nonatomic) IBOutlet UITableViewCell *provinceCell;
 @property (weak, nonatomic) IBOutlet UITableViewCell *schoolCell;
 @property (weak, nonatomic) IBOutlet UITableViewCell *chestCell;
+
+// detail cells
+
+
+- (void)setIsFirst;
+@property (weak, nonatomic) IBOutlet UITableViewCell *detailNameCell;
+@property (weak, nonatomic) IBOutlet UITableViewCell *detailProvinceCell;
+@property (weak, nonatomic) IBOutlet UITableViewCell *detailSchoolCell;
+@property (weak, nonatomic) IBOutlet UITableViewCell *detailChestCell;
 
 
 

@@ -47,12 +47,20 @@
                                   barMetrics:UIBarMetricsDefault];
     
     self.navigationItem.backBarButtonItem = backButton;
+    
+    UIImage *image = [UIImage imageNamed:@"title_esandik.png"];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+    
+    self.navigationItem.titleView = imageView;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-//    UINavigationBar *navBar = self.navigationController.navigationBar;
     
-    self.navigationController.navigationBar.topItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"title_esandik.png"]];
+//    [super viewDidAppear:animated];
+//    
+//    self.navigationController.navigationBar.topItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"title_esandik.png"]];
+    
+    
     
     
     
