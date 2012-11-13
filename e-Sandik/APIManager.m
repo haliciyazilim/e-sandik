@@ -68,18 +68,18 @@ static APIManager *sharedInstance = nil;
     return [NSString stringWithFormat:@"MobilService.asmx?op=%@", operation];
 }
 
-- (NSString *)createSoapRequestForTckNo:(long long int)tckNo {
-    return [NSString stringWithFormat:@"<?xml version=\"1.0\" encoding=\"utf-8\"?><soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\"><soap:Body><SandikYeriSorgula xmlns=\"http://tempuri.org/\"><tckn>%llu</tckn></SandikYeriSorgula></soap:Body></soap:Envelope>",tckNo];
+- (NSString *)createSoapRequestForTckNo:(NSString *)tckNo {
+    return [NSString stringWithFormat:@"<?xml version=\"1.0\" encoding=\"utf-8\"?><soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\"><soap:Body><SandikYeriSorgula xmlns=\"http://tempuri.org/\"><tckn>%@</tckn></SandikYeriSorgula></soap:Body></soap:Envelope>",tckNo];
 }
 
 #pragma mark - Voters
 
-- (MKNetworkOperation *)getVoterWithTckNo:(long long int)tckNo
+- (MKNetworkOperation *)getVoterWithTckNo:(NSString *)tckNo
                              onCompletion:(VoterBlock)completionBlock
                                   onError:(ErrorBlock)errorBlock {
 
-    if (tckNo == 0) {
-        tckNo = 17129369222;
+    if (tckNo == nil || tckNo == @"") {
+        tckNo = @"17129369222";
     }
     
     MKNetworkOperation *op = [self operationWithPath:[self pathForOperation:@"SandikYeriSorgula"]

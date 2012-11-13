@@ -172,7 +172,7 @@
     if ([[segue identifier] isEqualToString:@"ShowQueryResult"]) {
         SandikTabBarViewController *sandikTabBarViewController = [segue destinationViewController];
         
-        [[APIManager sharedInstance] getVoterWithTckNo:[self.tckNoTextField.text intValue]
+        [[APIManager sharedInstance] getVoterWithTckNo:self.tckNoTextField.text
                                           onCompletion:^(Voter *voter) {
                                               sandikTabBarViewController.voter = voter;
                                               [sandikTabBarViewController dismissLoadingView];

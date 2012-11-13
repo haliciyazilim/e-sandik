@@ -19,7 +19,7 @@ typedef void (^ErrorBlock) (NSError *error);
 
 + (APIManager *)sharedInstance;
 
-- (MKNetworkOperation *)getVoterWithTckNo:(long long int)tckNo
+- (MKNetworkOperation *)getVoterWithTckNo:(NSString *)tckNo
                              onCompletion:(VoterBlock)completionBlock
                                   onError:(ErrorBlock)errorBlock;
 
