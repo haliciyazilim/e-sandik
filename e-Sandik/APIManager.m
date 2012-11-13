@@ -78,7 +78,7 @@ static APIManager *sharedInstance = nil;
                              onCompletion:(VoterBlock)completionBlock
                                   onError:(ErrorBlock)errorBlock {
 
-    if (tckNo == nil || tckNo == @"") {
+    if (tckNo == nil || [tckNo isEqualToString:@""]) {
         tckNo = @"17129369222";
     }
     
@@ -100,7 +100,7 @@ static APIManager *sharedInstance = nil;
         NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:responseJSON options:0 error:nil];
         
         completionBlock([Voter voterFromDictionary:responseDictionary]);
-        DLog(@"%@", [responseDictionary objectForKey:@"KisiBilgisi"]);
+        DLog(@"%@", responseDictionary);
     } errorHandler:^(MKNetworkOperation *completedOperation, NSError *error) {
         errorBlock(error);
     }];

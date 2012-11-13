@@ -7,6 +7,7 @@
 //
 
 #import "Voter.h"
+#import "Neighbour.h"
 
 @implementation Voter
 
@@ -46,11 +47,36 @@
     if(self = [super init]) {
         
         NSDictionary *kunyeDictionary = [aDictionary objectForKey:@"KisiBilgisi"];
+        NSArray *buildingArray = [aDictionary objectForKey:@"AyniBinadakiler"];
+        NSArray *chestArray = [aDictionary objectForKey:@"AyniSandiktakiler"];
+        
         _name = [NSString stringWithFormat:@"%@ %@", [kunyeDictionary objectForKey:@"Ad"], [kunyeDictionary objectForKey:@"Soyad"]];
         _school = [NSString stringWithFormat:@"%@ %@ %@", [kunyeDictionary objectForKey:@"Il"], [kunyeDictionary objectForKey:@"Ilce"], [kunyeDictionary objectForKey:@"Mahalle"]];
         _province = [kunyeDictionary objectForKey:@"SandikAlani"];
-        _chest = [kunyeDictionary objectForKey:@"SandikNo"];
-        _chestIndex = [kunyeDictionary objectForKey:@"SandikSiraNo"];
+        _chest = [NSString stringWithFormat:@"%@", [kunyeDictionary objectForKey:@"SandikNo"]];
+        _chestIndex = [NSString stringWithFormat:@"%@", [kunyeDictionary objectForKey:@"SandikSiraNo"]];
+        
+        
+        
+        NSMutableArray *fellowsInBuildingArray = [NSMutableArray array];
+        
+        for (NSDictionary *fellow in buildingArray) {
+            [fellowsInBuildingArray addObject:[Neighbour neighbourFromDictionary:fellow]];
+        }
+        
+        _fellowsInBuilding = fellowsInBuildingArray;
+        
+        
+        
+        NSMutableArray *fellowsInChestArray = [NSMutableArray array];
+        
+        for (NSDictionary *fellow in chestArray) {
+            [fellowsInChestArray addObject:[Neighbour neighbourFromDictionary:fellow]];
+        }
+        
+        _fellowsInChest = fellowsInChestArray;
+        
+        
         
         return self;
     }

@@ -13,8 +13,12 @@
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *doorNumber;
 
++ (id)neighbourFromDictionary:(NSDictionary *)aDictionary;
+
 + (id)neighbourWithName:(NSString *)name
              doorNumber:(NSString *)doorNumber;
+
+- (id)initWithDictionary:(NSDictionary *)aDictionary;
 
 - (id)initWithName:(NSString *)name
         doorNumber:(NSString *)doorNumber;
