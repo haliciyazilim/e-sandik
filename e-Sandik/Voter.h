@@ -18,13 +18,15 @@
 @property (nonatomic, strong) NSArray *fellowsInBuilding;
 @property (nonatomic, strong) NSArray *fellowsInChest;
 
-+ (id) VoterWithName:(NSString *)name
++ (id) voterFromDictionary:(NSDictionary *)aDictionary;
+
++ (id) voterWithName:(NSString *)name
               school:(NSString *)school
             province:(NSString *)province
                chest:(NSString *)chest
           chestIndex:(NSString *)chestIndex;
 
-+ (id) VoterWithName:(NSString *)name
++ (id) voterWithName:(NSString *)name
               school:(NSString *)school
             province:(NSString *)province
                chest:(NSString *)chest
@@ -32,6 +34,7 @@
    fellowsInBuilding:(NSArray *)fellowsInBuilding
       fellowsInChest:(NSArray *)fellowsInChest;
 
+- (id) initFromDictionary:(NSDictionary *)aDictionary;
 
 - (id) initWithName:(NSString *)name
              school:(NSString *)school

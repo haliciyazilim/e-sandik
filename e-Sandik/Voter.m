@@ -10,7 +10,11 @@
 
 @implementation Voter
 
-+ (id) VoterWithName:(NSString *)name
++ (id) voterFromDictionary:(NSDictionary *)aDictionary {
+    return [[Voter alloc] initFromDictionary:aDictionary];
+}
+
++ (id) voterWithName:(NSString *)name
              school:(NSString *)school
            province:(NSString *)province
               chest:(NSString *)chest
@@ -22,7 +26,7 @@
                             chestIndex:chestIndex];
 }
 
-+ (id) VoterWithName:(NSString *)name
++ (id) voterWithName:(NSString *)name
               school:(NSString *)school
             province:(NSString *)province
                chest:(NSString *)chest
@@ -36,6 +40,22 @@
                             chestIndex:chestIndex
                      fellowsInBuilding:fellowsInBuilding
                         fellowsInChest:fellowsInChest];
+}
+
+- (id) initFromDictionary:(NSDictionary *)aDictionary {
+    if(self = [super init]) {
+        
+        NSDictionary *kunyeDictionary = [aDictionary objectForKey:@"KisiBilgisi"];
+        _name = [NSString stringWithFormat:@"%@ %@", [kunyeDictionary objectForKey:@"Ad"], [kunyeDictionary objectForKey:@"Soyad"]];
+        _school = [NSString stringWithFormat:@"%@ %@ %@", [kunyeDictionary objectForKey:@"Il"], [kunyeDictionary objectForKey:@"Ilce"], [kunyeDictionary objectForKey:@"Mahalle"]];
+        _province = [kunyeDictionary objectForKey:@"SandikAlani"];
+        _chest = [kunyeDictionary objectForKey:@"SandikNo"];
+        _chestIndex = [kunyeDictionary objectForKey:@"SandikSiraNo"];
+        
+        return self;
+    }
+    
+    return nil;
 }
 
 - (id) initWithName:(NSString *)name school:(NSString *)school province:(NSString *)province chest:(NSString *)chest chestIndex:(NSString *)chestIndex {
