@@ -31,9 +31,9 @@
     
     UIImage *image = [UIImage imageNamed:@"mainbg.png"];
     UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
-    
+    imageView.contentMode = UIViewContentModeBottom;
     // Add image view on top of table view
-    [self.tableView addSubview:imageView];
+//    [self.tableView addSubview:imageView];
     
     // Set the background view of the table view
     self.tableView.backgroundView = imageView;

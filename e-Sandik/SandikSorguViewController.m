@@ -13,6 +13,7 @@
 
 @interface SandikSorguViewController ()
 
+
 @end
 
 @implementation SandikSorguViewController
@@ -24,6 +25,8 @@
     }
     return self;
 }
+
+
 
 - (void)viewDidLoad
 {
@@ -70,8 +73,6 @@
 //    UIImage *shadowImage = [UIImage imageNamed:@"header_shadow.png"];
 //    [navBar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
 //    [navBar setShadowImage:shadowImage];
-    
-    
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:)
                                                  name:UIKeyboardWillShowNotification object:self.view.window];
@@ -174,6 +175,7 @@
         [[APIManager sharedInstance] getVoterWithTckNo:[self.tckNoTextField.text intValue]
                                           onCompletion:^(Voter *voter) {
                                               sandikTabBarViewController.voter = voter;
+                                              [sandikTabBarViewController dismissLoadingView];
                                           } onError:^(NSError *error) {
                                               
                                           }];
