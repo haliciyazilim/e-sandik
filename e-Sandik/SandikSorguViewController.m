@@ -77,6 +77,7 @@
                                                  name:UIKeyboardWillShowNotification object:self.view.window];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:)
                                                  name:UIKeyboardWillHideNotification object:self.view.window];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textFieldDidChange:) name:UITextFieldTextDidChangeNotification object:self.tckNoTextField];
 
 }
 
@@ -84,6 +85,7 @@
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillHideNotification object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UITextFieldTextDidChangeNotification object:nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -105,17 +107,27 @@
 }
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
-    
-    
-
-    
     return YES;
 }
 
 - (BOOL)textFieldShouldEndEditing:(UITextField *)textField {
-
-    
     return YES;
+}
+- (void)textFieldDidBeginEditing:(UITextField *)textField {
+    if (textField.text.length == 0) {
+        textField.clearButtonMode = UITextFieldViewModeNever;
+    }
+    else {
+        textField.clearButtonMode = UITextFieldViewModeAlways;
+    }
+}
+- (void)textFieldDidChange:(NSNotification *)notif {
+    if (self.tckNoTextField.text.length == 0) {
+        self.tckNoTextField.clearButtonMode = UITextFieldViewModeNever;
+    }
+    else {
+        self.tckNoTextField.clearButtonMode = UITextFieldViewModeAlways;
+    }
 }
 
 - (void)keyboardWillShow:(NSNotification *)notif {

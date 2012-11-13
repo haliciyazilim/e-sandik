@@ -30,14 +30,19 @@
 @property (weak, nonatomic) IBOutlet UITableViewCell *chestCell;
 
 // detail cells
-
-
-- (void)setIsFirst;
 @property (weak, nonatomic) IBOutlet UITableViewCell *detailNameCell;
 @property (weak, nonatomic) IBOutlet UITableViewCell *detailProvinceCell;
 @property (weak, nonatomic) IBOutlet UITableViewCell *detailSchoolCell;
 @property (weak, nonatomic) IBOutlet UITableViewCell *detailChestCell;
 
+// ghost rows
+@property (weak, nonatomic) IBOutlet UITableViewCell *firstEmptyRow;
+@property (weak, nonatomic) IBOutlet UITableViewCell *secondEmptyRow;
+@property (weak, nonatomic) IBOutlet UITableViewCell *thirdEmptyRow;
+@property (weak, nonatomic) IBOutlet UITableViewCell *fourthEmptyRow;
 
+
+
+- (void)setIsFirst;
 
 @end

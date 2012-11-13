@@ -93,6 +93,19 @@
     self.detailSchoolCell.backgroundView = myImageView7;
     self.detailChestCell.backgroundView = myImageView8;
     
+    UIView *emptyView = [[UIView alloc] initWithFrame:CGRectZero];
+    emptyView.backgroundColor = [UIColor clearColor];
+    UIView *emptyView2 = [[UIView alloc] initWithFrame:CGRectZero];
+    emptyView2.backgroundColor = [UIColor clearColor];
+    UIView *emptyView3 = [[UIView alloc] initWithFrame:CGRectZero];
+    emptyView3.backgroundColor = [UIColor clearColor];
+    UIView *emptyView4 = [[UIView alloc] initWithFrame:CGRectZero];
+    emptyView4.backgroundColor = [UIColor clearColor];
+
+    self.firstEmptyRow.backgroundView = emptyView;
+    self.secondEmptyRow.backgroundView = emptyView2;
+    self.thirdEmptyRow.backgroundView = emptyView3;
+    self.fourthEmptyRow.backgroundView = emptyView4;
     
 
     [self configureViews];
