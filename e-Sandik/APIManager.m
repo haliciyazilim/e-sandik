@@ -79,7 +79,7 @@ static APIManager *sharedInstance = nil;
                                   onError:(ErrorBlock)errorBlock {
 
     if (tckNo == nil || [tckNo isEqualToString:@""]) {
-        tckNo = @"17129369222";
+        tckNo = @"00000000000";
     }
     
     MKNetworkOperation *op = [self operationWithPath:[self pathForOperation:@"SandikYeriSorgula"]
