@@ -99,43 +99,30 @@ static APIManager *sharedInstance = nil;
  
         NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:responseJSON options:0 error:nil];
         if([[responseDictionary valueForKey:@"HataKodu"] integerValue] == 1){
-            NSError *noSuchPersonErr = [NSError errorWithDomain:@"No such Person" code:-101 userInfo:nil];
-            errorBlock(noSuchPersonErr);
+            NSError *apiError = [NSError errorWithDomain:@"APIError"
+                                                           code:-101
+                                                       userInfo:@{NSLocalizedDescriptionKey : [responseDictionary valueForKey:@"HataAciklamasi"]}];
+            errorBlock(apiError);
         }
         else{
             completionBlock([Voter voterFromDictionary:responseDictionary]);
         }
         DLog(@"%@", responseDictionary);
     } errorHandler:^(MKNetworkOperation *completedOperation, NSError *error) {
-        NSError *noConnectionErr = [NSError errorWithDomain:@"No internet connection" code:-102 userInfo:nil];
-        errorBlock(noConnectionErr);
+        if (error.domain == NSURLErrorDomain && error.code == -1009) {
+            NSError *connectionError = [NSError errorWithDomain:@"ConnectionError"
+                                                           code:-102
+                                                       userInfo:@{NSLocalizedDescriptionKey : @"İnternet bağlantısı sağlanamadı, lütfen bağlantı ayarlarınızı kontrol ederek tekrar deneyiniz."}];
+            errorBlock(connectionError);
+        } else {
+            NSLog(@"%@", error);
+            errorBlock(error);
+        }
     }];
     
     [self enqueueOperation:op];
     
     return op;
-//
-//
-//    double delayInSeconds = 2.0;
-//    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
-//    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-//        completionBlock([[Voter alloc] initWithName:@"Eren"
-//                                             school:@"ODTU"
-//                                           province:@"Ankara"
-//                                              chest:@"112"
-//                                         chestIndex:@"115"
-//                                  fellowsInBuilding:@[  [Neighbour neighbourWithName:@"Alperen Kavun" doorNumber:@"10"],
-//                                                        [Neighbour neighbourWithName:@"Yunus Eren Güzel" doorNumber:@"13"],
-//                                                        [Neighbour neighbourWithName:@"Abdullah Karacabey" doorNumber:@"17"],
-//                                                        [Neighbour neighbourWithName:@"Ebuzer Egemen Dursun" doorNumber:@"1"]]
-//                                     fellowsInChest:@[  [Neighbour neighbourWithName:@"Alperen Kavun" doorNumber:@"10"],
-//                                                        [Neighbour neighbourWithName:@"Yunus Eren Güzel" doorNumber:@"13"],
-//                                                        [Neighbour neighbourWithName:@"Abdullah Karacabey" doorNumber:@"17"],
-//                                                        [Neighbour neighbourWithName:@"Ebuzer Egemen Dursun" doorNumber:@"1"],
-//                                                        [Neighbour neighbourWithName:@"Nihal Sandıkçı" doorNumber:@"10"],
-//                                                        [Neighbour neighbourWithName:@"Hakan Özcan" doorNumber:@"13"],
-//                                                        [Neighbour neighbourWithName:@"Meral Ayduğan" doorNumber:@"17"]]]);
-//    });
 }
 
 @end

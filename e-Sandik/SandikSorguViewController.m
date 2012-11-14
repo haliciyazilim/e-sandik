@@ -176,17 +176,14 @@
                                               sandikTabBarViewController.voter = voter;
                                               [sandikTabBarViewController dismissLoadingView];
                                           } onError:^(NSError *error) {
-                                              if(error.code == -101){
-                                                  [sandikTabBarViewController dismissLoadingView];
-                                                  UIAlertView *myAlert = [[UIAlertView alloc] initWithTitle:@"Hata" message:@"Girdiğiniz T.C. Kimlik numarasına ait kayıt bulunamadı." delegate:sandikTabBarViewController cancelButtonTitle:@"Tamam" otherButtonTitles:nil, nil];
-                                                  [myAlert show];
-                                                  
-                                              }
-                                              else if(error.code == -102){
-                                                  [sandikTabBarViewController dismissLoadingView];
-                                                  UIAlertView *myAlert = [[UIAlertView alloc] initWithTitle:@"Hata" message:@"İnternet bağlantısı sağlanamadı, lütfen bağlantı ayarlarınızı kontrol ederek tekrar deneyiniz." delegate:sandikTabBarViewController cancelButtonTitle:@"Tamam" otherButtonTitles:nil, nil];
-                                                  [myAlert show];
-                                              }
+                                              [sandikTabBarViewController dismissLoadingView];
+                                              UIAlertView *myAlert = [[UIAlertView alloc] initWithTitle:@"Hata"
+                                                                                                message:[error localizedDescription]
+                                                                                               delegate:sandikTabBarViewController
+                                                                                      cancelButtonTitle:@"Tamam"
+                                                                                      otherButtonTitles:nil, nil];
+                                              [myAlert show];
+                                              
                                           }];
     }
     [self.tckNoTextField setText:@""];
