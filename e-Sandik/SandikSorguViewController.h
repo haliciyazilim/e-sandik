@@ -10,5 +10,6 @@
 
 @interface SandikSorguViewController : UIViewController <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *tckNoTextField;
+- (IBAction)performQuery:(id)sender;
 
 @end

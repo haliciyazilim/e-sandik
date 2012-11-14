@@ -13,7 +13,6 @@
 
 @interface SandikSorguViewController ()
 
-
 @end
 
 @implementation SandikSorguViewController
@@ -62,12 +61,6 @@
 //    [super viewDidAppear:animated];
 //    
 //    self.navigationController.navigationBar.topItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"title_esandik.png"]];
-    
-    
-    
-    
-    
-    
     
 //    UIImage *image = [UIImage imageNamed:@"header_bg.png"];
 //    UIImage *shadowImage = [UIImage imageNamed:@"header_shadow.png"];
@@ -167,8 +160,14 @@
                      }];
 }
 
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    NSUInteger newLength = [textField.text length];
+    return (newLength >= 11) ? NO : YES;
+}
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    
     if ([[segue identifier] isEqualToString:@"ShowQueryResult"]) {
         SandikTabBarViewController *sandikTabBarViewController = [segue destinationViewController];
         
@@ -179,12 +178,21 @@
                                           } onError:^(NSError *error) {
                                               
                                           }];
-        
-    //    detailViewController.sighting = [self.dataController objectInListAtIndex:[self.tableView indexPathForSelectedRow].row];
     }
     [self.tckNoTextField setText:@""];
     
     [self.tckNoTextField resignFirstResponder];
+        
+    
 }
 
+- (IBAction)performQuery:(id)sender {
+    if ([self.tckNoTextField.text length] == 11){
+        [self performSegueWithIdentifier:@"ShowQueryResult" sender:self];
+    }
+    else{
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Hata" message:@"Lütfen 11 haneli T.C. Kimlik numaranızı giriniz." delegate:self cancelButtonTitle:@"Tamam" otherButtonTitles:nil, nil];
+        [alertView show];
+    }
+}
 @end
