@@ -161,8 +161,8 @@
 }
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
-    NSUInteger newLength = [textField.text length];
-    return (newLength >= 11) ? NO : YES;
+    NSString* replacedString = [textField.text stringByReplacingCharactersInRange:range withString:string];
+    return (replacedString.length > 11) ? NO : YES;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -194,7 +194,9 @@
 }
 
 - (IBAction)performQuery:(id)sender {
-    if ([self.tckNoTextField.text length] == 11){
+    long long int myText = [self.tckNoTextField.text longLongValue];
+    NSString *tck = [NSString stringWithFormat:@"%llu",myText];
+    if ([tck length] == 11){
         [self performSegueWithIdentifier:@"ShowQueryResult" sender:self];
     }
     else{
