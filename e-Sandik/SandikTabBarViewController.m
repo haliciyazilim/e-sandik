@@ -76,7 +76,13 @@
 }
 
 -(void)dismissLoadingView {
-    [self.loadingAlert dismissWithClickedButtonIndex:-1 animated:YES];
+    [self.loadingAlert dismissWithClickedButtonIndex:11 animated:YES];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (buttonIndex == 0){
+        [[self navigationController] popViewControllerAnimated:YES];
+    }
 }
 
 @end

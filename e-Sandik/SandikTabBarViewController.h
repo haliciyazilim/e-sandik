@@ -10,7 +10,7 @@
 
 @class Voter;
 
-@interface SandikTabBarViewController : UITabBarController
+@interface SandikTabBarViewController : UITabBarController <UIAlertViewDelegate>
 
 @property (nonatomic, strong) Voter* voter;
 @property (nonatomic, strong) UIAlertView* loadingAlert;
