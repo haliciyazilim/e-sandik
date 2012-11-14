@@ -98,11 +98,17 @@ static APIManager *sharedInstance = nil;
         NSData *responseJSON = [[responseString substringWithRange:range] dataUsingEncoding:NSUTF8StringEncoding];
  
         NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:responseJSON options:0 error:nil];
-        
-        completionBlock([Voter voterFromDictionary:responseDictionary]);
+        if([[responseDictionary valueForKey:@"HataKodu"] integerValue] == 1){
+            NSError *noSuchPersonErr = [NSError errorWithDomain:@"No such Person" code:-101 userInfo:nil];
+            errorBlock(noSuchPersonErr);
+        }
+        else{
+            completionBlock([Voter voterFromDictionary:responseDictionary]);
+        }
         DLog(@"%@", responseDictionary);
     } errorHandler:^(MKNetworkOperation *completedOperation, NSError *error) {
-        errorBlock(error);
+        NSError *noConnectionErr = [NSError errorWithDomain:@"No internet connection" code:-102 userInfo:nil];
+        errorBlock(noConnectionErr);
     }];
     
     [self enqueueOperation:op];
