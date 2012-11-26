@@ -162,7 +162,15 @@
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
     NSString* replacedString = [textField.text stringByReplacingCharactersInRange:range withString:string];
-    return (replacedString.length > 11) ? NO : YES;
+    
+    if (replacedString.length > 11) {
+        NSRange fieldRange = {0, 11};
+        textField.text = [replacedString substringWithRange:fieldRange];
+        
+        return NO;
+    } else {
+        return YES;
+    }
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
