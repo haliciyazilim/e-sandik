@@ -93,7 +93,12 @@
     
     [(UILabel *)[cell viewWithTag:1] setText:neighBourAtIndex.name];
     
-    [(UILabel *)[cell viewWithTag:2] setText:neighBourAtIndex.doorNumber];
+    if ([neighBourAtIndex.doorNumber isEqualToString:@"0"]) {
+        [(UILabel *)[cell viewWithTag:2] setText:@"-"];
+    }
+    else {
+        [(UILabel *)[cell viewWithTag:2] setText:neighBourAtIndex.doorNumber];
+    }
     
     return cell;
 }
@@ -115,7 +120,7 @@
     [headerView setBackgroundColor:[UIColor colorWithRed:0.420 green:0.227 blue:0.227 alpha:0.85]];
     
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, tableView.bounds.size.width - 10, 18)];
-    label.text = @"Binanızda oy kullanan seçmenler      Kapı No";
+    label.text = @"Binanızda Oy Kullanan Seçmenler     Kapı No";
     label.font = [UIFont fontWithName:@"Futura" size:14];
     label.textColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:0.75];
     label.backgroundColor = [UIColor clearColor];
