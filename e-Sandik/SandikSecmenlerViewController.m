@@ -107,7 +107,7 @@
     [headerView setBackgroundColor:[UIColor colorWithRed:0.420 green:0.227 blue:0.227 alpha:0.85]];
     
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, tableView.bounds.size.width - 10, 18)];
-    label.text = [NSString stringWithFormat:@"%@ nolu sandıkta oy kullanan seçmenler",self.voter.chest];
+    label.text = [NSString stringWithFormat:@"Sandık No: %@     Seçmen Sayısı: %d",self.voter.chest,[self.voter.fellowsInChest count]];
     label.font = [UIFont fontWithName:@"Futura" size:14];
     label.textColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:0.75];
     label.backgroundColor = [UIColor clearColor];
