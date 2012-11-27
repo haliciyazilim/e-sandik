@@ -112,7 +112,7 @@ static APIManager *sharedInstance = nil;
         if (error.domain == NSURLErrorDomain && error.code == -1009) {
             NSError *connectionError = [NSError errorWithDomain:@"ConnectionError"
                                                            code:-102
-                                                       userInfo:@{NSLocalizedDescriptionKey : @"İnternet bağlantısı sağlanamadı, lütfen bağlantı ayarlarınızı kontrol ederek tekrar deneyiniz."}];
+                                                       userInfo:@{NSLocalizedDescriptionKey : @"İnternet bağlantısı sağlanamadı, ayarlarınızı kontrol ederek tekrar deneyiniz."}];
             errorBlock(connectionError);
         } else {
             NSLog(@"%@", error);
