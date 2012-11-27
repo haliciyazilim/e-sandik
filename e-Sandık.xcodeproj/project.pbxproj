@@ -94,14 +94,14 @@
 /* Begin PBXFileReference section */
 		053E4973164D944700053418 /* Neighbour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Neighbour.h; sourceTree = "<group>"; };
 		053E4974164D944700053418 /* Neighbour.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Neighbour.m; sourceTree = "<group>"; };
-		0543E828164BB72D00255154 /* e-Sandik.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "e-Sandik.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0543E828164BB72D00255154 /* e-Sandık.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "e-Sandık.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0543E82C164BB72D00255154 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0543E82E164BB72D00255154 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0543E830164BB72D00255154 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		0543E834164BB72D00255154 /* e-Sandik-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "e-Sandik-Info.plist"; sourceTree = "<group>"; };
+		0543E834164BB72D00255154 /* e-Sandık-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "e-Sandık-Info.plist"; sourceTree = "<group>"; };
 		0543E836164BB72D00255154 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0543E838164BB72D00255154 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		0543E83A164BB72D00255154 /* e-Sandik-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "e-Sandik-Prefix.pch"; sourceTree = "<group>"; };
+		0543E83A164BB72D00255154 /* e-Sandık-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "e-Sandık-Prefix.pch"; sourceTree = "<group>"; };
 		0543E83B164BB72D00255154 /* SandikAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SandikAppDelegate.h; sourceTree = "<group>"; };
 		0543E83C164BB72D00255154 /* SandikAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SandikAppDelegate.m; sourceTree = "<group>"; };
 		0543E845164BB72D00255154 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
@@ -228,7 +228,7 @@
 		0543E829164BB72D00255154 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0543E828164BB72D00255154 /* e-Sandik.app */,
+				0543E828164BB72D00255154 /* e-Sandık.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -268,10 +268,10 @@
 		0543E833164BB72D00255154 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				0543E834164BB72D00255154 /* e-Sandik-Info.plist */,
+				0543E834164BB72D00255154 /* e-Sandık-Info.plist */,
 				0543E835164BB72D00255154 /* InfoPlist.strings */,
 				0543E838164BB72D00255154 /* main.m */,
-				0543E83A164BB72D00255154 /* e-Sandik-Prefix.pch */,
+				0543E83A164BB72D00255154 /* e-Sandık-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -409,9 +409,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0543E827164BB72D00255154 /* e-Sandik */ = {
+		0543E827164BB72D00255154 /* e-Sandık */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0543E85A164BB72E00255154 /* Build configuration list for PBXNativeTarget "e-Sandik" */;
+			buildConfigurationList = 0543E85A164BB72E00255154 /* Build configuration list for PBXNativeTarget "e-Sandık" */;
 			buildPhases = (
 				0543E824164BB72D00255154 /* Sources */,
 				0543E825164BB72D00255154 /* Frameworks */,
@@ -421,9 +421,9 @@
 			);
 			dependencies = (
 			);
-			name = "e-Sandik";
+			name = "e-Sandık";
 			productName = "e-Sandik";
-			productReference = 0543E828164BB72D00255154 /* e-Sandik.app */;
+			productReference = 0543E828164BB72D00255154 /* e-Sandık.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -436,7 +436,7 @@
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Halıcı";
 			};
-			buildConfigurationList = 0543E822164BB72D00255154 /* Build configuration list for PBXProject "e-Sandik" */;
+			buildConfigurationList = 0543E822164BB72D00255154 /* Build configuration list for PBXProject "e-Sandık" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -448,7 +448,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0543E827164BB72D00255154 /* e-Sandik */,
+				0543E827164BB72D00255154 /* e-Sandık */,
 			);
 		};
 /* End PBXProject section */
@@ -632,10 +632,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "e-Sandik/e-Sandik-Prefix.pch";
-				INFOPLIST_FILE = "e-Sandik/e-Sandik-Info.plist";
+				GCC_PREFIX_HEADER = "e-Sandik/e-Sandık-Prefix.pch";
+				INFOPLIST_FILE = "e-Sandik/e-Sandık-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "e-Sandık";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -645,10 +645,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "e-Sandik/e-Sandik-Prefix.pch";
-				INFOPLIST_FILE = "e-Sandik/e-Sandik-Info.plist";
+				GCC_PREFIX_HEADER = "e-Sandik/e-Sandık-Prefix.pch";
+				INFOPLIST_FILE = "e-Sandik/e-Sandık-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "e-Sandık";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -657,7 +657,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0543E822164BB72D00255154 /* Build configuration list for PBXProject "e-Sandik" */ = {
+		0543E822164BB72D00255154 /* Build configuration list for PBXProject "e-Sandık" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0543E858164BB72E00255154 /* Debug */,
@@ -666,7 +666,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0543E85A164BB72E00255154 /* Build configuration list for PBXNativeTarget "e-Sandik" */ = {
+		0543E85A164BB72E00255154 /* Build configuration list for PBXNativeTarget "e-Sandık" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0543E85B164BB72E00255154 /* Debug */,
