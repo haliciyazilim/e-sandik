@@ -237,13 +237,13 @@
                                         </view>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="45" id="Zvs-fW-lGT">
-                                        <rect key="frame" x="0.0" y="64" width="320" height="46"/>
+                                        <rect key="frame" x="0.0" y="64" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="300" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Ebuzer Egemen Dursun" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EHa-lI-nt2">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EHa-lI-nt2">
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="260" id="QbP-n4-oSi"/>
                                                         <constraint firstAttribute="height" constant="21" id="j8P-Qb-BBm"/>
@@ -301,13 +301,13 @@
                                         </view>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="78" id="shh-NU-KTL">
-                                        <rect key="frame" x="0.0" y="168" width="320" height="79"/>
+                                        <rect key="frame" x="0.0" y="168" width="320" height="78"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="300" height="77"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Ankara Çankaya Şehit Cevdet Özdemir" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="260" translatesAutoresizingMaskIntoConstraints="NO" id="EW7-rn-Uc7">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="260" translatesAutoresizingMaskIntoConstraints="NO" id="EW7-rn-Uc7">
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="260" id="iFZ-jy-moo"/>
                                                         <constraint firstAttribute="height" constant="55" id="xyI-DS-aAz"/>
@@ -365,13 +365,13 @@
                                         </view>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="78" id="Ujv-Pj-D25">
-                                        <rect key="frame" x="0.0" y="305" width="320" height="79"/>
+                                        <rect key="frame" x="0.0" y="305" width="320" height="78"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="300" height="77"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Bilgi İlköğretim Okulu -A Blok" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="260" translatesAutoresizingMaskIntoConstraints="NO" id="0Sz-lC-TiB">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="260" translatesAutoresizingMaskIntoConstraints="NO" id="0Sz-lC-TiB">
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="55" id="ehm-WF-Le8"/>
                                                         <constraint firstAttribute="width" constant="260" id="wXC-wg-NeB"/>
@@ -400,7 +400,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="icon_sandik.png" translatesAutoresizingMaskIntoConstraints="NO" id="HEM-7y-TTq"/>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Sandık / Sandık Sıranız" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ysd-wk-cbN">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Sandık No / Sıra No" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ysd-wk-cbN">
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="Gln-4m-dva"/>
                                                         <constraint firstAttribute="width" constant="240" id="crx-iA-oeI"/>
@@ -429,13 +429,13 @@
                                         </view>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Axz-DD-V4Z">
-                                        <rect key="frame" x="0.0" y="442" width="320" height="45"/>
+                                        <rect key="frame" x="0.0" y="442" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="2573 / 165" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gFh-Fu-WBX">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gFh-Fu-WBX">
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="260" id="1Xs-6g-cbd"/>
                                                         <constraint firstAttribute="height" constant="21" id="y3d-kE-PEL"/>
