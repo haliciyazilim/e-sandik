@@ -151,8 +151,8 @@
 
 - (void)configureViews {
     if(self.voter.isInformationsOld){
-        UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 10.0, 320, 70)];
-        UILabel *headerLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0, 10.0, 300.0, 60.0)];
+        UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 10.0, 320.0, 70.0)];
+        UILabel *headerLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0, 0.0, 300.0, 0.0)];
         [headerLabel setBackgroundColor:[UIColor clearColor]];
         [headerLabel setTextColor:[UIColor whiteColor]];
         [headerLabel setFont:[UIFont fontWithName:@"Futura-Medium" size:13]];
@@ -161,7 +161,12 @@
         [headerLabel setTextAlignment:NSTextAlignmentCenter];
         [headerLabel setText:@"Not: Yeni seçmen listeleri açıklanana kadar 2011 seçimlerine dair bilgiler görüntülenecektir."];
         [headerView addSubview:headerLabel];
-        self.tableView.tableHeaderView = headerView;
+
+        [UIView animateWithDuration:1.0 delay:0.0 options:UIViewAnimationCurveEaseInOut animations:^{
+            self.tableView.tableHeaderView = headerView;
+            headerLabel.frame = CGRectMake(10.0, 10.0, 300.0, 60.0);
+        } completion:^(BOOL finished) {
+        }];
     }
     
     self.nameLabel.text = self.voter.name;
