@@ -37,7 +37,7 @@
 //    [navBar setShadowImage:shadowImage];
     
     UIImageView *shadowView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"header_shadow.png"]];
-    shadowView.frame = CGRectMake(0,navBar.frame.size.height+20,323,17);
+    shadowView.frame = CGRectMake(0,navBar.frame.size.height+[UIApplication sharedApplication].statusBarFrame.size.height,323,17);
     [navBar.superview addSubview:shadowView];
     
 }
