@@ -107,7 +107,6 @@
     self.secondEmptyRow.backgroundView = emptyView2;
     self.thirdEmptyRow.backgroundView = emptyView3;
     self.fourthEmptyRow.backgroundView = emptyView4;
-    
 
     [self configureViews];
     // Uncomment the following line to preserve selection between presentations.
@@ -151,6 +150,20 @@
 }
 
 - (void)configureViews {
+    if(self.voter.isInformationsOld){
+        UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 10.0, 320, 70)];
+        UILabel *headerLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0, 10.0, 300.0, 60.0)];
+        [headerLabel setBackgroundColor:[UIColor clearColor]];
+        [headerLabel setTextColor:[UIColor whiteColor]];
+        [headerLabel setFont:[UIFont fontWithName:@"Futura-Medium" size:13]];
+        [headerLabel setAdjustsFontSizeToFitWidth:NO];
+        [headerLabel setNumberOfLines:0];
+        [headerLabel setTextAlignment:NSTextAlignmentCenter];
+        [headerLabel setText:@"Not: Yeni seçmen listeleri açıklanana kadar 2011 seçimlerine dair bilgiler görüntülenecektir."];
+        [headerView addSubview:headerLabel];
+        self.tableView.tableHeaderView = headerView;
+    }
+    
     self.nameLabel.text = self.voter.name;
     self.provinceLabel.text = self.voter.province;
     self.schoolLabel.text = self.voter.school;

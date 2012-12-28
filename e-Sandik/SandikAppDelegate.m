@@ -17,6 +17,13 @@
     // Override point for customization after application launch.
 //    sleep(3);
     
+    if([[UIScreen mainScreen] bounds].size.height == 568){
+        _window.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"mainbg-568h.png"]];
+    }
+    else{
+        _window.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"mainbg.png"]];
+    }
+    
     return YES;
 }
 							
