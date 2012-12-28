@@ -55,7 +55,8 @@
         _school = [kunyeDictionary objectForKey:@"SandikAlani"];
         _chest = [NSString stringWithFormat:@"%@", [kunyeDictionary objectForKey:@"SandikNo"]];
         _chestIndex = [NSString stringWithFormat:@"%@", [kunyeDictionary objectForKey:@"SandikSiraNo"]];
-        _isInformationsOld = YES;
+        _isInformationsOld = [[aDictionary objectForKey:@"EskiListe"] boolValue];
+        _electionYear = [aDictionary objectForKey:@"SecimYili"];
         
         
         
