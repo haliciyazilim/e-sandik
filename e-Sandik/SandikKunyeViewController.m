@@ -159,7 +159,7 @@
         [headerLabel setAdjustsFontSizeToFitWidth:NO];
         [headerLabel setNumberOfLines:0];
         [headerLabel setTextAlignment:NSTextAlignmentCenter];
-        [headerLabel setText:@"Not: Yeni seçmen listeleri açıklanana kadar 2011 seçimlerine dair bilgiler görüntülenecektir."];
+        [headerLabel setText:[NSString stringWithFormat:@"Not: Yeni seçmen listeleri açıklanana kadar %@ seçimlerine dair bilgiler görüntülenecektir.",self.voter.electionYear]];
         [headerView addSubview:headerLabel];
 
         [UIView animateWithDuration:1.0 delay:0.0 options:UIViewAnimationCurveEaseInOut animations:^{
