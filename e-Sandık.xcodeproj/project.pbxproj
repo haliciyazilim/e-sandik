@@ -40,6 +40,7 @@
 		0543E8B8164BFAC600255154 /* header_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0543E8B6164BFAC600255154 /* header_bg@2x.png */; };
 		0543E8BB164BFD8300255154 /* SandikSorguViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0543E8BA164BFD8300255154 /* SandikSorguViewController.m */; };
 		0543E8BE164BFEBE00255154 /* SandikTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0543E8BD164BFEBD00255154 /* SandikTabBarViewController.m */; };
+		05488A47168D8CC10076BB74 /* mainbg-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 05488A46168D8CC10076BB74 /* mainbg-568h@2x.png */; };
 		05BA1B8716524230006E6B38 /* cell_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 05BA1B8516524230006E6B38 /* cell_bg.png */; };
 		05BA1B8816524230006E6B38 /* cell_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 05BA1B8616524230006E6B38 /* cell_bg@2x.png */; };
 		05BA1B8B16524939006E6B38 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05BA1B8A16524939006E6B38 /* QuartzCore.framework */; };
@@ -136,6 +137,7 @@
 		0543E8BA164BFD8300255154 /* SandikSorguViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SandikSorguViewController.m; sourceTree = "<group>"; };
 		0543E8BC164BFEBD00255154 /* SandikTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SandikTabBarViewController.h; sourceTree = "<group>"; };
 		0543E8BD164BFEBD00255154 /* SandikTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SandikTabBarViewController.m; sourceTree = "<group>"; };
+		05488A46168D8CC10076BB74 /* mainbg-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mainbg-568h@2x.png"; sourceTree = "<group>"; };
 		05BA1B8516524230006E6B38 /* cell_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_bg.png; sourceTree = "<group>"; };
 		05BA1B8616524230006E6B38 /* cell_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cell_bg@2x.png"; sourceTree = "<group>"; };
 		05BA1B8A16524939006E6B38 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -292,6 +294,7 @@
 				0543E89D164BED3500255154 /* icon_voterlist.png */,
 				0543E8A1164BEE8800255154 /* mainbg.png */,
 				0543E8A2164BEE8800255154 /* mainbg@2x.png */,
+				05488A46168D8CC10076BB74 /* mainbg-568h@2x.png */,
 				0543E8A5164BEF1700255154 /* main_chp_yatay.png */,
 				0543E8A6164BEF1800255154 /* main_chp_yatay@2x.png */,
 				0543E8A9164BF25A00255154 /* tcinput_bg.png */,
@@ -514,6 +517,7 @@
 				05BA1BB61652923E006E6B38 /* Default@2x.png in Resources */,
 				05BA1BB8165294AB006E6B38 /* app-icon-57.png in Resources */,
 				05BA1BBA165294B0006E6B38 /* app-icon-114.png in Resources */,
+				05488A47168D8CC10076BB74 /* mainbg-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -634,7 +638,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "e-Sandik/e-Sandık-Prefix.pch";
 				INFOPLIST_FILE = "e-Sandik/e-Sandık-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "e-Sandık";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -647,7 +651,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "e-Sandik/e-Sandık-Prefix.pch";
 				INFOPLIST_FILE = "e-Sandik/e-Sandık-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "e-Sandık";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
