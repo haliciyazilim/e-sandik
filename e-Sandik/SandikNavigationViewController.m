@@ -31,10 +31,14 @@
 - (void)viewWillAppear:(BOOL)animated {
     UINavigationBar *navBar = self.navigationBar;
     UIImage *image = [UIImage imageNamed:@"header_bg.png"];
-    UIImage *shadowImage = [UIImage imageNamed:@"header_shadow.png"];
+//    UIImage *shadowImage = [UIImage imageNamed:@"header_shadow.png"];
 
     [navBar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
-    [navBar setShadowImage:shadowImage];
+//    [navBar setShadowImage:shadowImage];
+    
+    UIImageView *shadowView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"header_shadow.png"]];
+    shadowView.frame = CGRectMake(0,navBar.frame.size.height+20,323,17);
+    [navBar.superview addSubview:shadowView];
     
 }
 
