@@ -17,6 +17,7 @@
 @property (nonatomic, strong) NSString *chestIndex;
 @property (nonatomic, strong) NSArray *fellowsInBuilding;
 @property (nonatomic, strong) NSArray *fellowsInChest;
+@property BOOL isInformationsOld;
 
 + (id) voterFromDictionary:(NSDictionary *)aDictionary;
 
