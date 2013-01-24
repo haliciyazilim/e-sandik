@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlKimlikBilgileriAnaLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center_horizontal"
+    android:background="@drawable/splash_back" >
+
+    <RelativeLayout
+        android:id="@+id/rlSecimBilgisi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true" >
+
+        <TextView
+            android:id="@+id/txtSecimBilgisi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="TextView"
+            android:textColor="@color/beyaz" />
+
+    </RelativeLayout>
+     
+    <RelativeLayout
+        android:id="@+id/rlBaslikKunye"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/top_bg"
+        android:gravity="top" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:paddingBottom="8dp"
+            android:src="@drawable/baslik_secmenkunyesi" />
+
+       
+
+    </RelativeLayout>
+
+
+        <ScrollView
+            android:id="@+id/svKunyeBilgileri"
+            android:layout_width="fill_parent"
+            android:layout_height="240dp"
+            android:layout_below="@id/rlBaslikKunye" >
+
+            <LinearLayout
+                android:id="@+id/LinearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="20dp" >
+
+                    <TableRow
+                        android:id="@+id/tableRow1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal" >
+
+                        <LinearLayout
+                            android:id="@+id/linLayisim"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
+                            android:gravity="center_vertical"
+                            android:minHeight="25dp" >
+
+                            <ImageView
+                                android:id="@+id/imageIsim"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:paddingLeft="30dp"
+                                android:src="@drawable/icon_secmen" />
+
+                            <TextView
+                                android:id="@+id/txtIsimBaslik"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:minWidth="300dp"
+                                android:paddingLeft="10dp"
+                                android:text="Seçmen Adı Soyadı"
+                                android:textColor="@color/baslik"
+                                android:textSize="18dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tableRow2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:paddingTop="2dp" >
+
+                        <RelativeLayout
+                            android:id="@+id/RelaLayIsim"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/beyaz_opacity"
+                            android:minHeight="30dp" >
+
+                            <TextView
+                                android:id="@+id/txtIsim"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:minWidth="300dp"
+                                android:paddingLeft="30dp"
+                                android:singleLine="false"
+                                android:textColor="@color/beyaz" />
+                        </RelativeLayout>
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tableRow3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:paddingTop="10dp" >
+
+                        <LinearLayout
+                            android:id="@+id/linLayMuhtarlik"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
+                            android:minHeight="25dp"
+                            android:orientation="horizontal" >
+
+                            <ImageView
+                                android:id="@+id/imageMuhtarlik"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:paddingLeft="30dp"
+                                android:src="@drawable/icon_muhtar" />
+
+                            <TextView
+                                android:id="@+id/txtMuhtarlikBaslik"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:minWidth="300dp"
+                                android:paddingLeft="10dp"
+                                android:text="Muhtarlık"
+                                android:textColor="@color/baslik"
+                                android:textSize="18dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tableRow4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:paddingTop="2dp" >
+
+                        <RelativeLayout
+                            android:id="@+id/RelaLayMuhtarlik"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/beyaz_opacity"
+                            android:minHeight="30dp" >
+
+                            <TextView
+                                android:id="@+id/txtMuhtarlik"
+                                android:layout_width="280dp"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:ellipsize="none"
+                                android:maxLines="2"
+                                android:minWidth="300dp"
+                                android:paddingLeft="30dp"
+                                android:singleLine="false"
+                                android:textColor="@color/beyaz" />
+                        </RelativeLayout>
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tableRow5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:paddingTop="10dp" >
+
+                        <LinearLayout
+                            android:id="@+id/linLaySandikAlani"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
+                            android:minHeight="25dp"
+                            android:orientation="horizontal" >
+
+                            <ImageView
+                                android:id="@+id/imageSandikAlani"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:paddingLeft="30dp"
+                                android:src="@drawable/icon_okul" />
+
+                            <TextView
+                                android:id="@+id/txtSandikAlaniBaslik"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:minWidth="300dp"
+                                android:paddingLeft="10dp"
+                                android:text="Okul"
+                                android:textColor="@color/baslik"
+                                android:textSize="18dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tableRow6"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:paddingTop="2dp" >
+
+                        <RelativeLayout
+                            android:id="@+id/RelaLaySandikAlani"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/beyaz_opacity"
+                            android:minHeight="30dp" >
+
+                            <TextView
+                                android:id="@+id/txtSandikAlani"
+                                android:layout_width="280dp"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:ellipsize="none"
+                                android:maxLines="2"
+                                android:minWidth="300dp"
+                                android:paddingLeft="30dp"
+                                android:singleLine="false"
+                                android:textColor="@color/beyaz" />
+                        </RelativeLayout>
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tableRow7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:paddingTop="10dp" >
+
+                        <LinearLayout
+                            android:id="@+id/linLaySandikNumara"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
+                            android:minHeight="25dp"
+                            android:orientation="horizontal" >
+
+                            <ImageView
+                                android:id="@+id/imageSandikNumara"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:paddingLeft="30dp"
+                                android:src="@drawable/icon_sandik" />
+
+                            <TextView
+                                android:id="@+id/txtSandikNumaraBaslik"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:minWidth="300dp"
+                                android:paddingLeft="10dp"
+                                android:text="Sandık No / Sıra No"
+                                android:textColor="@color/baslik"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tableRow8"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:paddingTop="2dp" >
+
+                        <RelativeLayout
+                            android:id="@+id/RelaLaySandikNumara"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="fill"
+                            android:background="@color/beyaz_opacity"
+                            android:minHeight="30dp" >
+
+                            <TextView
+                                android:id="@+id/txtSandikNumara"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:minWidth="300dp"
+                                android:paddingLeft="30dp"
+                                android:textColor="@color/beyaz" />
+                        </RelativeLayout>
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+        </ScrollView>
+
+
+
+</RelativeLayout>

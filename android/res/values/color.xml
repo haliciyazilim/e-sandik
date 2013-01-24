@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="beyaz">#FFFFFF</color>
+    <color name="red">#FF0000</color>
+    <color name="beyaz_opacity">#33ffffff</color>
+    <color name="siyah">#000000</color>
+    <color name="baslik">#600000</color>
+    
+</resources>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/splash_back"
+    android:orientation="vertical" >
+
+	<RelativeLayout
+	    android:id="@+id/RelativeLayout1"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_gravity="top"
+	    android:background="@drawable/top_bg" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:paddingBottom="8dp"
+            android:src="@drawable/baslik_sandikbilgisi" />
+
+    </RelativeLayout>
+
+	<LinearLayout
+	    android:id="@+id/LinearLayout1"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal" >
+
+	    <TextView
+	        android:id="@+id/txtSandikNo"
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+	        android:layout_weight="1"
+	        android:gravity="left|center_vertical"
+	        android:paddingLeft="20dp"
+	        android:text="Sandık No: 1180"
+	        android:textAlignment="center"
+	        android:textColor="@color/beyaz" />
+
+	    <TextView
+	        android:id="@+id/txtSecmenSayisi"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_vertical|center_horizontal"
+	        android:layout_marginRight="20dp"
+	        android:layout_weight="1"
+	        android:gravity="center_vertical|center_horizontal"
+	        android:text="Seçmen Sayısı: 288"
+	        android:textAlignment="center"
+	        android:textColor="@color/beyaz" />
+	</LinearLayout>
+
+    <ListView
+        android:id="@+id/listSandik"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="8dp"
+        android:background="@android:color/transparent"
+		android:cacheColorHint="@android:color/transparent" >
+    </ListView>
+
+</LinearLayout>

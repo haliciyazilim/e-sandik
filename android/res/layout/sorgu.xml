@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/page_back"
+    android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/editSorgu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="127dp"
+        android:background="@drawable/input_bg"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/sorguHint"
+        android:inputType="number"
+        android:singleLine="true"
+        android:textSize="18dp"
+        android:width="300dp" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/btnSorgula"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editSorgu"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="41dp"
+        android:background="@drawable/sorgula_butonu"
+        android:text="@string/sorgula"
+        android:textSize="16dp" />
+
+    <TextView
+        android:id="@+id/editAciklama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="30dp"
+        android:text="CHP Bilgi ve İletişim Teknolojileri"
+        android:textColor="@color/beyaz_opacity" />
+
+</RelativeLayout>

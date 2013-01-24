@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">e-Sandık</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="sorguHint">Lütfen Kimlik Numaranızı Giriniz.</string>
+    <string name="sorgula">Sorgula</string>
+    
+
+</resources>
