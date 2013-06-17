@@ -98,9 +98,12 @@ static APIManager *sharedInstance = nil;
                                                               forOperation:operationName];
         
         if([[responseDictionary valueForKey:@"hataKodu"] integerValue] == 1){
+//            NSError *apiError = [NSError errorWithDomain:@"APIError"
+//                                                    code:-101
+//                                                userInfo:@{NSLocalizedDescriptionKey : [responseDictionary valueForKey:@"hataAciklamasi"]}];
             NSError *apiError = [NSError errorWithDomain:@"APIError"
                                                     code:-101
-                                                userInfo:@{NSLocalizedDescriptionKey : [responseDictionary valueForKey:@"hataAciklamasi"]}];
+                                                userInfo:@{NSLocalizedDescriptionKey : @"Sunucuyla ilgili bir sorun oluştu. Lütfen daha sonra tekrar deneyiniz."];
             errorBlock(apiError);
         }
         else{
