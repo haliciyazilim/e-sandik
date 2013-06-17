@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		050DDEED1765FA8200363603 /* SandikLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 050DDEEC1765FA8200363603 /* SandikLoginViewController.m */; };
 		053E4975164D944700053418 /* Neighbour.m in Sources */ = {isa = PBXBuildFile; fileRef = 053E4974164D944700053418 /* Neighbour.m */; };
 		0543E82D164BB72D00255154 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0543E82C164BB72D00255154 /* UIKit.framework */; };
 		0543E82F164BB72D00255154 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0543E82E164BB72D00255154 /* Foundation.framework */; };
@@ -41,6 +42,13 @@
 		0543E8BB164BFD8300255154 /* SandikSorguViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0543E8BA164BFD8300255154 /* SandikSorguViewController.m */; };
 		0543E8BE164BFEBE00255154 /* SandikTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0543E8BD164BFEBD00255154 /* SandikTabBarViewController.m */; };
 		05488A47168D8CC10076BB74 /* mainbg-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 05488A46168D8CC10076BB74 /* mainbg-568h@2x.png */; };
+		0552B4E9176F3ECF00AB7539 /* RNCryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0552B4DC176F3ECF00AB7539 /* RNCryptor.m */; };
+		0552B4EA176F3ECF00AB7539 /* RNCryptorEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 0552B4DE176F3ECF00AB7539 /* RNCryptorEngine.m */; };
+		0552B4EB176F3ECF00AB7539 /* RNDecryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0552B4E0176F3ECF00AB7539 /* RNDecryptor.m */; };
+		0552B4EC176F3ECF00AB7539 /* RNEncryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0552B4E2176F3ECF00AB7539 /* RNEncryptor.m */; };
+		0552B4ED176F3ECF00AB7539 /* RNOpenSSLCryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0552B4E4176F3ECF00AB7539 /* RNOpenSSLCryptor.m */; };
+		0552B4EE176F3ECF00AB7539 /* RNOpenSSLDecryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0552B4E6176F3ECF00AB7539 /* RNOpenSSLDecryptor.m */; };
+		0552B4EF176F3ECF00AB7539 /* RNOpenSSLEncryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0552B4E8176F3ECF00AB7539 /* RNOpenSSLEncryptor.m */; };
 		05BA1B8716524230006E6B38 /* cell_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 05BA1B8516524230006E6B38 /* cell_bg.png */; };
 		05BA1B8816524230006E6B38 /* cell_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 05BA1B8616524230006E6B38 /* cell_bg@2x.png */; };
 		05BA1B8B16524939006E6B38 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05BA1B8A16524939006E6B38 /* QuartzCore.framework */; };
@@ -93,6 +101,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		050DDEEB1765FA8200363603 /* SandikLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SandikLoginViewController.h; sourceTree = "<group>"; };
+		050DDEEC1765FA8200363603 /* SandikLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SandikLoginViewController.m; sourceTree = "<group>"; };
 		053E4973164D944700053418 /* Neighbour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Neighbour.h; sourceTree = "<group>"; };
 		053E4974164D944700053418 /* Neighbour.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Neighbour.m; sourceTree = "<group>"; };
 		0543E828164BB72D00255154 /* e-Sandık.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "e-Sandık.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,6 +148,22 @@
 		0543E8BC164BFEBD00255154 /* SandikTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SandikTabBarViewController.h; sourceTree = "<group>"; };
 		0543E8BD164BFEBD00255154 /* SandikTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SandikTabBarViewController.m; sourceTree = "<group>"; };
 		05488A46168D8CC10076BB74 /* mainbg-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mainbg-568h@2x.png"; sourceTree = "<group>"; };
+		0552B4D9176F3ECF00AB7539 /* RNCryptor+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RNCryptor+Private.h"; sourceTree = "<group>"; };
+		0552B4DA176F3ECF00AB7539 /* RNCryptor-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RNCryptor-Prefix.pch"; sourceTree = "<group>"; };
+		0552B4DB176F3ECF00AB7539 /* RNCryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNCryptor.h; sourceTree = "<group>"; };
+		0552B4DC176F3ECF00AB7539 /* RNCryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNCryptor.m; sourceTree = "<group>"; };
+		0552B4DD176F3ECF00AB7539 /* RNCryptorEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNCryptorEngine.h; sourceTree = "<group>"; };
+		0552B4DE176F3ECF00AB7539 /* RNCryptorEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNCryptorEngine.m; sourceTree = "<group>"; };
+		0552B4DF176F3ECF00AB7539 /* RNDecryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNDecryptor.h; sourceTree = "<group>"; };
+		0552B4E0176F3ECF00AB7539 /* RNDecryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNDecryptor.m; sourceTree = "<group>"; };
+		0552B4E1176F3ECF00AB7539 /* RNEncryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNEncryptor.h; sourceTree = "<group>"; };
+		0552B4E2176F3ECF00AB7539 /* RNEncryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNEncryptor.m; sourceTree = "<group>"; };
+		0552B4E3176F3ECF00AB7539 /* RNOpenSSLCryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNOpenSSLCryptor.h; sourceTree = "<group>"; };
+		0552B4E4176F3ECF00AB7539 /* RNOpenSSLCryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNOpenSSLCryptor.m; sourceTree = "<group>"; };
+		0552B4E5176F3ECF00AB7539 /* RNOpenSSLDecryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNOpenSSLDecryptor.h; sourceTree = "<group>"; };
+		0552B4E6176F3ECF00AB7539 /* RNOpenSSLDecryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNOpenSSLDecryptor.m; sourceTree = "<group>"; };
+		0552B4E7176F3ECF00AB7539 /* RNOpenSSLEncryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNOpenSSLEncryptor.h; sourceTree = "<group>"; };
+		0552B4E8176F3ECF00AB7539 /* RNOpenSSLEncryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNOpenSSLEncryptor.m; sourceTree = "<group>"; };
 		05BA1B8516524230006E6B38 /* cell_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_bg.png; sourceTree = "<group>"; };
 		05BA1B8616524230006E6B38 /* cell_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cell_bg@2x.png"; sourceTree = "<group>"; };
 		05BA1B8A16524939006E6B38 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -260,6 +286,7 @@
 				0543E847164BB72D00255154 /* MainStoryboard_iPad.storyboard */,
 				0543E83B164BB72D00255154 /* SandikAppDelegate.h */,
 				0543E83C164BB72D00255154 /* SandikAppDelegate.m */,
+				0552B4D8176F3ECF00AB7539 /* RNCryptor */,
 				0543E833164BB72D00255154 /* Supporting Files */,
 				4104C1F4164BF8EE00520218 /* APIManager.h */,
 				4104C1F5164BF8EE00520218 /* APIManager.m */,
@@ -339,6 +366,29 @@
 			name = Images;
 			sourceTree = "<group>";
 		};
+		0552B4D8176F3ECF00AB7539 /* RNCryptor */ = {
+			isa = PBXGroup;
+			children = (
+				0552B4D9176F3ECF00AB7539 /* RNCryptor+Private.h */,
+				0552B4DA176F3ECF00AB7539 /* RNCryptor-Prefix.pch */,
+				0552B4DB176F3ECF00AB7539 /* RNCryptor.h */,
+				0552B4DC176F3ECF00AB7539 /* RNCryptor.m */,
+				0552B4DD176F3ECF00AB7539 /* RNCryptorEngine.h */,
+				0552B4DE176F3ECF00AB7539 /* RNCryptorEngine.m */,
+				0552B4DF176F3ECF00AB7539 /* RNDecryptor.h */,
+				0552B4E0176F3ECF00AB7539 /* RNDecryptor.m */,
+				0552B4E1176F3ECF00AB7539 /* RNEncryptor.h */,
+				0552B4E2176F3ECF00AB7539 /* RNEncryptor.m */,
+				0552B4E3176F3ECF00AB7539 /* RNOpenSSLCryptor.h */,
+				0552B4E4176F3ECF00AB7539 /* RNOpenSSLCryptor.m */,
+				0552B4E5176F3ECF00AB7539 /* RNOpenSSLDecryptor.h */,
+				0552B4E6176F3ECF00AB7539 /* RNOpenSSLDecryptor.m */,
+				0552B4E7176F3ECF00AB7539 /* RNOpenSSLEncryptor.h */,
+				0552B4E8176F3ECF00AB7539 /* RNOpenSSLEncryptor.m */,
+			);
+			path = RNCryptor;
+			sourceTree = "<group>";
+		};
 		416A7D89165141BC0005E9E3 /* MKNetworkKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -397,6 +447,8 @@
 				05D0B71B164D29BE0041D665 /* SandikNavigationViewController.m */,
 				0543E8BC164BFEBD00255154 /* SandikTabBarViewController.h */,
 				0543E8BD164BFEBD00255154 /* SandikTabBarViewController.m */,
+				050DDEEB1765FA8200363603 /* SandikLoginViewController.h */,
+				050DDEEC1765FA8200363603 /* SandikLoginViewController.m */,
 				0543E8B9164BFD8200255154 /* SandikSorguViewController.h */,
 				0543E8BA164BFD8300255154 /* SandikSorguViewController.m */,
 				0543E869164BD6E100255154 /* SandikKunyeViewController.h */,
@@ -547,6 +599,14 @@
 				416A7DA5165141BC0005E9E3 /* MKNetworkEngine.m in Sources */,
 				416A7DA6165141BC0005E9E3 /* MKNetworkOperation.m in Sources */,
 				416A7DA7165141BC0005E9E3 /* Reachability.m in Sources */,
+				050DDEED1765FA8200363603 /* SandikLoginViewController.m in Sources */,
+				0552B4E9176F3ECF00AB7539 /* RNCryptor.m in Sources */,
+				0552B4EA176F3ECF00AB7539 /* RNCryptorEngine.m in Sources */,
+				0552B4EB176F3ECF00AB7539 /* RNDecryptor.m in Sources */,
+				0552B4EC176F3ECF00AB7539 /* RNEncryptor.m in Sources */,
+				0552B4ED176F3ECF00AB7539 /* RNOpenSSLCryptor.m in Sources */,
+				0552B4EE176F3ECF00AB7539 /* RNOpenSSLDecryptor.m in Sources */,
+				0552B4EF176F3ECF00AB7539 /* RNOpenSSLEncryptor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -639,6 +699,10 @@
 				GCC_PREFIX_HEADER = "e-Sandik/e-Sandık-Prefix.pch";
 				INFOPLIST_FILE = "e-Sandik/e-Sandık-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SDKROOT)/usr/lib/system\"",
+				);
 				PRODUCT_NAME = "e-Sandık";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -652,6 +716,10 @@
 				GCC_PREFIX_HEADER = "e-Sandik/e-Sandık-Prefix.pch";
 				INFOPLIST_FILE = "e-Sandik/e-Sandık-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SDKROOT)/usr/lib/system\"",
+				);
 				PRODUCT_NAME = "e-Sandık";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
