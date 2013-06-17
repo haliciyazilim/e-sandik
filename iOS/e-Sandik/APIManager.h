@@ -12,12 +12,20 @@
 
 @class Voter;
 
-typedef void (^VoterBlock) (Voter *voter);
+typedef void (^CompletionBlock) (NSDictionary *responseDictionary);
 typedef void (^ErrorBlock) (NSError *error);
+
+typedef void (^LoginBlock) (NSString *tckNo);
+typedef void (^VoterBlock) (Voter *voter);
 
 @interface APIManager : MKNetworkEngine
 
 + (APIManager *)sharedInstance;
+
+- (MKNetworkOperation *)loginWithTckNo:(NSString *)tckNo
+                           andPassword:(NSString *)password
+                          onCompletion:(LoginBlock)completionBlock
+                               onError:(ErrorBlock)errorBlock;
 
 - (MKNetworkOperation *)getVoterWithTckNo:(NSString *)tckNo
                              onCompletion:(VoterBlock)completionBlock
