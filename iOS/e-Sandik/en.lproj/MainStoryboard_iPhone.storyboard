@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C3006" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="FdP-bt-3rd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="FdP-bt-3rd">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
         <!--Sandik Navigation View Controller-->
@@ -12,23 +12,23 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="lMh-er-aEY" kind="relationship" relationship="rootViewController" id="gin-9L-M4F"/>
+                        <segue destination="V0b-GT-vpq" kind="relationship" relationship="rootViewController" id="J4d-tV-ZiK"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bnE-4O-7zm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-741" y="180"/>
+            <point key="canvasLocation" x="-1191" y="180"/>
         </scene>
         <!--Sandik Sorgu View Controller-->
         <scene sceneID="1B2-2c-DbA">
             <objects>
                 <viewController id="lMh-er-aEY" customClass="SandikSorguViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Bfh-Zj-2mf">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="T.C. Kimlik No Giriniz" textAlignment="center" minimumFontSize="17" background="tcinput_bg.png" clearButtonMode="whileEditing" id="PmJ-DB-zdg">
-                                <rect key="frame" x="29" y="126" width="262" height="45"/>
+                                <rect key="frame" x="29" y="138" width="262" height="45"/>
                                 <color key="textColor" red="0.37647058823529411" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" returnKeyType="done"/>
@@ -37,7 +37,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="UAz-Y1-1MB">
-                                <rect key="frame" x="72" y="190" width="176" height="34"/>
+                                <rect key="frame" x="72" y="207" width="176" height="34"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
                                 <state key="normal" title="Sorgula" backgroundImage="main_btn_normal.png">
                                     <color key="titleColor" red="0.27843137254901962" green="0.15686274509803921" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -52,7 +52,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.30000000000000004" contentMode="left" text="CHP Bilgi ve İletişim Teknolojileri" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZHf-Yj-O5x">
-                                <rect key="frame" x="20" y="475" width="271" height="21"/>
+                                <rect key="frame" x="20" y="518" width="271" height="21"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -61,6 +61,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="oLa-q5-da0"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="tckNoTextField" destination="PmJ-DB-zdg" id="xVo-Gq-XxM"/>
                         <segue destination="4" kind="push" identifier="ShowQueryResult" id="vry-aw-kaB"/>
@@ -96,7 +97,7 @@
             <objects>
                 <tableViewController id="jRa-Ks-1Vm" customClass="SandikBinaBilgisiViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="53" sectionHeaderHeight="22" sectionFooterHeight="22" id="2Nr-fk-Bcc">
-                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -154,7 +155,7 @@
             <objects>
                 <tableViewController id="FRb-uF-G9H" customClass="SandikKunyeViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="ziN-Q0-z2X">
-                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <label key="tableHeaderView" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="T7l-Sd-rVo">
@@ -197,7 +198,7 @@
                                         </view>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="45" id="Zvs-fW-lGT">
-                                        <rect key="frame" x="0.0" y="64" width="320" height="46"/>
+                                        <rect key="frame" x="0.0" y="64" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="300" height="44"/>
@@ -247,7 +248,7 @@
                                         </view>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="78" id="shh-NU-KTL">
-                                        <rect key="frame" x="0.0" y="168" width="320" height="79"/>
+                                        <rect key="frame" x="0.0" y="168" width="320" height="78"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="300" height="77"/>
@@ -297,7 +298,7 @@
                                         </view>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="78" id="Ujv-Pj-D25">
-                                        <rect key="frame" x="0.0" y="305" width="320" height="79"/>
+                                        <rect key="frame" x="0.0" y="305" width="320" height="78"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="300" height="77"/>
@@ -347,7 +348,7 @@
                                         </view>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Axz-DD-V4Z">
-                                        <rect key="frame" x="0.0" y="442" width="320" height="45"/>
+                                        <rect key="frame" x="0.0" y="442" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="300" height="43"/>
@@ -401,7 +402,7 @@
             <objects>
                 <tableViewController id="sFL-gl-PcJ" customClass="SandikSecmenlerViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="30" sectionHeaderHeight="22" sectionFooterHeight="22" id="mwe-vG-XLx">
-                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -437,6 +438,68 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SIR-Mf-LYO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="990" y="180"/>
+        </scene>
+        <!--Sandik Login View Controller-->
+        <scene sceneID="Sr4-sN-EMk">
+            <objects>
+                <viewController id="V0b-GT-vpq" customClass="SandikLoginViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2zP-ne-xE0">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Telefon No/T.C. Kimlik No Giriniz" textAlignment="center" minimumFontSize="17" background="tcinput_bg.png" clearButtonMode="whileEditing" id="eYA-oN-sFI">
+                                <rect key="frame" x="20" y="140" width="271" height="45"/>
+                                <color key="textColor" red="0.37647058820000001" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="V0b-GT-vpq" id="sAf-Jy-fzo"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="e1v-QN-qbc">
+                                <rect key="frame" x="90" y="331" width="130" height="34"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                <state key="normal" title="Giriş" backgroundImage="main_btn_normal.png">
+                                    <color key="titleColor" red="0.2784313725" green="0.15686274510000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" title="Sorgula" backgroundImage="main_btn_hover.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="checkLogin:" destination="V0b-GT-vpq" eventType="touchUpInside" id="R8k-Ij-Ae5"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.30000001192092896" contentMode="left" text="CHP Bilgi ve İletişim Teknolojileri" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QWp-dy-znW">
+                                <rect key="frame" x="20" y="518" width="271" height="21"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Şifre Giriniz" textAlignment="center" minimumFontSize="17" background="tcinput_bg.png" clearButtonMode="whileEditing" id="nAC-Q2-5aj">
+                                <rect key="frame" x="20" y="230" width="271" height="45"/>
+                                <color key="textColor" red="0.37647058820000001" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done" secureTextEntry="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="V0b-GT-vpq" id="HiD-GG-a6X"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Fxt-5k-nFR"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="passwordField" destination="nAC-Q2-5aj" id="98s-L1-dFM"/>
+                        <outlet property="usernameField" destination="eYA-oN-sFI" id="Scm-Ul-bkK"/>
+                        <segue destination="lMh-er-aEY" kind="push" identifier="LoginSegue" id="e5g-y5-F7s"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZaD-ZP-4Xn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-728" y="180"/>
         </scene>
     </scenes>
     <resources>
@@ -476,6 +539,14 @@
                 <relationship kind="outlet" name="schoolLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="secondEmptyRow" candidateClass="UITableViewCell"/>
                 <relationship kind="outlet" name="thirdEmptyRow" candidateClass="UITableViewCell"/>
+            </relationships>
+        </class>
+        <class className="SandikLoginViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SandikLoginViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="checkLogin:"/>
+                <relationship kind="outlet" name="passwordField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="usernameField" candidateClass="UITextField"/>
             </relationships>
         </class>
         <class className="SandikNavigationViewController" superclassName="UINavigationController">
