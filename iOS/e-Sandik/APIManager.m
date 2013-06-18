@@ -173,7 +173,7 @@ static APIManager *sharedInstance = nil;
                                                       @"Sifre" : password  }
                                        onCompletion:^(NSDictionary *responseDictionary) {
                                            if ([responseDictionary[@"result"][@"LoginDurumu"] boolValue] == true) {
-                                               loginBlock(responseDictionary[@"result"][@"TCKN"]);
+                                               loginBlock([responseDictionary[@"result"][@"TCKN"] stringValue]);
                                            } else {
                                                errorBlock([NSError errorWithDomain:@"LoginError"
                                                                               code:-110

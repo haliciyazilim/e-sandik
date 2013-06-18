@@ -73,7 +73,12 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:)
                                                  name:UIKeyboardWillHideNotification object:self.view.window];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textFieldDidChange:) name:UITextFieldTextDidChangeNotification object:self.tckNoTextField];
-
+    
+    if (self.currentTckNo != nil) {
+        [self.tckNoTextField setText:self.currentTckNo];
+//        [self.tckNoTextField setText:@"asdasdsa"];
+        self.tckNoTextField.clearButtonMode = UITextFieldViewModeAlways;
+    }
 }
 
 -(void)viewWillDisappear:(BOOL)animated

@@ -9,7 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @interface SandikSorguViewController : UIViewController <UITextFieldDelegate>
+
+@property (nonatomic) NSString* currentUsername;
+@property (nonatomic) NSString* currentPassword;
+@property (nonatomic) NSString* currentTckNo;
 @property (weak, nonatomic) IBOutlet UITextField *tckNoTextField;
+
 - (IBAction)performQuery:(id)sender;
 
 @end
