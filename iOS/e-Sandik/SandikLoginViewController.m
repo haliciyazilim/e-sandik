@@ -22,6 +22,7 @@
     NSString* currentUsername;
     NSString* currentPassword;
     NSString* currentTckNo;
+    UIActivityIndicatorView* activityIndicator;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -38,7 +39,23 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Geri"
+                                                                   style:UIBarButtonItemStyleBordered
+                                                                  target:self
+                                                                  action:nil];
+    UIImage *buttonImage = [UIImage imageNamed:@"btn_back_normal.png"];
     
+    UIImage *hoverButtonImage = [UIImage imageNamed:@"btn_back_hover.png"];
+    
+    [backButton setBackButtonBackgroundImage:buttonImage
+                                    forState:UIControlStateNormal
+                                  barMetrics:UIBarMetricsDefault];
+    
+    [backButton setBackButtonBackgroundImage:hoverButtonImage
+                                    forState:UIControlStateHighlighted
+                                  barMetrics:UIBarMetricsDefault];
+    
+    self.navigationItem.backBarButtonItem = backButton;
     
 }
 - (void)viewWillAppear:(BOOL)animated {
@@ -170,9 +187,12 @@
 - (void)viewDidUnload {
     [self setUsernameField:nil];
     [self setPasswordField:nil];
+    [self setLoginButton:nil];
     [super viewDidUnload];
 }
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    [self.usernameField resignFirstResponder];
+    [self.passwordField resignFirstResponder];
     if ([[segue identifier] isEqualToString:@"LoginSegue"]) {
         SandikSorguViewController* sorguViewController = [segue destinationViewController];
         [sorguViewController setCurrentUsername:currentUsername];
@@ -182,13 +202,19 @@
 }
 - (IBAction)checkLogin:(id)sender {
     
+    activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+    [activityIndicator setFrame:CGRectMake(0.0, 0.0, 34.0, 34.0)];
+    [self.loginButton addSubview:activityIndicator];
+    [activityIndicator startAnimating];
+    
+    [self.loginButton setUserInteractionEnabled:NO];
+    
     long long int myText = [self.usernameField.text longLongValue];
     NSString *username = [NSString stringWithFormat:@"%llu",myText];
     if ([username length] == 11 || [username length] == 10){
         NSString* aPassword = self.passwordField.text;
         
         [[APIManager sharedInstance] loginWithTckNo:username andPassword:aPassword onCompletion:^(NSString *tckNo) {
-            NSLog(@"%@",tckNo);
             NSData* user = [NSKeyedArchiver archivedDataWithRootObject:username];
             NSData* pass = [NSKeyedArchiver archivedDataWithRootObject:aPassword];
             NSError* error2;
@@ -202,8 +228,16 @@
             currentUsername = username;
             currentPassword = aPassword;
             currentTckNo = tckNo;
+            [activityIndicator stopAnimating];
+            [activityIndicator removeFromSuperview];
+            activityIndicator = nil;
+            [self.loginButton setUserInteractionEnabled:YES];
             [self performSegueWithIdentifier:@"LoginSegue" sender:self];
         } onError:^(NSError *error) {
+            [activityIndicator stopAnimating];
+            [activityIndicator removeFromSuperview];
+            activityIndicator = nil;
+            [self.loginButton setUserInteractionEnabled:YES];
             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Hata" message:[error localizedDescription] delegate:self cancelButtonTitle:@"Tamam" otherButtonTitles:nil, nil];
             [alertView show];
         }];
