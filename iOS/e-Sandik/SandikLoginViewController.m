@@ -10,12 +10,19 @@
 #import "RNEncryptor.h"
 #import "RNDecryptor.h"
 #import "NSData+Base64.h"
+#import "APIManager.h"
+#import "SandikSorguViewController.h"
 
 @interface SandikLoginViewController ()
 
 @end
 
 @implementation SandikLoginViewController
+{
+    NSString* currentUsername;
+    NSString* currentPassword;
+    NSString* currentTckNo;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,6 +37,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    
+    
 }
 - (void)viewWillAppear:(BOOL)animated {
     
@@ -39,6 +49,31 @@
                                                  name:UIKeyboardWillHideNotification object:self.view.window];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textFieldDidChange:) name:UITextFieldTextDidChangeNotification object:self.usernameField];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textFieldDidChange:) name:UITextFieldTextDidChangeNotification object:self.passwordField];
+    
+    NSData* encryptedUsername = [[NSUserDefaults standardUserDefaults] objectForKey:USER_DEFAULTS_KEY_USERNAME];
+    NSData* encryptedPassword = [[NSUserDefaults standardUserDefaults] objectForKey:USER_DEFAULTS_KEY_PASSWORD];
+    
+    if (encryptedUsername != nil && encryptedPassword != nil) {
+        NSError* error;
+        NSError* error2;
+        
+        NSData* decryptedUsername = [RNDecryptor decryptData:encryptedUsername withPassword:ENCRYPTION_KEY error:&error];
+        NSData* decryptedPassword = [RNDecryptor decryptData:encryptedPassword withPassword:ENCRYPTION_KEY error:&error2];
+        
+        currentUsername = [NSKeyedUnarchiver unarchiveObjectWithData:decryptedUsername];
+        currentPassword = [NSKeyedUnarchiver unarchiveObjectWithData:decryptedPassword];
+    }
+    else {
+        currentUsername = nil;
+        currentPassword = nil;
+    }
+    
+    if (currentUsername != nil && currentPassword != nil) {
+        [self.usernameField setText:currentUsername];
+        [self.passwordField setText:currentPassword];
+        self.usernameField.clearButtonMode = UITextFieldViewModeAlways;
+        self.passwordField.clearButtonMode = UITextFieldViewModeAlways;
+    }
     
 }
 -(void)viewWillDisappear:(BOOL)animated
@@ -137,20 +172,49 @@
     [self setPasswordField:nil];
     [super viewDidUnload];
 }
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"LoginSegue"]) {
+        SandikSorguViewController* sorguViewController = [segue destinationViewController];
+        [sorguViewController setCurrentUsername:currentUsername];
+        [sorguViewController setCurrentPassword:currentPassword];
+        [sorguViewController setCurrentTckNo:currentTckNo];
+    }
+}
 - (IBAction)checkLogin:(id)sender {
     
-    
-    
-    NSString *key = @"secretsecret";
-    NSString* aPassword = @"kavunkavun";
-    
-    NSData* data = [NSKeyedArchiver archivedDataWithRootObject:aPassword];
-    NSError* error;
-    NSData* encryptedData = [RNEncryptor encryptData:data withSettings:kRNCryptorAES256Settings password:key error:&error];
-    
-    NSData* decryptedData = [RNDecryptor decryptData:encryptedData withPassword:key error:&error];
-    
-    NSString* decStr = [NSKeyedUnarchiver unarchiveObjectWithData:decryptedData];
+    long long int myText = [self.usernameField.text longLongValue];
+    NSString *username = [NSString stringWithFormat:@"%llu",myText];
+    if ([username length] == 11 || [username length] == 10){
+        NSString* aPassword = self.passwordField.text;
+        
+        [[APIManager sharedInstance] loginWithTckNo:username andPassword:aPassword onCompletion:^(NSString *tckNo) {
+            NSLog(@"%@",tckNo);
+            NSData* user = [NSKeyedArchiver archivedDataWithRootObject:username];
+            NSData* pass = [NSKeyedArchiver archivedDataWithRootObject:aPassword];
+            NSError* error2;
+            NSError* error;
+            NSData* encryptedUsername = [RNEncryptor encryptData:user withSettings:kRNCryptorAES256Settings password:ENCRYPTION_KEY error:&error];
+            NSData* encryptedPassword = [RNEncryptor encryptData:pass withSettings:kRNCryptorAES256Settings password:ENCRYPTION_KEY error:&error2];
+            
+            [[NSUserDefaults standardUserDefaults] setObject:encryptedUsername forKey:USER_DEFAULTS_KEY_USERNAME];
+            [[NSUserDefaults standardUserDefaults] setObject:encryptedPassword forKey:USER_DEFAULTS_KEY_PASSWORD];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+            currentUsername = username;
+            currentPassword = aPassword;
+            currentTckNo = tckNo;
+            [self performSegueWithIdentifier:@"LoginSegue" sender:self];
+        } onError:^(NSError *error) {
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Hata" message:[error localizedDescription] delegate:self cancelButtonTitle:@"Tamam" otherButtonTitles:nil, nil];
+            [alertView show];
+        }];
+        
+    }
+    else{
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Hata" message:@"Lütfen 11 haneli T.C. Kimlik numaranızı veya telefon numaranızı giriniz." delegate:self cancelButtonTitle:@"Tamam" otherButtonTitles:nil, nil];
+        [alertView show];
+        
+        
+    }
     
 }
 @end
