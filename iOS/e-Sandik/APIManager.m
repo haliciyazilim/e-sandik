@@ -98,9 +98,12 @@ static APIManager *sharedInstance = nil;
                                                               forOperation:operationName];
         
         if([[responseDictionary valueForKey:@"hataKodu"] integerValue] == 1){
+//            NSError *apiError = [NSError errorWithDomain:@"APIError"
+//                                                    code:-101
+//                                                userInfo:@{NSLocalizedDescriptionKey : [responseDictionary valueForKey:@"hataAciklamasi"]}];
             NSError *apiError = [NSError errorWithDomain:@"APIError"
                                                     code:-101
-                                                userInfo:@{NSLocalizedDescriptionKey : [responseDictionary valueForKey:@"hataAciklamasi"]}];
+                                                userInfo:@{NSLocalizedDescriptionKey : @"Sunucuyla ilgili bir sorun oluştu. Lütfen daha sonra tekrar deneyiniz."}];
             errorBlock(apiError);
         }
         else{
@@ -157,16 +160,16 @@ static APIManager *sharedInstance = nil;
 
 #pragma mark - Voters
 
-- (MKNetworkOperation *)loginWithTckNo:(NSString *)tckNo
-                           andPassword:(NSString *)password
-                          onCompletion:(LoginBlock)loginBlock
-                               onError:(ErrorBlock)errorBlock {
-    if ([tckNo characterAtIndex:0] == '0') {
-        tckNo = [tckNo substringFromIndex:1];
+- (MKNetworkOperation *)loginWithUsername:(NSString *)username
+                              andPassword:(NSString *)password
+                             onCompletion:(LoginBlock)loginBlock
+                                  onError:(ErrorBlock)errorBlock {
+    if ([username characterAtIndex:0] == '0') {
+        username = [username substringFromIndex:1];
     }
     
     return [self createNetworkOperationForOperation:@"ESANDIK_Login"
-                                      andParameters:@{@"telNo_TCKN" : tckNo,
+                                      andParameters:@{@"telNo_TCKN" : username,
                                                       @"Sifre" : password  }
                                        onCompletion:^(NSDictionary *responseDictionary) {
                                            if ([responseDictionary[@"result"][@"LoginDurumu"] boolValue] == true) {
@@ -183,54 +186,45 @@ static APIManager *sharedInstance = nil;
 }
 
 - (MKNetworkOperation *)getVoterWithTckNo:(NSString *)tckNo
+                                 username:(NSString*)username
+                              andPassword:(NSString *)password
                              onCompletion:(VoterBlock)completionBlock
                                   onError:(ErrorBlock)errorBlock {
 
+    if ([username characterAtIndex:0] == '0') {
+        username = [username substringFromIndex:1];
+    }
+    
     if (tckNo == nil || [tckNo isEqualToString:@""]) {
         tckNo = @"00000000000";
     }
     
-    MKNetworkOperation *op = [self operationWithPath:[self pathForOperation:@"SandikYeriSorgula"]
-                                              params:@{@"xmlData" : [self createSoapRequestForTckNo:tckNo]}
-                                          httpMethod:@"POST"];
-    
-    [op setCustomPostDataEncodingHandler:^NSString *(NSDictionary *postDataDict) {
-        return [postDataDict objectForKey:@"xmlData"];
-    } forType:@"text/xml"];
-    
-    [op addCompletionHandler:^(MKNetworkOperation *completedOperation) {
-        NSString *responseString = [completedOperation responseString];
-        NSRange range1 = [responseString rangeOfString:@"<SandikYeriSorgulaResult>"];
-        NSRange range2 = [responseString rangeOfString:@"</SandikYeriSorgulaResult>"];
-        NSRange range = {NSMaxRange(range1), range2.location-range1.location-range2.length+1};
-        NSData *responseJSON = [[responseString substringWithRange:range] dataUsingEncoding:NSUTF8StringEncoding];
- 
-        NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:responseJSON options:0 error:nil];
-        if([[responseDictionary valueForKey:@"HataKodu"] integerValue] == 1){
-            NSError *apiError = [NSError errorWithDomain:@"APIError"
-                                                           code:-101
-                                                       userInfo:@{NSLocalizedDescriptionKey : [responseDictionary valueForKey:@"HataAciklamasi"]}];
-            errorBlock(apiError);
-        }
-        else{
-            completionBlock([Voter voterFromDictionary:responseDictionary]);
-        }
-        DLog(@"%@", responseDictionary);
-    } errorHandler:^(MKNetworkOperation *completedOperation, NSError *error) {
-        if (error.domain == NSURLErrorDomain && error.code == -1009) {
-            NSError *connectionError = [NSError errorWithDomain:@"ConnectionError"
-                                                           code:-102
-                                                       userInfo:@{NSLocalizedDescriptionKey : @"İnternet bağlantısı sağlanamadı, ayarlarınızı kontrol ederek tekrar deneyiniz."}];
-            errorBlock(connectionError);
-        } else {
-            NSLog(@"%@", error);
-            errorBlock(error);
-        }
-    }];
-    
-    [self enqueueOperation:op];
-    
-    return op;
+    return [self createNetworkOperationForOperation:@"SandikYeriSorgula_v2"
+                                      andParameters:@{@"telNo_TCKN" : username,
+                                                           @"Sifre" : password,
+                                                            @"tckn" : tckNo}
+                                       onCompletion:^(NSDictionary *responseDictionary) {
+                                           if([[responseDictionary valueForKey:@"HataKodu"] integerValue] == 1){
+                                               NSError *apiError = [NSError errorWithDomain:@"APIError"
+                                                                                       code:-101
+                                                                                   userInfo:@{NSLocalizedDescriptionKey : responseDictionary[@"HataAciklamasi"]}];
+                                               errorBlock(apiError);
+                                           }
+                                           else{
+                                               completionBlock([Voter voterFromDictionary:responseDictionary[@"result"]]);
+                                           }
+                                       }
+                                            onError:^(NSError *error) {
+                                                if (error.domain == NSURLErrorDomain && error.code == -1009) {
+                                                    NSError *connectionError = [NSError errorWithDomain:@"ConnectionError"
+                                                                                                   code:-102
+                                                                                               userInfo:@{NSLocalizedDescriptionKey : @"İnternet bağlantısı sağlanamadı, ayarlarınızı kontrol ederek tekrar deneyiniz."}];
+                                                    errorBlock(connectionError);
+                                                } else {
+                                                    NSLog(@"%@", error);
+                                                    errorBlock(error);
+                                                }
+                                            }];
 }
 
 @end

@@ -175,6 +175,7 @@
     if ([[segue identifier] isEqualToString:@"ShowQueryResult"]) {
         SandikTabBarViewController *sandikTabBarViewController = [segue destinationViewController];
         sandikTabBarViewController.voter = currentVoter;
+
     }
     
     [self.tckNoTextField resignFirstResponder];
@@ -196,7 +197,7 @@
         myIndicator.frame = CGRectMake(110, 64, 60, 60);
         [myIndicator startAnimating];
         
-        [[APIManager sharedInstance] getVoterWithTckNo:self.tckNoTextField.text
+        [[APIManager sharedInstance] getVoterWithTckNo:self.tckNoTextField.text username:self.currentUsername andPassword:self.currentPassword 
               onCompletion:^(Voter *voter) {
                   [self dismissLoadingView];
                   currentVoter = voter;
