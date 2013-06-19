@@ -22,7 +22,7 @@ public class Splash extends Activity {
                 new Thread() {
                     public void run() {
                    
-                   Intent sorguyaGec=new Intent(Splash.this, Sorgu.class);
+                   Intent sorguyaGec=new Intent(Splash.this, Giris.class);
                    startActivity(sorguyaGec);
                    
                     }
