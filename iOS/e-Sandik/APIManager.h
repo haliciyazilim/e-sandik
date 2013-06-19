@@ -22,12 +22,14 @@ typedef void (^VoterBlock) (Voter *voter);
 
 + (APIManager *)sharedInstance;
 
-- (MKNetworkOperation *)loginWithTckNo:(NSString *)tckNo
-                           andPassword:(NSString *)password
-                          onCompletion:(LoginBlock)completionBlock
-                               onError:(ErrorBlock)errorBlock;
+- (MKNetworkOperation *)loginWithUsername:(NSString *)username
+                              andPassword:(NSString *)password
+                             onCompletion:(LoginBlock)loginBlock
+                                  onError:(ErrorBlock)errorBlock;
 
 - (MKNetworkOperation *)getVoterWithTckNo:(NSString *)tckNo
+                                 username:(NSString*)username
+                              andPassword:(NSString *)password
                              onCompletion:(VoterBlock)completionBlock
                                   onError:(ErrorBlock)errorBlock;
 

@@ -186,6 +186,8 @@
         SandikTabBarViewController *sandikTabBarViewController = [segue destinationViewController];
         
         [[APIManager sharedInstance] getVoterWithTckNo:self.tckNoTextField.text
+                                              username:@"username"
+                                           andPassword:@"password"
                                           onCompletion:^(Voter *voter) {
                                               sandikTabBarViewController.voter = voter;
                                               [sandikTabBarViewController dismissLoadingView];

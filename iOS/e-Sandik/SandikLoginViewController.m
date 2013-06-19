@@ -214,7 +214,7 @@
     if ([username length] == 11 || [username length] == 10){
         NSString* aPassword = self.passwordField.text;
         
-        [[APIManager sharedInstance] loginWithTckNo:username andPassword:aPassword onCompletion:^(NSString *tckNo) {
+        [[APIManager sharedInstance] loginWithUsername:username andPassword:aPassword onCompletion:^(NSString *tckNo) {
             NSData* user = [NSKeyedArchiver archivedDataWithRootObject:username];
             NSData* pass = [NSKeyedArchiver archivedDataWithRootObject:aPassword];
             NSError* error2;
