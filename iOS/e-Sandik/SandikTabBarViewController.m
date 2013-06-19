@@ -31,19 +31,6 @@
 {
     [super viewDidLoad];
     
-   
-        
-    self.loadingAlert = [[UIAlertView alloc] initWithTitle:@"Lütfen Bekleyiniz." message:@"Seçmen bilgileriniz yükleniyor.." delegate:self cancelButtonTitle:nil otherButtonTitles:nil, nil];
-    NSLog(@"Here");
-    UIActivityIndicatorView *myIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
-    myIndicator.hidesWhenStopped = YES;
-    //    myIndicator.color = [UIColor colorWithRed:1.0 green:0 blue:0 alpha:1];
-    [self.loadingAlert addSubview:myIndicator];
-    [self.loadingAlert show];
-    myIndicator.frame = CGRectMake(110, 64, 60, 60);
-    [myIndicator startAnimating];
-    
-    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -73,16 +60,6 @@
     
     SandikSecmenlerViewController *sandikSecmenlerViewController = [self.viewControllers objectAtIndex:2];
     sandikSecmenlerViewController.voter = voter;
-}
-
--(void)dismissLoadingView {
-    [self.loadingAlert dismissWithClickedButtonIndex:-1 animated:YES];
-}
-
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
-    if (buttonIndex == 0){
-        [[self navigationController] popViewControllerAnimated:YES];
-    }
 }
 
 @end

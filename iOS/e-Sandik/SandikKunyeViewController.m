@@ -40,7 +40,6 @@
     imageView.contentMode = UIViewContentModeBottom;
     
     // Add image view on top of table view
-    //[self.tableView addSubview:imageView];
     
     // Set the background view of the table view
     self.tableView.backgroundView = imageView;
@@ -83,7 +82,6 @@
     myImageView8.clipsToBounds = YES;
     myImageView8.alpha = 0.3;
     
-//    self.nameCell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"cell_bg.png"]];
     self.nameCell.backgroundView = myImageView;
     self.provinceCell.backgroundView = myImageView2;
     self.schoolCell.backgroundView = myImageView3;
@@ -108,23 +106,20 @@
     self.thirdEmptyRow.backgroundView = emptyView3;
     self.fourthEmptyRow.backgroundView = emptyView4;
 
-    [self configureViews];
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+//    [self configureViews];
+    [self configure];
 }
-
+- (void) configure {
+    self.nameLabel.text = self.voter.name;
+    self.provinceLabel.text = self.voter.province;
+    self.schoolLabel.text = self.voter.school;
+    if (self.voter.chest && self.voter.chestIndex) {
+        self.chestLabel.text = [NSString stringWithFormat:@"%@ / %@", self.voter.chest, self.voter.chestIndex];
+    } else {
+        self.chestLabel.text = nil;
+    }
+}
 - (void)viewWillAppear:(BOOL)animated {
-    
-//    UINavigationBar *navBar = self.navigationController.navigationBar;
-//    UIImage *image = [UIImage imageNamed:@"header_bg.png"];
-//    UIImage *shadowImage = [UIImage imageNamed:@"header_shadow.png"];
-//    [navBar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
-//    [navBar setShadowImage:shadowImage];
-    
-//    self.navigationController.navigationBar.topItem.title = @"Künye";
 
     if(isFirst != 0){
     
@@ -134,7 +129,9 @@
         isFirst = 1;
     }
 }
-
+- (void) viewDidAppear:(BOOL)animated {
+    [self configureViews];
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -145,11 +142,10 @@
     if (_voter != voter) {
         _voter = voter;
     }
-    
-    [self configureViews];
 }
 
 - (void)configureViews {
+
     if(self.voter.isInformationsOld){
         UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 10.0, 320.0, 70.0)];
         UILabel *headerLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0, 0.0, 300.0, 0.0)];
@@ -161,11 +157,12 @@
         [headerLabel setTextAlignment:NSTextAlignmentCenter];
         [headerLabel setText:[NSString stringWithFormat:@"Not: Yeni seçmen listeleri açıklanana kadar %@ seçimlerine dair bilgiler görüntülenecektir.",self.voter.electionYear]];
         [headerView addSubview:headerLabel];
-
+        
         [UIView animateWithDuration:1.0 delay:0.0 options:UIViewAnimationCurveEaseInOut animations:^{
-            self.tableView.tableHeaderView = headerView;
             headerLabel.frame = CGRectMake(10.0, 10.0, 300.0, 60.0);
+            self.tableView.tableHeaderView = headerView;
         } completion:^(BOOL finished) {
+            
         }];
     }
     
