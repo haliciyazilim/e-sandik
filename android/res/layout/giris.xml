@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/page_back"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/editAciklama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="30dp"
+        android:text="@string/chpAciklama"
+        android:textColor="@color/beyaz_opacity" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:gravity="center_horizontal" >
+
+        <Button
+            android:id="@+id/btnGiris"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editSifre"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/sorgula_butonu"
+            android:text="@string/sorgula"
+            android:textSize="16dp" />
+
+        <EditText
+            android:id="@+id/editKullaniciAdi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="false"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/input_bg"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="@string/kullaniciAdiHint"
+            android:inputType="number"
+            android:singleLine="true"
+            android:textSize="18dp"
+            android:width="300dp" />
+
+        <EditText
+            android:id="@+id/editSifre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editKullaniciAdi"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/input_bg"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="@string/sifreHint"
+            android:singleLine="true"
+            android:textSize="18dp"
+            android:width="300dp"
+            android:inputType="textPassword" />
+    </RelativeLayout>
+
+</RelativeLayout>

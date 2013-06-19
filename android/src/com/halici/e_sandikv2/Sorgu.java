@@ -7,17 +7,15 @@ import java.util.HashMap;
 
 import com.halici.e_sandikv2.siniflar.AyniBinadakiler;
 import com.halici.e_sandikv2.siniflar.AyniSandikdakiler;
+import com.halici.e_sandikv2.siniflar.BaglantiKontrolu;
 import com.halici.e_sandikv2.siniflar.KisiBilgileri;
 import com.halici.e_sandikv2.siniflar.Sorgulama;
 
-import android.R.bool;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.net.ConnectivityManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.InputFilter;
@@ -28,18 +26,26 @@ import android.widget.Toast;
 
 public class Sorgu extends Activity {
 	public String secimYili, eskiListe, isim, muhtarlik, sandikAlani, sandikNumarasi, sandikSirasi;
+	
+	private String userName, password, tckn;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.sorgu);
 		
+		Intent intent=getIntent();
+		userName=intent.getStringExtra("userName");
+		password=intent.getStringExtra("sifre");
+		tckn=intent.getStringExtra("tckn");
+		
 		final EditText editSorgu=(EditText) findViewById(R.id.editSorgu);
 		InputFilter[] FilterArray = new InputFilter[1];
 		FilterArray[0] = new InputFilter.LengthFilter(11);
 		editSorgu.setFilters(FilterArray);
 		
-		editSorgu.setText("");
+		editSorgu.setText(tckn);
 		
 		Button btnSorgu=(Button) findViewById(R.id.btnSorgula);
         
@@ -58,24 +64,18 @@ public class Sorgu extends Activity {
 					
 					String tckn=editSorgu.getText().toString();
 					
-					boolean baglanti=baglantiKuntrolu();
+					boolean baglanti=new BaglantiKontrolu(Sorgu.this).kontrolEt();
 					
-					if(baglanti==true)
-						new Servis().execute(tckn);
+					if(baglanti==true){
+						System.out.println("******Sorgu: "+userName+", "+tckn+", "+password);
+						new Servis().execute(userName,tckn,password);
+					}
 					else if(baglanti==false){
 						Toast.makeText(getApplicationContext(), "İnternet bağlantınız ile ilgili bir sorun var; lütfen kontrol ediniz.",  Toast.LENGTH_LONG).show();
-					}
-					
-					
-					
+					}	
 				}
-				
-					
-				
 			}
 		});
-			
-			
     }
 	
 	public void kimlikNoHaneUyarisi(){
@@ -90,11 +90,8 @@ public class Sorgu extends Activity {
 	
 	@Override
 	public void onBackPressed() {
+		super.onBackPressed();
 		
-		//android.os.Process.killProcess(android.os.Process.myPid());
-		//System.exit(0);
-		//finish();
-		moveTaskToBack(true);
 	}
 
 
@@ -104,8 +101,8 @@ public class Sorgu extends Activity {
 		 EditText editSorgu=(EditText) findViewById(R.id.editSorgu);
 		@Override
 		protected String doInBackground(String... params) {
-			Sorgulama sorgu=new Sorgulama(params[0]);
-			String sonuc=sorgu.baglan();
+			Sorgulama sorgu=new Sorgulama(params[0],params[1], params[2]);
+			String sonuc=sorgu.bilgileriAl();
 			
 			System.out.println("Sonuclar sonuc: "+sonuc);
 			return sonuc;
@@ -181,16 +178,7 @@ public class Sorgu extends Activity {
 	}
 
 	
-	public boolean baglantiKuntrolu() {
-        final ConnectivityManager conMgr = (ConnectivityManager) getSystemService (Context.CONNECTIVITY_SERVICE);
-        if (conMgr.getActiveNetworkInfo() != null && conMgr.getActiveNetworkInfo().isAvailable() &&    conMgr.getActiveNetworkInfo().isConnected()) {
-        	System.out.println("İnternet Baplantısı var");
-        	return true;
-        } else {
-              System.out.println("İnternet Baplantısı yok");
-            return false;
-        }
-     }
+	
 		
 		
 	
