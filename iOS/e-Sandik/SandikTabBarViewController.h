@@ -13,8 +13,5 @@
 @interface SandikTabBarViewController : UITabBarController <UIAlertViewDelegate>
 
 @property (nonatomic, strong) Voter* voter;
-@property (nonatomic, strong) UIAlertView* loadingAlert;
-
-- (void)dismissLoadingView;
 
 @end

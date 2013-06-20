@@ -16,7 +16,10 @@
 @end
 
 @implementation SandikSorguViewController
-
+{
+    Voter* currentVoter;
+    BOOL isLoginFalse;
+}
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -59,15 +62,6 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     
-//    [super viewDidAppear:animated];
-//    
-//    self.navigationController.navigationBar.topItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"title_esandik.png"]];
-    
-//    UIImage *image = [UIImage imageNamed:@"header_bg.png"];
-//    UIImage *shadowImage = [UIImage imageNamed:@"header_shadow.png"];
-//    [navBar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
-//    [navBar setShadowImage:shadowImage];
-    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:)
                                                  name:UIKeyboardWillShowNotification object:self.view.window];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:)
@@ -76,9 +70,9 @@
     
     if (self.currentTckNo != nil) {
         [self.tckNoTextField setText:self.currentTckNo];
-//        [self.tckNoTextField setText:@"asdasdsa"];
         self.tckNoTextField.clearButtonMode = UITextFieldViewModeAlways;
     }
+    isLoginFalse = NO;
 }
 
 -(void)viewWillDisappear:(BOOL)animated
@@ -95,9 +89,7 @@
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
-//    if(textField == self.tckNoTextField){
-        [textField resignFirstResponder];
-//    }
+    [textField resignFirstResponder];
     return YES;
 }
 
@@ -184,23 +176,9 @@
     
     if ([[segue identifier] isEqualToString:@"ShowQueryResult"]) {
         SandikTabBarViewController *sandikTabBarViewController = [segue destinationViewController];
-        
-        [[APIManager sharedInstance] getVoterWithTckNo:self.tckNoTextField.text
-                                          onCompletion:^(Voter *voter) {
-                                              sandikTabBarViewController.voter = voter;
-                                              [sandikTabBarViewController dismissLoadingView];
-                                          } onError:^(NSError *error) {
-                                              [sandikTabBarViewController dismissLoadingView];
-                                              UIAlertView *myAlert = [[UIAlertView alloc] initWithTitle:@"Hata"
-                                                                                                message:[error localizedDescription]
-                                                                                               delegate:sandikTabBarViewController
-                                                                                      cancelButtonTitle:@"Tamam"
-                                                                                      otherButtonTitles:nil, nil];
-                                              [myAlert show];
-                                              
-                                          }];
+        sandikTabBarViewController.voter = currentVoter;
+
     }
-    [self.tckNoTextField setText:@""];
     
     [self.tckNoTextField resignFirstResponder];
         
@@ -208,16 +186,53 @@
 }
 
 - (IBAction)performQuery:(id)sender {
+    
     long long int myText = [self.tckNoTextField.text longLongValue];
     NSString *tck = [NSString stringWithFormat:@"%llu",myText];
     if ([tck length] == 11){
-        [self performSegueWithIdentifier:@"ShowQueryResult" sender:self];
+        self.loadingAlert = [[UIAlertView alloc] initWithTitle:@"Lütfen Bekleyiniz." message:@"Seçmen bilgileriniz yükleniyor.." delegate:self cancelButtonTitle:nil otherButtonTitles:nil, nil];
+        UIActivityIndicatorView *myIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+        myIndicator.hidesWhenStopped = YES;
+        //    myIndicator.color = [UIColor colorWithRed:1.0 green:0 blue:0 alpha:1];
+        [self.loadingAlert addSubview:myIndicator];
+        [self.loadingAlert show];
+        myIndicator.frame = CGRectMake(110, 64, 60, 60);
+        [myIndicator startAnimating];
+        
+        [[APIManager sharedInstance] getVoterWithTckNo:self.tckNoTextField.text username:self.currentUsername andPassword:self.currentPassword 
+              onCompletion:^(Voter *voter) {
+                  [self dismissLoadingView];
+                  currentVoter = voter;
+                  [self performSegueWithIdentifier:@"ShowQueryResult" sender:self];
+                  
+              } onError:^(NSError *error) {
+                  [self dismissLoadingView];
+                  if (error.code == -110) {
+                      isLoginFalse = YES;
+                  }
+                  UIAlertView *myAlert = [[UIAlertView alloc] initWithTitle:@"Hata"
+                                                                    message:[error localizedDescription]
+                                                                   delegate:self
+                                                          cancelButtonTitle:@"Tamam"
+                                                          otherButtonTitles:nil, nil];
+                  [myAlert show];
+                  
+              }];
     }
     else{
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Hata" message:@"Lütfen 11 haneli T.C. Kimlik numaranızı giriniz." delegate:self cancelButtonTitle:@"Tamam" otherButtonTitles:nil, nil];
         [alertView show];
         
         
+    }
+}
+-(void)dismissLoadingView {
+    [self.loadingAlert dismissWithClickedButtonIndex:-1 animated:YES];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (buttonIndex == 0 && isLoginFalse){
+        [[self navigationController] popViewControllerAnimated:YES];
     }
 }
 @end

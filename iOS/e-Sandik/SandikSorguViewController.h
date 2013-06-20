@@ -14,6 +14,7 @@
 @property (nonatomic) NSString* currentPassword;
 @property (nonatomic) NSString* currentTckNo;
 @property (weak, nonatomic) IBOutlet UITextField *tckNoTextField;
+@property (nonatomic, strong) UIAlertView* loadingAlert;
 
 - (IBAction)performQuery:(id)sender;
 
