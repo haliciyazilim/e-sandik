@@ -5,6 +5,9 @@ package com.halici.e_sandikv2;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import com.halici.e_sandikv2.siniflar.AyniBinadakiler;
 import com.halici.e_sandikv2.siniflar.AyniSandikdakiler;
 import com.halici.e_sandikv2.siniflar.BaglantiKontrolu;
@@ -142,14 +145,25 @@ public class Sorgu extends Activity {
 			
 			if(kisiBilgisi.get("isim")==null){
 				
-				new AlertDialog.Builder(Sorgu.this)
+				JSONObject hataBilgisi;
+				try {
+					hataBilgisi = new JSONObject(string);
+					new AlertDialog.Builder(Sorgu.this)
 					.setTitle("Bilgi")
-					.setMessage("Girdiğiniz TC kimlik numarasına ait bir kayıt bulunamadı.")
+					.setMessage(hataBilgisi.getString("HataAciklamasi").toString())
 					.setNeutralButton("Tamam",  new DialogInterface.OnClickListener() {
 						   public void onClick(DialogInterface dialog, int which) {
 							   editSorgu.setText("");
 							   }
 							}).show();
+					
+				} catch (JSONException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+				
+				
 			}
 			else{
 				Intent intent= new Intent("com.halici.e_sandikv2.SONUCLAR_LAYOUT");
