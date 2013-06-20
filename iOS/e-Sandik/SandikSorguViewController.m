@@ -18,6 +18,7 @@
 @implementation SandikSorguViewController
 {
     Voter* currentVoter;
+    BOOL isLoginFalse;
 }
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -71,6 +72,7 @@
         [self.tckNoTextField setText:self.currentTckNo];
         self.tckNoTextField.clearButtonMode = UITextFieldViewModeAlways;
     }
+    isLoginFalse = NO;
 }
 
 -(void)viewWillDisappear:(BOOL)animated
@@ -205,6 +207,9 @@
                   
               } onError:^(NSError *error) {
                   [self dismissLoadingView];
+                  if (error.code == -110) {
+                      isLoginFalse = YES;
+                  }
                   UIAlertView *myAlert = [[UIAlertView alloc] initWithTitle:@"Hata"
                                                                     message:[error localizedDescription]
                                                                    delegate:self
@@ -226,7 +231,7 @@
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
-    if (buttonIndex == 0){
+    if (buttonIndex == 0 && isLoginFalse){
         [[self navigationController] popViewControllerAnimated:YES];
     }
 }
