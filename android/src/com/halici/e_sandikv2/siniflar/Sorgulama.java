@@ -28,11 +28,11 @@ public class Sorgulama {
 			 
 	// kullanılan metot
 	final static String METHOD_NAME_LOGIN="ESANDIK_Login";
-	final static String METHOD_NAME_SANDIK_YERI="SandikYeriSorgula";
+	final static String METHOD_NAME_SANDIK_YERI="SandikYeriSorgula_v2";
 			 
 	// soap_action
 	final static String SOAP_ACTION_LOGIN="http://tempuri.org/ESANDIK_Login";
-	final static String SOAP_ACTION_SANDIK_YERI="http://tempuri.org/SandikYeriSorgula";
+	final static String SOAP_ACTION_SANDIK_YERI="http://tempuri.org/SandikYeriSorgula_v2";
 			 
 	// webservise ait url tanimlaması
 	final static String URL = "http://bilisim.chp.org.tr/MobilService.asmx";
