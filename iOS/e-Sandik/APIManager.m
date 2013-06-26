@@ -210,9 +210,14 @@ static APIManager *sharedInstance = nil;
                                                                                    userInfo:@{NSLocalizedDescriptionKey : responseDictionary[@"HataAciklamasi"]}];
                                                errorBlock(apiError);
                                            }
-                                           else{
+                                           else if ([responseDictionary[@"result"][@"LoginDurumu"] boolValue] == true) {
                                                completionBlock([Voter voterFromDictionary:responseDictionary[@"result"]]);
+                                           } else {
+                                               errorBlock([NSError errorWithDomain:@"LoginError"
+                                                                              code:-110
+                                                                          userInfo:@{NSLocalizedDescriptionKey : @"Hatalı kullanıcı adı veya şifre girdiniz. Lütfen tekrar deneyin."}]);
                                            }
+
                                        }
                                             onError:^(NSError *error) {
                                                 if (error.domain == NSURLErrorDomain && error.code == -1009) {
