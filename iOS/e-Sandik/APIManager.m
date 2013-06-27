@@ -98,12 +98,12 @@ static APIManager *sharedInstance = nil;
                                                               forOperation:operationName];
         
         if([[responseDictionary valueForKey:@"hataKodu"] integerValue] == 1){
-//            NSError *apiError = [NSError errorWithDomain:@"APIError"
-//                                                    code:-101
-//                                                userInfo:@{NSLocalizedDescriptionKey : [responseDictionary valueForKey:@"hataAciklamasi"]}];
             NSError *apiError = [NSError errorWithDomain:@"APIError"
                                                     code:-101
-                                                userInfo:@{NSLocalizedDescriptionKey : @"Sunucuyla ilgili bir sorun oluştu. Lütfen daha sonra tekrar deneyiniz."}];
+                                                userInfo:@{NSLocalizedDescriptionKey : [responseDictionary valueForKey:@"hataAciklamasi"]}];
+//            NSError *apiError = [NSError errorWithDomain:@"APIError"
+//                                                    code:-101
+//                                                userInfo:@{NSLocalizedDescriptionKey : @"Sunucuyla ilgili bir sorun oluştu. Lütfen daha sonra tekrar deneyiniz."}];
             errorBlock(apiError);
         }
         else{
@@ -210,9 +210,14 @@ static APIManager *sharedInstance = nil;
                                                                                    userInfo:@{NSLocalizedDescriptionKey : responseDictionary[@"HataAciklamasi"]}];
                                                errorBlock(apiError);
                                            }
-                                           else{
+                                           else if ([responseDictionary[@"result"][@"LoginDurumu"] boolValue] == true) {
                                                completionBlock([Voter voterFromDictionary:responseDictionary[@"result"]]);
+                                           } else {
+                                               errorBlock([NSError errorWithDomain:@"LoginError"
+                                                                              code:-110
+                                                                          userInfo:@{NSLocalizedDescriptionKey : @"Hatalı kullanıcı adı veya şifre girdiniz. Lütfen tekrar deneyin."}]);
                                            }
+
                                        }
                                             onError:^(NSError *error) {
                                                 if (error.domain == NSURLErrorDomain && error.code == -1009) {

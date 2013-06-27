@@ -108,7 +108,22 @@
     [textField resignFirstResponder];
     return YES;
 }
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    NSString* replacedString = [textField.text stringByReplacingCharactersInRange:range withString:string];
+    if (textField == self.usernameField) {
+        if (replacedString.length > 11) {
+            NSRange fieldRange = {0, 11};
+            textField.text = [replacedString substringWithRange:fieldRange];
+            
+            return NO;
+        } else {
+            return YES;
+        }
+    } else {
+        return YES;
+    }
 
+}
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     [self.usernameField resignFirstResponder];
