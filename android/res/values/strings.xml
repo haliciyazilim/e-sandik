@@ -6,7 +6,7 @@
     <string name="menu_settings">Settings</string>
     <string name="sorguHint">Lütfen Kimlik Numaranızı Giriniz.</string>
     <string name="kullaniciAdiHint">Telefon No/T.C. Kimlik No Giriniz</string>
-    <string name="sifreHint">Lütfen Şifretinizi Giriniz.</string>
+    <string name="sifreHint">Lütfen Şifrenizi Giriniz.</string>
     <string name="sorgula">Sorgula</string>
     <string name="chpAciklama">CHP Bilgi ve İletişim Teknolojileri</string>
     
