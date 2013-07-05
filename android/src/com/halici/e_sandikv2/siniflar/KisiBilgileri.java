@@ -21,6 +21,7 @@ public class KisiBilgileri {
 	private static String sandikAlani="SandikAlani";
 	private static String sandikNo="SandikNo";
 	private static String sandikSiraNo="SandikSiraNo";
+	private static String loginDurumu="LoginDurumu";
 
 	private static String eskiListe="EskiListe";
 	private static String secimYili="SecimYili";
@@ -50,6 +51,7 @@ public class KisiBilgileri {
 			
 			
 			
+			map.put("loginDurumu", String.valueOf(json.getBoolean(loginDurumu)));
 			map.put("isim", kisiBilgileri.getString(ad));
 			map.put("soyisim", kisiBilgileri.getString(soyad));
 			map.put("tckn", kisiBilgileri.getString(tckn));

@@ -29,6 +29,7 @@ import android.widget.Toast;
 
 public class Sorgu extends Activity {
 	public String secimYili, eskiListe, isim, muhtarlik, sandikAlani, sandikNumarasi, sandikSirasi;
+	public Boolean loginDurumu;
 	
 	private String userName, password, tckn;
 	
@@ -119,61 +120,75 @@ public class Sorgu extends Activity {
 			KisiBilgileri bilgiler=new KisiBilgileri(string);
 			HashMap<String, String> kisiBilgisi=bilgiler.veriAl();
 			
-			AyniSandikdakiler bilgiler1=new AyniSandikdakiler(string);
-			ArrayList<String> sandikBilgisi=bilgiler1.veriAl();
 			
-			AyniBinadakiler bilgiler2=new AyniBinadakiler(string);
-			ArrayList<HashMap<String, String>> binaBilgisi=bilgiler2.veriAl();
 			
 			
 			// Künye için gerekli bilgiler isim,muhtarlik, sandikAlani, sandikNumarasi, sandikSirasi;
 			
 			
-
-			isim=(kisiBilgisi.get("isim")+" "+kisiBilgisi.get("soyisim"));
-			muhtarlik=(kisiBilgisi.get("il")+" "+kisiBilgisi.get("ilce")+" "+kisiBilgisi.get("mahalle"));
-			sandikAlani=(kisiBilgisi.get("sandikAlani"));
-			sandikNumarasi=(kisiBilgisi.get("sandikNo"));
-			sandikSirasi=(kisiBilgisi.get("sandikSiraNo"));
+			loginDurumu=Boolean.valueOf(kisiBilgisi.get("loginDurumu"));
 			
-			secimYili=(kisiBilgisi.get("secimYili"));
-			eskiListe=(kisiBilgisi.get("eskiListe"));
-			
-			String[] kunye={isim,muhtarlik,sandikAlani,sandikNumarasi, sandikSirasi, secimYili, eskiListe};
 			
 			//System.out.println("Sorgu kunye: "+kunye[0]);
 			
-			if(kisiBilgisi.get("isim")==null){
+			if(loginDurumu){
+				System.out.println("Login TRUE");
+			
+				AyniSandikdakiler bilgiler1=new AyniSandikdakiler(string);
+				ArrayList<String> sandikBilgisi=bilgiler1.veriAl();
 				
-				JSONObject hataBilgisi;
-				try {
-					hataBilgisi = new JSONObject(string);
-					new AlertDialog.Builder(Sorgu.this)
-					.setTitle("Bilgi")
-					.setMessage(hataBilgisi.getString("HataAciklamasi").toString())
-					.setNeutralButton("Tamam",  new DialogInterface.OnClickListener() {
-						   public void onClick(DialogInterface dialog, int which) {
-							   editSorgu.setText("");
-							   }
-							}).show();
+				AyniBinadakiler bilgiler2=new AyniBinadakiler(string);
+				ArrayList<HashMap<String, String>> binaBilgisi=bilgiler2.veriAl();
+				
+				isim=(kisiBilgisi.get("isim")+" "+kisiBilgisi.get("soyisim"));
+				muhtarlik=(kisiBilgisi.get("il")+" "+kisiBilgisi.get("ilce")+" "+kisiBilgisi.get("mahalle"));
+				sandikAlani=(kisiBilgisi.get("sandikAlani"));
+				sandikNumarasi=(kisiBilgisi.get("sandikNo"));
+				sandikSirasi=(kisiBilgisi.get("sandikSiraNo"));
+				
+				secimYili=(kisiBilgisi.get("secimYili"));
+				eskiListe=(kisiBilgisi.get("eskiListe"));
+				
+				String[] kunye={isim,muhtarlik,sandikAlani,sandikNumarasi, sandikSirasi, secimYili, eskiListe};
+				
+				
+				if(kisiBilgisi.get("isim")==null){
 					
-				} catch (JSONException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
+					JSONObject hataBilgisi;
+					try {
+						hataBilgisi = new JSONObject(string);
+						new AlertDialog.Builder(Sorgu.this)
+						.setTitle("Bilgi")
+						.setMessage(hataBilgisi.getString("HataAciklamasi").toString())
+						.setNeutralButton("Tamam",  new DialogInterface.OnClickListener() {
+							   public void onClick(DialogInterface dialog, int which) {
+								   editSorgu.setText("");
+								   }
+								}).show();
+						
+					} catch (JSONException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					
+					
+					
 				}
-				
-				
-				
+				else{
+					Intent intent= new Intent("com.halici.e_sandikv2.SONUCLAR_LAYOUT");
+					intent.putExtra("kunye", kunye);
+					intent.putStringArrayListExtra("sandikBilgisi", sandikBilgisi);
+					intent.putExtra("binaBilgisi", binaBilgisi);
+					startActivity(intent);
+					editSorgu.setText("");
+				}
 			}
 			else{
-				Intent intent= new Intent("com.halici.e_sandikv2.SONUCLAR_LAYOUT");
-				intent.putExtra("kunye", kunye);
-				intent.putStringArrayListExtra("sandikBilgisi", sandikBilgisi);
-				intent.putExtra("binaBilgisi", binaBilgisi);
+				Toast.makeText(getApplicationContext(), "Üyelik bilgileriniz ile ilgili bir hata oluştu. Lütfen tekrar giriş yapınız.",  Toast.LENGTH_LONG).show();
+				Intent intent=new Intent(Sorgu.this,Giris.class);
 				startActivity(intent);
-				editSorgu.setText("");
 			}
-			
+				
 		}
 
 		@Override

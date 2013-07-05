@@ -115,6 +115,20 @@ public class Giris extends Activity {
 		this.userName=eTuserName.getText().toString().trim();
 		this.password=eTpassword.getText().toString().trim();
 		
+		if(this.userName.startsWith("0")){
+			this.userName=this.userName.substring(1, this.userName.length());
+			System.out.println("userName: "+this.userName);
+		}
+		
+		if(this.userName.length()<10){
+			Toast.makeText(getApplicationContext(), "Lütfen 10 haneli telefon numaranızı ya da 11 haneli kimlik numaranızı giriniz.",  Toast.LENGTH_LONG).show();
+			return;
+		}
+		else if(this.password.length()==0){
+			Toast.makeText(getApplicationContext(), "Lütfen şifrenizi giriniz.",  Toast.LENGTH_LONG).show();
+			return;
+		}
+		
 		boolean baglanti=new BaglantiKontrolu(Giris.this).kontrolEt();
 		
 		if(baglanti==true)
@@ -164,7 +178,7 @@ public class Giris extends Activity {
 					intent.putExtra("tckn", tckn);
 					intent.putExtra("sifre", password);
 					
-					System.out.println("******"+userName+", "+tckn+", "+password);
+//					System.out.println("******"+userName+", "+tckn+", "+password);
 					
 					startActivity(intent);
 					
