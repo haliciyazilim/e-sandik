@@ -174,9 +174,10 @@
     } else {
         self.chestLabel.text = nil;
     }
-    
 }
-
+- (void) viewDidDisappear:(BOOL)animated {
+    self.tableView.tableHeaderView = nil;
+}
 - (void)setIsFirst {
     isFirst = 0;
 }
