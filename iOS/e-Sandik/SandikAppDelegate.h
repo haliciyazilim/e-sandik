@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SandikAppDelegate : UIResponder <UIApplicationDelegate>
+@interface SandikAppDelegate : UIResponder <UIApplicationDelegate, UIAlertViewDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
