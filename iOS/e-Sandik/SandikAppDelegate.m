@@ -43,12 +43,10 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     if (buttonIndex != alertView.cancelButtonIndex){
         // open app store
-        NSString* str = @"eSe%C3%A7men";
-        NSString* url = [@"itms-apps://itunes.com/apps/" stringByAppendingString:str];
+        NSString* url = @"itms-apps://itunes.apple.com/app/e-secmen/id670241191";
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
         
     } else {
-        NSLog(@"cancel button");
     }
 }
 
