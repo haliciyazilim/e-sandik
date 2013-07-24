@@ -24,9 +24,32 @@
         _window.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"mainbg.png"]];
     }
     
+    NSString* string = [[NSUserDefaults standardUserDefaults] objectForKey:@"isUpdateMade"];
+    
+    if (string == nil || [string isEqualToString:@"NO"]) {
+        
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Bilgilendirme" message:@"e-Sandık uygulaması sandık görevlilerinin kullanımı için güncellenmiştir. Seçmenler, kendi bilgilerine erişmek için e-Seçmen uygulamasını kullanabilirler." delegate:self cancelButtonTitle:@"Kapat" otherButtonTitles:@"Görüntüle", nil];
+        [alertView show];
+        
+        alertView.delegate = self;
+        
+        [[NSUserDefaults standardUserDefaults] setObject:@"YES" forKey:@"isUpdateMade"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+    
     return YES;
 }
-							
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (buttonIndex != alertView.cancelButtonIndex){
+        // open app store
+        NSString* url = @"itms-apps://itunes.apple.com/app/e-secmen/id670241191";
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
+        
+    } else {
+    }
+}
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
