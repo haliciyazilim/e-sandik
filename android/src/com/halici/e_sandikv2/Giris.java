@@ -22,6 +22,7 @@ import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
@@ -41,6 +42,7 @@ public class Giris extends Activity {
 	private static final String NAME="name";
 	private static final String PASSWORD="password";
 	private static final String SEED="secure";
+	private static final String IS_BEFORE_STARTED="isBeforeStarted";
 	
 	private boolean loginDurumu;
 	private String tckn;
@@ -60,6 +62,44 @@ public class Giris extends Activity {
 		btnSign=(Button)findViewById(R.id.btnGiris);
 		shPreferences=getSharedPreferences("data", MODE_PRIVATE);
 		
+		boolean isBeforeStarted= shPreferences.getBoolean(IS_BEFORE_STARTED, false);
+		if(!isBeforeStarted){
+			shPreferences.edit().putBoolean(IS_BEFORE_STARTED, true);
+			AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
+			 
+	        // Setting Dialog Title
+	        alertDialog.setTitle("Uyarı");
+	 
+	        // Setting Dialog Message
+	        alertDialog.setMessage("e-Sandık uygulaması sandık görevlilerinin kullanımı için güncellenmiştir. " +
+	        		"Seçmenler, kendi bilgilerine erişmek için e-Seçmen uygulamasını kullanabilirler.");
+	 
+	        // Setting Icon to Dialog
+//	        alertDialog.setIcon(R.drawable.delete);
+	 
+	        alertDialog.setPositiveButton("e-Seçmen İndir", new DialogInterface.OnClickListener() {
+	            public void onClick(DialogInterface dialog,int which) {
+	 
+	            	final String appName = "com.halici.e_secmen";
+	            	try {
+	            	    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id="+appName)));
+	            	} catch (android.content.ActivityNotFoundException anfe) {
+	            	    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/apps/details?id="+appName)));
+	            	}
+	            }
+	        });
+	 
+	        alertDialog.setNegativeButton("Kapat", new DialogInterface.OnClickListener() {
+	            public void onClick(DialogInterface dialog, int which) {
+	            // Write your code here to invoke NO event
+	            Toast.makeText(getApplicationContext(), "You clicked on NO", Toast.LENGTH_SHORT).show();
+	            dialog.cancel();
+	            }
+	        });
+
+	        alertDialog.show();
+			
+		}
 		getSavedData();
 		
 		
@@ -71,6 +111,8 @@ public class Giris extends Activity {
 				
 			}
 		});
+		
+		
 		
 	}
 	
