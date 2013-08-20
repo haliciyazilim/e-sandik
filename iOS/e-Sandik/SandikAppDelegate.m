@@ -28,7 +28,7 @@
     
     if (string == nil || [string isEqualToString:@"NO"]) {
         
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Bilgilendirme" message:@"e-Sandık uygulaması sandık görevlilerinin kullanımı için güncellenmiştir. Seçmenler, kendi bilgilerine erişmek için e-Seçmen uygulamasını kullanabilirler." delegate:self cancelButtonTitle:@"Kapat" otherButtonTitles:@"Görüntüle", nil];
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Bilgilendirme" message:@"e-Sandık uygulaması CHP görevlilerinin kullanımı için güncellenmiştir. Diğer kullanıcılar, kendi bilgilerine erişmek için e-Seçmen uygulamasını kullanabilirler." delegate:self cancelButtonTitle:@"Kapat" otherButtonTitles:@"Görüntüle", nil];
         [alertView show];
         
         alertView.delegate = self;
