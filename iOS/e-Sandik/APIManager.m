@@ -199,10 +199,10 @@ static APIManager *sharedInstance = nil;
         tckNo = @"00000000000";
     }
     
-    return [self createNetworkOperationForOperation:@"SandikYeriSorgula_v2"
-                                      andParameters:@{@"telNo_TCKN" : username,
-                                                           @"Sifre" : password,
-                                                            @"tckn" : tckNo}
+    return [self createNetworkOperationForOperation:@"SandikYeriSorgula_v3"
+                                      andParameters:@{@"scsTelNoTckn" : username,
+                                                           @"scsSifre" : password,
+                                                            @"scsTckn" : tckNo}
                                        onCompletion:^(NSDictionary *responseDictionary) {
                                            if([[responseDictionary valueForKey:@"HataKodu"] integerValue] == 1){
                                                NSError *apiError = [NSError errorWithDomain:@"APIError"

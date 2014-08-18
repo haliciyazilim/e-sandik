@@ -16,7 +16,6 @@
 		0543E839164BB72D00255154 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0543E838164BB72D00255154 /* main.m */; };
 		0543E83D164BB72D00255154 /* SandikAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0543E83C164BB72D00255154 /* SandikAppDelegate.m */; };
 		0543E846164BB72D00255154 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0543E844164BB72D00255154 /* MainStoryboard_iPhone.storyboard */; };
-		0543E849164BB72D00255154 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0543E847164BB72D00255154 /* MainStoryboard_iPad.storyboard */; };
 		0543E86B164BD6E100255154 /* SandikKunyeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0543E86A164BD6E100255154 /* SandikKunyeViewController.m */; };
 		0543E86E164BD70100255154 /* SandikBinaBilgisiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0543E86D164BD70100255154 /* SandikBinaBilgisiViewController.m */; };
 		0543E871164BD71E00255154 /* SandikSecmenlerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0543E870164BD71E00255154 /* SandikSecmenlerViewController.m */; };
@@ -86,6 +85,10 @@
 		05D0B728164D32180041D665 /* icon_secmen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 05D0B722164D32180041D665 /* icon_secmen@2x.png */; };
 		05D0B73B164D36FD0041D665 /* icon_sandik.png in Resources */ = {isa = PBXBuildFile; fileRef = 05D0B739164D36FD0041D665 /* icon_sandik.png */; };
 		05D0B73C164D36FD0041D665 /* icon_sandik@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 05D0B73A164D36FD0041D665 /* icon_sandik@2x.png */; };
+		05F2642019A1E1D500403EDC /* AppIcon29x29.png in Resources */ = {isa = PBXBuildFile; fileRef = 05F2641C19A1E1D500403EDC /* AppIcon29x29.png */; };
+		05F2642119A1E1D500403EDC /* AppIcon29x29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 05F2641D19A1E1D500403EDC /* AppIcon29x29@2x.png */; };
+		05F2642219A1E1D500403EDC /* AppIcon40x40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 05F2641E19A1E1D500403EDC /* AppIcon40x40@2x.png */; };
+		05F2642319A1E1D500403EDC /* AppIcon60x60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 05F2641F19A1E1D500403EDC /* AppIcon60x60@2x.png */; };
 		4104C1F6164BF8EE00520218 /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4104C1F5164BF8EE00520218 /* APIManager.m */; };
 		416A7DA0165141BC0005E9E3 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 416A7D8E165141BC0005E9E3 /* NSData+Base64.m */; };
 		416A7DA1165141BC0005E9E3 /* NSDate+RFC1123.m in Sources */ = {isa = PBXBuildFile; fileRef = 416A7D90165141BC0005E9E3 /* NSDate+RFC1123.m */; };
@@ -116,7 +119,6 @@
 		0543E83B164BB72D00255154 /* SandikAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SandikAppDelegate.h; sourceTree = "<group>"; };
 		0543E83C164BB72D00255154 /* SandikAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SandikAppDelegate.m; sourceTree = "<group>"; };
 		0543E845164BB72D00255154 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		0543E848164BB72D00255154 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		0543E869164BD6E100255154 /* SandikKunyeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SandikKunyeViewController.h; sourceTree = "<group>"; };
 		0543E86A164BD6E100255154 /* SandikKunyeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SandikKunyeViewController.m; sourceTree = "<group>"; };
 		0543E86C164BD70100255154 /* SandikBinaBilgisiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SandikBinaBilgisiViewController.h; sourceTree = "<group>"; };
@@ -202,6 +204,10 @@
 		05D0B722164D32180041D665 /* icon_secmen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_secmen@2x.png"; sourceTree = "<group>"; };
 		05D0B739164D36FD0041D665 /* icon_sandik.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_sandik.png; sourceTree = "<group>"; };
 		05D0B73A164D36FD0041D665 /* icon_sandik@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_sandik@2x.png"; sourceTree = "<group>"; };
+		05F2641C19A1E1D500403EDC /* AppIcon29x29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon29x29.png; sourceTree = "<group>"; };
+		05F2641D19A1E1D500403EDC /* AppIcon29x29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon29x29@2x.png"; sourceTree = "<group>"; };
+		05F2641E19A1E1D500403EDC /* AppIcon40x40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon40x40@2x.png"; sourceTree = "<group>"; };
+		05F2641F19A1E1D500403EDC /* AppIcon60x60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon60x60@2x.png"; sourceTree = "<group>"; };
 		4104C1F4164BF8EE00520218 /* APIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIManager.h; sourceTree = "<group>"; };
 		4104C1F5164BF8EE00520218 /* APIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIManager.m; sourceTree = "<group>"; };
 		416A7D8D165141BC0005E9E3 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
@@ -283,7 +289,6 @@
 				416A7D89165141BC0005E9E3 /* MKNetworkKit */,
 				0543E8BF164BFECF00255154 /* Images */,
 				0543E844164BB72D00255154 /* MainStoryboard_iPhone.storyboard */,
-				0543E847164BB72D00255154 /* MainStoryboard_iPad.storyboard */,
 				0543E83B164BB72D00255154 /* SandikAppDelegate.h */,
 				0543E83C164BB72D00255154 /* SandikAppDelegate.m */,
 				0552B4D8176F3ECF00AB7539 /* RNCryptor */,
@@ -310,6 +315,10 @@
 			children = (
 				05BA1BB9165294B0006E6B38 /* app-icon-114.png */,
 				05BA1BB7165294AB006E6B38 /* app-icon-57.png */,
+				05F2641C19A1E1D500403EDC /* AppIcon29x29.png */,
+				05F2641D19A1E1D500403EDC /* AppIcon29x29@2x.png */,
+				05F2641E19A1E1D500403EDC /* AppIcon40x40@2x.png */,
+				05F2641F19A1E1D500403EDC /* AppIcon60x60@2x.png */,
 				05BA1BB11652923E006E6B38 /* Default-568h@2x.png */,
 				05BA1BB21652923E006E6B38 /* Default.png */,
 				05BA1BB31652923E006E6B38 /* Default@2x.png */,
@@ -490,6 +499,11 @@
 				CLASSPREFIX = Sandik;
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Halıcı";
+				TargetAttributes = {
+					0543E827164BB72D00255154 = {
+						DevelopmentTeam = Y89A3S87KH;
+					};
+				};
 			};
 			buildConfigurationList = 0543E822164BB72D00255154 /* Build configuration list for PBXProject "e-Sandık" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -515,7 +529,7 @@
 			files = (
 				0543E837164BB72D00255154 /* InfoPlist.strings in Resources */,
 				0543E846164BB72D00255154 /* MainStoryboard_iPhone.storyboard in Resources */,
-				0543E849164BB72D00255154 /* MainStoryboard_iPad.storyboard in Resources */,
+				05F2642119A1E1D500403EDC /* AppIcon29x29@2x.png in Resources */,
 				0543E891164BEA2B00255154 /* icon_boxlist@2x.png in Resources */,
 				0543E892164BEA2B00255154 /* icon_voter@2x.png in Resources */,
 				0543E893164BEA2B00255154 /* icon_voterlist@2x.png in Resources */,
@@ -523,6 +537,7 @@
 				0543E89F164BED3500255154 /* icon_voter.png in Resources */,
 				0543E8A0164BED3500255154 /* icon_voterlist.png in Resources */,
 				0543E8A3164BEE8800255154 /* mainbg.png in Resources */,
+				05F2642319A1E1D500403EDC /* AppIcon60x60@2x.png in Resources */,
 				0543E8A4164BEE8800255154 /* mainbg@2x.png in Resources */,
 				0543E8A7164BEF1800255154 /* main_chp_yatay.png in Resources */,
 				0543E8A8164BEF1800255154 /* main_chp_yatay@2x.png in Resources */,
@@ -542,6 +557,7 @@
 				05D0B726164D32180041D665 /* icon_okul@2x.png in Resources */,
 				05D0B727164D32180041D665 /* icon_secmen.png in Resources */,
 				05D0B728164D32180041D665 /* icon_secmen@2x.png in Resources */,
+				05F2642219A1E1D500403EDC /* AppIcon40x40@2x.png in Resources */,
 				05D0B73B164D36FD0041D665 /* icon_sandik.png in Resources */,
 				05D0B73C164D36FD0041D665 /* icon_sandik@2x.png in Resources */,
 				05C3087E1650E2FA000A6780 /* btn_back_hover.png in Resources */,
@@ -570,6 +586,7 @@
 				05BA1BB8165294AB006E6B38 /* app-icon-57.png in Resources */,
 				05BA1BBA165294B0006E6B38 /* app-icon-114.png in Resources */,
 				05488A47168D8CC10076BB74 /* mainbg-568h@2x.png in Resources */,
+				05F2642019A1E1D500403EDC /* AppIcon29x29.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -627,14 +644,6 @@
 				0543E845164BB72D00255154 /* en */,
 			);
 			name = MainStoryboard_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		0543E847164BB72D00255154 /* MainStoryboard_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0543E848164BB72D00255154 /* en */,
-			);
-			name = MainStoryboard_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -695,6 +704,11 @@
 		0543E85B164BB72E00255154 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					armv7,
+					armv7s,
+				);
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "e-Sandik/e-Sandık-Prefix.pch";
 				INFOPLIST_FILE = "e-Sandik/e-Sandık-Info.plist";
@@ -704,7 +718,9 @@
 					"\"$(SDKROOT)/usr/lib/system\"",
 				);
 				PRODUCT_NAME = "e-Sandık";
+				SDKROOT = iphoneos6.1;
 				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -712,6 +728,11 @@
 		0543E85C164BB72E00255154 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					armv7,
+					armv7s,
+				);
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "e-Sandik/e-Sandık-Prefix.pch";
 				INFOPLIST_FILE = "e-Sandik/e-Sandık-Info.plist";
@@ -721,7 +742,9 @@
 					"\"$(SDKROOT)/usr/lib/system\"",
 				);
 				PRODUCT_NAME = "e-Sandık";
+				SDKROOT = iphoneos6.1;
 				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

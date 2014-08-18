@@ -57,6 +57,11 @@
     
     self.navigationItem.backBarButtonItem = backButton;
     
+    UIImage *image = [UIImage imageNamed:@"title_esandik.png"];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+    
+    self.navigationItem.titleView = imageView;
+    
 }
 - (void)viewWillAppear:(BOOL)animated {
     
