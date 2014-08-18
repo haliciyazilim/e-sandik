@@ -28,7 +28,7 @@ public class Sorgulama {
 			 
 	// kullanılan metot
 	final static String METHOD_NAME_LOGIN="ESANDIK_Login";
-	final static String METHOD_NAME_SANDIK_YERI="SandikYeriSorgula_v2";
+	final static String METHOD_NAME_SANDIK_YERI="SandikYeriSorgula_v3";
 			 
 	// soap_action
 	final static String SOAP_ACTION_LOGIN="http://tempuri.org/ESANDIK_Login";
@@ -102,9 +102,9 @@ public class Sorgulama {
 		System.out.println("******Sorgulama: "+this.telNo_TCKN+", "+this.tckn+", "+this.sifre);
 		
 		// requeste bilgi ekleniyor.
-		request.addProperty("tckn", Long.valueOf(this.tckn));
-		request.addProperty("telNo_TCKN", this.telNo_TCKN);
-		request.addProperty("Sifre", this.sifre);
+		request.addProperty("scsTckn", (this.tckn)+"");
+		request.addProperty("scsTelNoTckn", this.telNo_TCKN);
+		request.addProperty("scsSifre", this.sifre);
 					
 		//Web servisin versiyonunu bildiriyoruz.
 		SoapSerializationEnvelope soapEnvelope = new SoapSerializationEnvelope(SoapEnvelope.VER12);

@@ -42,6 +42,8 @@ public class Giris extends Activity {
 	private static final String NAME="name";
 	private static final String PASSWORD="password";
 	private static final String SEED="secure";
+
+    private static final String ESANDIK_SHARED_PREFERENCES = "com.halici.e_sandikv2";
 	private static final String IS_BEFORE_STARTED="isBeforeStarted";
 	
 	private boolean loginDurumu;
@@ -60,7 +62,7 @@ public class Giris extends Activity {
 		eTuserName=(EditText)findViewById(R.id.editKullaniciAdi);
 		eTpassword=(EditText)findViewById(R.id.editSifre);
 		btnSign=(Button)findViewById(R.id.btnGiris);
-		shPreferences=getSharedPreferences("data", MODE_PRIVATE);
+		shPreferences=getSharedPreferences(ESANDIK_SHARED_PREFERENCES, MODE_PRIVATE);
 		
 		boolean isBeforeStarted= shPreferences.getBoolean(IS_BEFORE_STARTED, false);
 		if(!isBeforeStarted){
@@ -71,8 +73,8 @@ public class Giris extends Activity {
 	        alertDialog.setTitle("Uyarı");
 	 
 	        // Setting Dialog Message
-	        alertDialog.setMessage("e-Sandık uygulaması CHP görevlilerinin kullanımı için güncellenmiştir. " +
-	        		"Diğer kullanıcılar, kendi bilgilerine erişmek için e-Seçmen uygulamasını kullanabilirler.");
+	        alertDialog.setMessage("e-Sandık uygulaması sandık görevlilerinin kullanımı için güncellenmiştir. " +
+	        		"Seçmenler, kendi bilgilerine erişmek için e-Seçmen uygulamasını kullanabilirler.");
 	 
 	        // Setting Icon to Dialog
 //	        alertDialog.setIcon(R.drawable.delete);
@@ -89,8 +91,10 @@ public class Giris extends Activity {
 	            }
 	        });
 	 
-	        alertDialog.setNegativeButton("Kapat", new DialogInterface.OnClickListener() {
+	        alertDialog.setNegativeButton("Devam", new DialogInterface.OnClickListener() {
 	            public void onClick(DialogInterface dialog, int which) {
+	            // Write your code here to invoke NO event
+//	            Toast.makeText(getApplicationContext(), "You clicked on NO", Toast.LENGTH_SHORT).show();
 	            dialog.cancel();
 	            }
 	        });

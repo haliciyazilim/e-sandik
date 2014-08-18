@@ -32,6 +32,7 @@ public class Sorgu extends Activity {
 	public Boolean loginDurumu;
 	
 	private String userName, password, tckn;
+    private EditText editSorgu;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +45,7 @@ public class Sorgu extends Activity {
 		password=intent.getStringExtra("sifre");
 		tckn=intent.getStringExtra("tckn");
 		
-		final EditText editSorgu=(EditText) findViewById(R.id.editSorgu);
+		editSorgu=(EditText) findViewById(R.id.editSorgu);
 		InputFilter[] FilterArray = new InputFilter[1];
 		FilterArray[0] = new InputFilter.LengthFilter(11);
 		editSorgu.setFilters(FilterArray);
@@ -81,8 +82,15 @@ public class Sorgu extends Activity {
 			}
 		});
     }
-	
-	public void kimlikNoHaneUyarisi(){
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        if(editSorgu != null && tckn != null)
+        editSorgu.setText(tckn);
+    }
+
+    public void kimlikNoHaneUyarisi(){
     	Toast.makeText(getApplicationContext(), "Kimlik numaranızı 11 hane olarak giriniz!",  Toast.LENGTH_LONG).show();
     }
 	

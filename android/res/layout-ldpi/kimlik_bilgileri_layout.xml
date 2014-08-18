@@ -49,6 +49,7 @@
 
     </RelativeLayout>
 
+
         <ScrollView
             android:id="@+id/svKunyeBilgileri"
             android:layout_width="fill_parent"

@@ -82,9 +82,7 @@ public class SecmenKunye extends Fragment {
 		view=(RelativeLayout)inflater.inflate(R.layout.kimlik_bilgileri_layout, container, false);
 		rlSecimBilgisi=(RelativeLayout)view.findViewById(R.id.rlSecimBilgisi);
 		secimBilgisi=(TextView)view.findViewById(R.id.txtSecimBilgisi);
-		
 		if(!eskiListe.equals(null) && eskiListe.equals("1")){
-			
 			secimBilgisi.setText("Yeni seçmen bilgileri açıklanmadığı için "+secimYili+" seçimlerine dair bilgiler görüntülenmektedir.");
 			
 //			secimBilgisi.setText("Bilgiler "+secimYili+" seçimlerine aittir.");
